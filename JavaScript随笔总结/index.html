@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<meta name="author" content="linshuangqiang">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no"/> 
+	<link rel="stylesheet" type="text/css" href="./css/global.css">
+</head>
+<body>
+<h1>JavaScript总结 <=> 点点滴滴</h1>
+<h2>基本数据类型(baseDataTypes)</h2>
+<div class="con-show-link">
+	<h3>变量</h3>
+	<dl>
+		<dt>变量的使用</dt>
+		<dd>声明变量</dd>
+		<dd>初始化变量,即初始值</dd>
+		<dt>变量的初始化</dt>
+		<dd>先声明变量，然后在进行初始化</dd>
+		<dd>声明变量和初始化变量同步进行</dd>
+		<dt>区分大小写</dt>
+	</dl>
+	<h3>操作符</h3>
+	<table>
+		<thead>
+			<th>操作符</th>
+			<th>说明</th>
+		</thead>
+		<tbody>
+			<tr>
+				<td>+</td>
+				<td>加法运算</td>
+			</tr>
+			<tr>
+				<td>-</td>
+				<td>减法</td>
+			</tr>
+			<tr>
+				<td>*</td>
+				<td>乘法</td>
+			</tr>
+			<tr>
+				<td>/</td>
+				<td>除法</td>
+			</tr>
+			<tr>
+				<td>%</td>
+				<td>取模（余数）</td>
+			</tr>
+			<tr>
+				<td>++</td>
+				<td>自加（加1）</td>
+			</tr>
+			<tr>
+				<td>--</td>
+				<td>自减（减1）</td>
+			</tr>
+		</tbody>
+	</table>
+	<h3>注释</h3>
+	<ul>
+		<li>当行注释</li>
+		<li>多行注释</li>
+	</ul>
+	<h3>基本数据类型</h3>
+	<div>JavaScript中的数据类型分为基本类型和非基本类型（Object）</div>
+	<ul>
+		<li>数字</li>
+		<li>字符串</li>
+		<li>布尔值</li>
+		<li>undefined</li>
+		<li>null</li>
+	</ul>
+	<dl>
+		<dt>查看类型操作符：typeof</dt>
+		<dd>返回值："number","string","boolean","undefined","object","function"</dd>
+		<dt>number</dt>
+		<dd>进制</dd>
+		<dd>指数表示法</dd>
+		<dd>Infinity</dd>
+		<dd>NaN</dd>
+		<dt>string</dt>
+		<dd>字符串转换（自动转换）</dd>
+		<dd>特殊字符串</dd>
+		<dt>boolean</dt>
+		<dd>逻辑运算符：!,&&,||</dd>
+		<dd>操作符优先级</dd>
+		<dd>惰性求值（短路）</dd>
+		<dd>比较运算符：==,===,!=,!==,>,>=,<,<=</dd>
+		<dt>undefined</dt>
+		<dt>null</dt>
+	</dl>
+	<h3>基本数据类型总结</h3>
+	<div>
+		<p>1.JavaScript五大基本数据类型：数字，字符串，布尔值，undefined，null</p>
+		<p>2.任何不属于基本类型的都将属于对象</p>
+		<p>3.数字可存储：正负整数、浮点数、十六进制数与八进制数、指数、以及特殊数值：NaN、Infinity、-Infinity</p>
+		<p>4.字符串类型存储的是一对引号(单引号对或双引号对)之间的所有字符</p>
+		<p>5.布尔类型的值只有2个：true和false</p>
+		<p>6.null类型的值只有一个：null</p>
+		<p>7.undefined类型的值只有一个：undefined</p>
+		<p>8.绝大部分值在转换为布尔类型时都为true。为false的有："";null;undefined;0;NaN;false</p>
+	</div>
+</div>
+<h2>数组(array)</h2>
+<div class="con-show-link">
+	<h3>增加、更新数组元素</h3>
+	<h3>删除元素</h3>
+	<h3>数组的数组</h3>
+	<h3>数组的属性及方法</h3>
+</div>
+<h2>流程控制语句(controlStatement)</h2>
+<div class="con-show-link">
+	<h3>条件语句</h3>
+	<ul>
+		<li>if条件表达式（if;if else;if else if ... else）</li>
+		<li>switch语句</li>
+		<li>代码块</li>
+	</ul>
+	<h3>循环</h3>
+	<ul>
+		<li>while循环</li>
+		<li>do-while循环</li>
+		<li>for循环</li>
+		<li>for-in循环</li>
+	</ul>	
+</div>
+<h2>函数(function)</h2>
+<div class="con-show-link">
+	<ul>
+		<li>定义和使用函数</li>
+		<li>传递参数</li>
+		<li>预定义函数</li>
+		<li>作用域</li>
+		<li>函数也是数据（特殊数据类型），函数名即为变量名</li>
+		<li>匿名函数</li>
+		<li>回调函数</li>
+		<li>自掉函数</li>
+		<li>内嵌函数（函数内部定义的函数）</li>
+		<li>返回值为函数的函数</li>
+		<li>能重定义自身的函数</li>
+		<li>闭包</li>
+	</ul>
+	<dl>
+		<dt>什么函数（函数的组成部分）</dt>
+		<dd>关键字：function</dd>
+		<dd>函数名：function之后的名字</dd>
+		<dd>参数</dd>
+		<dd>函数块</dd>
+		<dd>return子句</dd>
+		<dt>调用函数</dt>
+		<dt>预定义函数</dt>
+		<dd>parseInt()</dd>
+		<dd>parseFloat()</dd>
+		<dd>isNaN()</dd>
+		<dd>isFinite()</dd>
+		<dd>URI的编码与反编码：encodeURI(url);encodeURIComponent(url)</dd>
+		<dd>eval()</dd>
+		<dt>变量作用域</dt>
+		<dd>变量提升</dd>
+		<dt>函数也是数据</dt>
+		<dd>匿名函数</dd>
+		<dd>回调函数（+示例）</dd>
+		<dd>即时函数</dd>
+		<dd>内部函数（私有）</dd>
+		<dd>返回函数的函数</dd>
+		<dd>重写自己的函数</dd>
+		<dt>闭包</dt>
+		<dd>作用域链</dd>
+		<dd>利用闭包突破作用域链</dd>
+		<dt>闭包的应用示例：getter和setter</dt>
+		<dt>迭代器</dt>
+	</dl>
+</div>
+<h2>对象(object)</h2>
+<div class="con-show-link">
+	<ul>
+		<li>如何创建并使用对象</li>
+		<li>构造函数</li>
+		<li>内置对象</li>
+	</ul>
+	<dl>
+		<dt>从数组到对象</dt>
+		<dd>元素、属性、方法和成员</dd>
+		<dd>哈希表、关联型数组</dd>
+		<dd>访问对象属性</dd>
+		<dd>调用对象方法</dd>
+		<dd>修改属性和方法</dd>
+		<dd>使用this</dd>
+		<dd>构造器函数</dd>
+		<dd>全局对象</dd>
+		<dd>构造器属性</dd>
+		<dd>instanceof操作符</dd>
+		<dd>返回对象的函数</dd>
+		<dd>传递对象</dd>
+		<dd>比较对象</dd>
+		<dt>内建对象</dt>
+		<dd>Object</dd>
+		<dd>Array</dd>
+		<dd>Function</dd>
+		<dd>Boolean</dd>
+		<dd>Number</dd>
+		<dd>String</dd>
+		<dd>Math</dd>
+		<dd>Date</dd>
+		<dd>RegExp</dd>
+		<dd>Error</dd>
+	</dl>
+</div>
+<h2>原型(prototype)</h2>
+<div class="con-show-link">
+	<dl>
+		<dt>原型属性</dt>
+		<dd>利用原型添加方法与属性</dd>
+		<dd>使用原型的方法与属性</dd>
+		<dd>自身属性与原型属性</dd>
+		<dd>__proto__</dd>
+	</dl>
+</div>
+<h2>面向对象(oop)</h2>
+<div class="con-show-link">
+	<dl>
+		<dt>理解对象</dt>
+		<dd>属性类型</dd>
+		<dd>定义多个属性</dd>
+		<dd>读取属性的特性</dd>
+		<dt>创建对象</dt>
+		<dd>工厂模式</dd>
+		<dd>构造函数模式</dd>
+		<dd>原型模式</dd>
+		<dd>组合使用构造函数模式和原型模式</dd>
+		<dd>动态原型模式</dd>
+		<dd>寄生构造函数模式</dd>
+		<dd>稳妥构造函数模式</dd>
+		<dt>继承</dt>
+		<dd>原型链</dd>
+		<dd>借用构造函数</dd>
+		<dd>组合继承</dd>
+		<dd>原型式继承</dd>
+		<dd>寄生式继承</dd>
+		<dd>寄生组合式继承</dd>
+	</dl>
+</div>
+</body>
+</html>
