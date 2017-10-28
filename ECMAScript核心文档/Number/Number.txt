@@ -1,0 +1,43 @@
+Number
+    数字
+构造函数
+    new Number(value)
+    Number(value)
+参数
+    正在创建的Number对象的数值，或将转换为一个数字的值
+返回
+    当Number构造函数使用new操作符时，将会返回一个新构造的Number对象。当没有new操作符时，它将传入的参数转换为一个原始的数值并返回这个值，（如果转换失败，则返回NaN）
+常量
+    Number.MAX_VALUE
+        能表示的最大数值
+    Number.MIN_VALUE
+        能表示的最小数值
+    Number.NaN
+        非数字值
+    Number.NEGATIVE_INFINITY
+        负无穷大，当发生溢出时返回
+    Number.POSITIVE_INFINITY
+        正无穷大，当发生溢出时返回
+方法
+    toString()
+        使用指定的进制，将一个数字转换为字符串
+    toLocaleString()
+        将一个数字转换为本地数字格式的字符串
+    toFixed()
+        将一个数字转换为包含指定小数位数的字符串
+    toExponential()
+        将一个数字转换为指数计数法，在小数点后有指定位数
+    toPrecision()
+        将一个数字转换为字符串，使用指定数目的有效数字。根据数字的大小以及指定的有效数字位数，可能采用指数或浮点数计数法。
+    valueOf()
+        返回一个Number对象的原始值
+与之相关的全局方法
+    parseInt()
+        将一个字符串转为整数
+    parseFloat()
+        将一个字符串转换为数字
+    RangeError
+        当一个数字超出合法的范围是抛出
+说明
+    数字时JavaScript中基本的原始数据类型。同时也支持Number对象，它时一个原始数值的包装对象。在必要时，会自动在原始形式和对象之间转换。可以通过Number构造函数显示的创建一个Number对象。
+    

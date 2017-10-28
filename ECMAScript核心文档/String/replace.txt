@@ -1,0 +1,34 @@
+String.replace()
+    替换匹配给定正则表达式的一个或多个子串
+结构
+    string.replace(regexp,replacement)
+参数
+    regexp
+        指定了要替换的模式的RegExp对象，如果是一个字符串，将用作将一个搜索的直接量文本模式，不会转换为RegExp对象。
+    replacement
+        一个内容为替换文本的字符串，或这一个函数，用于在调用时生成对应的替换文本
+返回
+    一个新字符串。其中匹配regexp的第一个或所有的地方替换为replacement。
+说明
+    replace在字符串上查找或替换操作。它在string中搜索一个或多个匹配regexp的子串并使用replacement进行替换。如果regexp具有g属性，则将替换所有匹配的子串。其他情况下，只会替换一个匹配的子串的。
+    replacement可以是一个字符串或一个函数。如果它是一个字符串。则将每个匹配子串替换为该字符串。
+    注意：replacement字符串中的$字符是有特殊含义得，它表示模式匹配中的一个字符串将在替换中使用
+    $1,$2,....,$88 => 匹配1～88个regexp中的圆括号子表达式的文本
+    $& => 匹配regexp的子串
+    $` => 匹配子串左边文本
+    $' => 匹配子串右边文本
+    $$ => 美元符号
+    在ECMAScript3中定义replace的replacement参数可以用一个函数来代替字符串。在使用函数的情况下，这个函数将在每个匹配结果上调用，它返回的字符串则将作为替换文本。传入该函数的第一个参数是匹配模式的字符串。接下来的参数是匹配某个圆括号子表达式的字符串，可能有0个或多个这样的参数。下一个参数是一个整数，指定String中出现匹配结果的位置，最后一个参数是string本身。
+示例
+    确保字符串"JavaScript"的大小写是正确的。
+        text.replace(/javascript/i,'JavaScript');
+    将一个单独的名字从格式‘Doe,john’转换为 ‘John Done’的格式：
+        name.replace(/(\w+)\s*,\s*(\w+)/,'$2 $1');
+    将所有的双引号替换为成对的前后单引号
+        text.replace(/"[^"]*"/g,"''$1''");
+    将一个字符串中所有单词的首字母大写
+        text.replace(/\b\w+\b/g,function(word){
+            return word.substring(0,1).toUpperCase()+word.substring(1);
+        })
+相关方法
+    RegExp，RegExp.exec(),RegExp.test(),String.match(),String.search()

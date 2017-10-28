@@ -1,0 +1,25 @@
+Array.reduce()
+    从数组元素中计算出一个值
+结构
+    array.reduce(f)
+    array.reduce(f,inital)
+参数
+    f
+        一个函数，可以合并两个值（一般是两个数组元素），并返回一个缩减的新值
+    inital
+        用来缩减数组元素的可选初始值，如果指定该参数，reduce方法的行为会像是把该参数插入array的头部一样。
+返回值
+    数组的化简值，该值是最后一次调用函数f时返回的值
+说明
+    reduce()方法接收函数f作为第一个参数。该函数就像一个二原操作符一样：接收两个值，执行某些操作，然后返回结果。如果array有n个元素，reduce方法会调用n-1次来将此数组元素缩减合并为一个值。
+    第一个调用f函数是传人的是array数组中前两个元素，之后调用的是传入之前的计算值和array数组的下一个值。最后一次调用函数f的返回值会成为reduce方法的返回值。
+    reduce方法在调用时可以传入可选的第二个参数：inital。如果指定了inital，reduce的行为会像是把该参数插入array的头部一样，就像reduce方法带有2个参数，而inital就像是职权f返回值一样。这种情况下，第一次调用f时传入的时inital和array的第一个元素，当指定了inital参数时，要缩减的元素将时n+1个（array的n个元素和inital参数），则将会调用n次f函数。
+    如果array为空，又没有指定inital参数，则reduce方法会抛出TypeError异常。如果array为空，但是指定了inital参数，则reduce方法会返回inital，且不会调用f函数。如果array只有一个元素，且没有指定inital参数，reduce方法不会调用f函数，会返回array中的单个元素。
+    reduce调用f函数时传入的是4个参数，第三个参数是第二个参数的数组序号，第四个则是array本身，
+示例：
+    var arr = [1,2,3,4];
+    arr.reduce(function(){return x*y;})//24 :((1*2)*3)*4
+相关方法
+    Array.forEach(),Array.map(),Array.reduceRight()
+        
+        

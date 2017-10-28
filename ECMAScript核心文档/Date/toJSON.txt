@@ -1,0 +1,13 @@
+Date.toJSON()
+    JSON序列化的一个Date对象
+结构
+    date.toJSON(key)
+参数
+    key
+        JSON.stringfy()会传递一个参数，但是toJSON方法会忽略它
+返回
+    date的一个字符串表示形式，值为调用它的toISOString方法的结构
+说明
+    JSON.stringfy()使用该方法将一个Date对象转化为一个字符串。它不是一个通用的方法
+相关方法
+    Date.toISOString(),JSON.stringfy()

@@ -1,0 +1,15 @@
+Object.preventExtensions()
+    禁止在一个对象上添加新的属性
+结构
+    Object.preventExtensions(o)
+参数
+    o
+        待设置可扩展属性的对象
+返回
+    传入参数的o（对象）
+说明
+    Object.preventExtensions()将对象o的可扩展属性设置为false，之后将不能向它添加新的属性，这是一个永久性的改变。一旦设置为不可扩展，将不能在更改为可扩展了。
+    注意：Object.preventExtensions()不会影响原型链，不可扩展的对象仍可以获得最新的继承属性。
+    这不是一个在对象上调用的方法，而是一个全局函数，因此必须传入一个对象作为其参数。
+相关方法
+    Object.freeze(),Object.isExtensible(),Object.seal()

@@ -1,0 +1,16 @@
+Function.call()
+    将函数作为对象的方法调用
+结构
+    function.call(thisObj,args...)
+参数
+    thisObj
+        调用function的对象。在函数体中，thisObj是关键字this的值，如果这个参数为null，则使用全局对象。
+    args...
+        任意多个参数，他们会作为参数传递给function
+返回
+    调用函数function的返回值
+异常
+    如果调用该参数的对象不是函数，则抛出该异常
+说明
+    call将指定的函数function作为对象thisObj的方法来调用，并传入参数列表中thisObj之后的参数。返回值是调用function的返回值。在函数体中，关键字this指代thisObj对象，如果thisObj为null，则使用全局对象
+    如果想用数组来指定传递给函数的参数，则使用apply方法

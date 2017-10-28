@@ -1,0 +1,30 @@
+Object.defineProperty()
+    创建或配置对象的一个属性
+结构
+    Object.defineProperty(o,name,desc)
+参数
+    o
+        将在其上创建或配置属性的对象
+    name
+        将创建或配置的属性的名字
+    desc
+        一个属性描述符对象，描述需要创建的新属性或对现有属性的修改
+返回
+    对象o
+异常
+    TypeError
+        如果o不是一个对象，或者指定属性不能创建（如：o不可扩展）或配置（如：该属性已经存在，并且不可配置）
+说明
+    Object.defineProperty()使用属性描述符desc来创建或配置对象o中名为name的属性。关于属性描述符对象可参阅Object.getOwnPropertyDescriptor()方法。
+    如果对象o不存在名为name的属性，则这个方法将简单的使用desc中指定的属性和值来创建一个新属性。对于desc中未指定的属性，对应的属性值将被设置为false或null
+    如果name为对象o中一个已经存在的属性名，则Object.defineProperty()将通过改变它的值或属性来重新配置这个属性。这时，desc只包含需要改变的属性，不必包含不需修改的属性。
+示例
+    function constant(o,n,v){
+        Object.defineProperty(o,n,{
+            writable: false,
+            enumerable:true,
+            configurable:false
+        });
+    }
+相关方法
+    Object.create(),Object.defineProperties(),Object.getOwnPropertyDescriptor()

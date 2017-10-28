@@ -1,0 +1,19 @@
+Object.isExtensible()
+    判断某个对象上是否可以添加新属性
+结构
+    Object.isExtensible(o)
+参数
+    o
+        待检查可扩展的对象
+返回
+    如果可以向对象中添加新属性则返回true，否则返回false。
+说明
+    如果像一个对象添加新属性，则称之为可扩展。所有对象在创建后都是可扩展的，直至被传入Object.preventExtensions(),Object.seal()或Object.freeze()。
+    这个方法不能在对象上调用，是一个全局函数。
+示例
+    var o = {};
+    Object.isExtensible(o);//true
+    Object.PreventExtensions(o);//将对象o设置为不可扩展
+    Object.isExtensible(o);//false
+相关方法
+    Object.isFrozen(),Object.isSealed(),Object.preventExtensions()    

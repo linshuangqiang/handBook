@@ -1,0 +1,6 @@
+Number.MIN_VALUR
+    最小的数值
+结构
+    Number.MIN_VALUE
+说明
+    Number.MIN_VALUE是javascript中可以表示的最小的数（接近0.而并不是最大的负数值）。值约为5E-324

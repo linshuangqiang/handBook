@@ -1,0 +1,62 @@
+Array 数组
+构造函数：
+    new Array()
+    new Array(size)
+    new Array(element0,element1,....,elementn)
+属性
+    length
+    一个可读／写的属性，表示数组中元素的个数
+方法
+    concat()
+    把元素链接到数组中
+    every()
+    测试断言函数是否对每个数组元素都为真
+    filter()
+    返回满足断言函数的数组元素
+    forEach()
+    为数组的每一个元素调用指定的函数
+    some()
+    测试是否至少有一个数组元素能让断言函数为真
+    map()
+    从数组中的元素，计算出新的数组元素
+    indexOf()
+    在数组中查找匹配的元素
+    lastIndexOf()
+    在数组中反向查找元素
+    join()
+    将数组转化为字符串，并链接起来
+    push()
+    在数组末尾添加新元素
+    pop()
+    移除数组中最后一个元素
+    unshift()
+    在数组的头部添加元素
+    shift()
+    移除数组中的第一个元素
+    reduce()
+    从数组的元素中，计算出一个值
+    reduceRight()
+    从右到左缩减数组
+    reverse()
+    在数组中颠倒数组元素中的顺序
+    slice()
+    返回数组中的一部分
+    sort()
+    在数组中，对数组元素进行排序
+    splice()
+    插入、删除或替换数组元素
+    toLocaleString()
+    将数组元素转化为本地字符串
+    toString()
+    将数组转化为字符串
+ES5新增的方法：
+    every()
+    filter()
+    forEach()
+    indexOf()
+    lastIndexOf()
+    map()
+    reduce()
+    reduceRight()
+    some()    
+        

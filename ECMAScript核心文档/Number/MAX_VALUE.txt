@@ -1,0 +1,6 @@
+Number.MAX_VALUE
+    最大的数值
+结构
+    Number.MAX_VALUE
+说明
+    Number.MAX_VALUE是javascript中可以表示的最大的数。约为1.79E+308

@@ -1,0 +1,19 @@
+ReferenceError
+    读取不存在的变量时抛出
+机构
+    new ReferenceError()
+    new ReferenceError(message)
+参数
+    message
+        一个可选的错误信息，用于提供关于该异常的细节，如果指定，这个参数将用做当前ReferenceError对象的message属性的值
+返回
+    一个新构造的ReferenceError对象，如果指定message参数，则对应的Error对象将把它用做自己的message属性的值；在其他情况下，它将使用预定义的默认字符串作为message属性的值。不使用new操作符，就像调用函数一样调用ReferenceError构造函数时，它的行为和使用new操作符调用时一样
+属性
+    message
+        一个关于该异常的细节的错误信息，这个属性的值为传入构造函数的字符串或预定义的默认字符串。参阅：Error.message
+    name
+        一个指定异常类型的字符串。所有的ReferenceError对象的这个属性都继承自值ReferenceError
+说明
+    试图读一个不存在的变量的值时将抛出一个ReferenceError类。关于异常的抛出和捕获：Error
+相关方法
+    Error,Error.message,Error.name

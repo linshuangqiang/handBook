@@ -1,0 +1,12 @@
+RegExp.toString()
+    将一个正则表达式转换为字符串
+结构
+    regexp.toString()
+返回
+    regexp的字符串表示
+异常
+    TypeError
+        如果在一个非RegExp对象上调用这个方法
+说明
+    RegWxp.toString()方法使用正则表达式直接量的格式返回一个正则表达式的字符串表示。
+    注：这个方法的实现并不要求添加转义序列，以保证返回的字符串是合法的正则表达式直接量。由new RegExp('/','g')创建的正则表达式。RegExp.toString()的一个实现可能会返回/\//g;它也可能添加一个转义序列并返回/\//g

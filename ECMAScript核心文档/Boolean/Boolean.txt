@@ -1,0 +1,16 @@
+Boolean
+    布尔值
+构造函数
+    new Boolean(value)
+    Boolean(value)
+参数
+    value
+        Boolean对象存放的值，或要转化为布尔值的值
+返回值
+    做为构造函数调用（带有new操作符）时，Boolean()会将参数转化为布尔值，并返回一个包含该值的Boolean对象。当调用（不带new操作符）时，Boolean()只会将参数转化为一个原始的布尔值，并返回。
+    0、NaN、null、空字符和undefined将被转化为false。其他原始值，除了false（但包含false字符串），以及其他的对象、数组等都将被转化为true
+方法
+    toString()
+        根据Boolen对象代表的布尔值返回 true 或 false字符串。
+    valueOf()
+        返回Boolean对象中存放的原始布尔值。

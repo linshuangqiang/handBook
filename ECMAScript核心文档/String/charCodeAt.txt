@@ -1,0 +1,13 @@
+String.charCodeAt()
+    取得字符串中第n个字符的编码
+结构
+    string.charCodeAt(n)
+参数
+    待返回编码的字符的索引
+返回
+    string中第n个字符的Unicode编码，返回的是一个16为的整数，值在 0 - 65535 之间
+说明
+    charCodeAt类似与charAt，不同之处在与返回值，charCodeAt返回的是编码。如果n为负数或大于字符串的长度，则charCodeAt返回NaN
+    关于Unicode编码创建字符串的方法可以使用String.fromCharCode()。
+相关方法
+    String.charAt(),String.fromCharCode()

@@ -1,0 +1,18 @@
+Object.getPrototypeOf()
+    返回一个对象的原型
+结构
+    Object.getPrototypeOf(o)
+参数
+    o
+        一个对象
+返回
+    对象o的原型对象
+说明
+    Object.getPrototypeOf()返回它的参数（对象o）的原型。注意：这是一个全局函数，必须传入一个对象作为参数，不能在对象上进行调用。
+示例
+    var p = {}
+    Object.getPrototypeOf(p);//Object.prototype
+    var o = Object.create(p);
+    Object.getPrototypeOf(o);//p
+相关方法
+    Object.create()

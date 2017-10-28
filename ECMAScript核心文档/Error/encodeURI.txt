@@ -1,0 +1,23 @@
+encodeURI()
+    转义一个URI中的字符
+结构
+    encodeURI(uri)
+参数
+    uri
+        一个包含URI或其他待编码的文本的字符串
+返回
+    uri的一个副本，其中某些字符已被替换为十六进制的转义序列
+异常
+    表示uri中包含非法的Unicode代理项对，不能编码。
+说明
+    encodeURI()是一个全局函数，返回它的uri参数的一个编码后的副本。ASCII字母和数字以及下面的ASCII标点字符将不会编码
+        -_.!~*'()
+    由于encodeURI()的意图是编码完整的URI，因此下面这些在URI中有特殊含义的ASCII标点字符也不会被转义
+        ;/?:@&=+$,#
+    uri中的其他字符将被转换为对应的UTF-8编码，并将结果的一、二或三个字节编码为一个%XX格式的十六进制转义序列。在这种编码机制中，ASCII字符将被替换为一个单独的%XX转义序列。编码在\u0080 - \u07ff之间的字符将被替换为两个转义序列，其他所有的十六位的Unicode字符则被替换为三个转义序列。
+    使用这个方法来编码URI时，必须确保该URI的组件（如查询字符串）都不包含如“?”和“#”等的URI分隔字符。如果这些组件必须包含这类字符，则应该使用encodeURIComponent()来对每个罪案进行单独编码。
+    decodeURI()是这个方法的逆方法。在ES3之前，可以使用escape()和unescape()方法（这两个方法现在已弃用）来执行类似的编码和解码。
+示例
+    encodeURI('\u00a9');//%C2%A9
+相关方法
+    decodeURI(),decodeURIComponent(),encodeURIComponent(),escape(),unescape()

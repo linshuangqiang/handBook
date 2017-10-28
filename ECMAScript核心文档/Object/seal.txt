@@ -1,0 +1,15 @@
+Object.seal()
+    阻止添加或删除对象的属性
+结构
+    Object.seal(o)
+参数
+    o
+        待封闭的对象
+返回
+    现在处于封闭状态的参数对象o
+说明
+    Object.seal()将o设置为不可扩展（Object.preventExtensions(),）,同时将它的所有自有属性设置为可不配置。它的最终结果是阻止添加新的属性及删除现有的属性。封闭对象是一个永久性的，一旦封闭，将无法在解封。
+    注意：Object.seal()不经将属性设置为只读的，这个是Object.freeze()的功能，还要注意：不会影响继承属性。也就是说如果一个封闭对象的原型链中有一个非封闭对象，是可以在里面进行添加或删除对应的继承属性
+    这不是一个在对象上调用的方法，而是一个全局函数，因此必须传入一个对象作为其参数。
+相关方法
+    Object.defineProperty(),Object.freeze(),Object.isSealed(),Object.preventExtensions()

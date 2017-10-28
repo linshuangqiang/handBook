@@ -1,0 +1,7 @@
+Function.prototype()
+    对象类的原型
+结构
+    function.prototype
+说明
+    prototype属性会在函数作为构造函数是使用。它指代作为整个对象类的原型对象。用构造函数创建的任何对象都会继承prototype对象引用的对象的所有属性。
+    构造函数、prototype属性和javascrit中的类。参考Object对象

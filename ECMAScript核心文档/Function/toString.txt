@@ -1,0 +1,11 @@
+Function.toString()
+    将函数转化为字符串
+结构
+    function.toString()
+返回
+    表示函数的字符串
+异常
+    TypeError
+        如果调用该函数的对象不是函数，则抛出该异常
+说明
+    Function对象的toString方法能经函数转化为字符串，但其功能与具体实现相关。

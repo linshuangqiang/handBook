@@ -1,0 +1,25 @@
+Array.forEach()
+    为每一个数组元素调用指定函数
+结构
+    array.forEach(f)
+    array.forEach(f,o)
+参数
+    f
+        为每一个数组元素调用的函数
+    o
+        调用f函数的可选this值
+返回值
+    调用f函数时的可选this值
+说明
+    forEach()按照序号从小到达遍历array，并对每一个元素调用一次f函数，对于每一个元素，调用f函数时带有三个参数
+    f(array[i],i,array)
+    f函数的任何返回值都会被忽略，注意forEach()并没有返回值。特别注意：它不会返回array
+数组方法的细节
+    对于forEach，map，filter，every和some的函数。
+    这些方面都接受函数作为第一个参数，并接受可选的第二个参数，如果指定了丁二哥参数o，则调用函数时，就如同使用的函数o中的方法。也就是说，在函数体内，this值等于o。如果没有指定第二个参数，则就像函数一样调用此函数（而不像方法），this值在非严格模式下是全局对象，在严格模式下则为null。
+    所有这些方法都会在遍历时就记录array的长度，如果调用函数把锌元素追加到array内，这些新追加的元素时是不会被遍历的。如果调用的函数修改了未遍历到的存在的元素，则调用时会传递修改后的值。
+示例：
+    var arr = [1,2,3,4,5];
+    arr.forEach(function(x,i,arr){a[i]++});//arr:[2,3,4,5,6]
+相关方法
+    Array.every(),Array.filter(),Array.indexOf(),Array.map(),Array.reduce()    

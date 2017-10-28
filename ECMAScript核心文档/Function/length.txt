@@ -1,0 +1,8 @@
+Function.length
+    声明的参数的个数
+结构  
+    function.length
+说明
+    函数的length属性指定定义函数时所声明的形参个数。实际调用函数时，传入的参数个数可能比函数的length属性多，也可能少。
+相关方法
+    Arguments.length

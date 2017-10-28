@@ -1,0 +1,6 @@
+String.toLowerCase()
+    将一个字符转换为小写
+结构
+    string.toLowerCase()
+返回
+    string的一个副本，如果其中有大写字母，则大写字母转换为对应的小写字母。

@@ -1,0 +1,20 @@
+RegExp.test()
+    测试一个字符串中国年是否匹配一个模式
+结构
+    regexp.test(string)
+参数
+    string
+        待测试的字符串
+返回
+    如果string中包含匹配regexp文本则返回true，否则返回false
+异常
+    TypeError
+        如果在一个非RegExp对象上调用此方法
+说明
+    test方法用于测试字符串string是否包含匹配regexp的文本，如果包含，返回true，否则返回false。调用一个RegExp对象的test方法传入字符串等同于：(r.test != null)。
+示例
+    var pattern = /java/i;
+    pattern.test('JavaScript')//true
+    pattern.test('ECMAScript')//false
+相关方法
+    RegExp.exec(),RegExp.lastIndex,String.match(),RegExp.replace(),String.substring()

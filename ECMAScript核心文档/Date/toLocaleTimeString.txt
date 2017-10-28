@@ -1,0 +1,8 @@
+Date.toLocaleTimeString()
+    返回使用本地格式表示的Date的时间部分
+结构
+    date.toLocaleTimeString()
+返回
+    一个与时间相关，可读的表示date的时间部分的字符串，使用本地时区及本地习惯的格式
+相关方法
+    Date.toDateString(),Date.toLocaleDateString(),Date.toLocaleString(),Date.toString().Date.toTimeString()

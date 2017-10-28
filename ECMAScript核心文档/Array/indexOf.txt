@@ -1,0 +1,18 @@
+Array.indexOf()
+    查找指定元素在数组中的位置
+结构
+    array.indexOf(value)
+    array.indexOf(value,start)
+参数
+    value
+        要在数组中查找的值
+    start
+        开始查找的可选数组序号。如果省略，则为0
+返回值
+    一个大于等于start的最小序号，该序号处的array的元素与value全等，如果数组不存在这样的元素，则返回-1；
+说明
+    该方法在array中查找等于value的元素，并返回找到的第一个元素的序号。查找的起始位置时start指定的数组序号，如果没有指定的，则从0开始，然后依次查找数组，直至找到匹配的元素为止。判断是否相等使用的是全等。返回值是找到的第一个匹配元素的序号，没有则返回-1。
+示例：
+    ['a','b','c'].indexOf('b');//1
+相关方法
+    Array.lastIndexOf(),String.indexOf()

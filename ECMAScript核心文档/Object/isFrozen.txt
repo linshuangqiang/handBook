@@ -1,0 +1,16 @@
+Object.isFrozen()
+    判断对象是否不可改变
+结构
+    Object.isFrozen(o)
+参数
+    o
+        待检测的对象
+返回
+    如果对象o已冻结并不改变则返回true，否则返回false
+说明
+    如果一个对象的所有非继承属性（除了那些带setter方法的）都为只读，或者是封闭的（sealed），则处于冻结状态。如果可以向一个对象添加新的属性，并且不可删除现有的属性，则称之为封闭的。
+    此方法检测它的参数是否为是否为冻结状态，对象一旦冻结，
+    冻结一个对象的常用方法为将它传递给Object.freeze()。也可这样冻结一个对象：将它传递给Object.preventExtensions()，然后调用Object.defineProperty()来将它所有的属性设置为只读并且不可删除的。
+    这个方法不能在对象上调用，是一个全局函数。
+相关方法
+    Object.defineProperty(),Object.freeze(),Object.isExtensible(),Object.isSealed(),Object.preventExtensions(),Object.seal()

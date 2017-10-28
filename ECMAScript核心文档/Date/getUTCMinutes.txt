@@ -1,0 +1,6 @@
+Date.getUTCMinutes()
+    返回一个Date对象的分钟数，世界时间
+结构
+    date.getUTCMinutes()
+返回
+    以世界时间表示的date中的分钟数，返回值介于0-59之间的一个整数

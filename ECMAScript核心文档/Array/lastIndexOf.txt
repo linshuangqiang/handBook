@@ -1,0 +1,16 @@
+Array.lastIndesOf()
+    反向查找数组
+结构
+    array.lastIndexOf(value)
+    array.lastIndexOf(value,start)
+参数
+    value
+        要在array中查找的值
+    start
+        开始查找的可选数组序号，如果省略，则从最后一个元素开始查找
+返回值
+    一个小于等于start的最大序号，该序号处的元素与value全等，如果没有与之匹配的array元素，则返回-1。
+说明
+    该方法在array中从后到前（依次反向）查找等于value的元素，并返回找到的第一个元素的序号，并返回该序号。如果指定了start值，则从此位置开始。否则从最后一个元素开始。判断相等使用的是全等。如果找到了则返回匹配元素的序号，否则返回-1。
+相关方法
+    Array.indexOf(),String.lastIndexOf()

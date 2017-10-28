@@ -1,0 +1,22 @@
+Number.toExponential()
+    使用指数计数法格式化一个数字
+结构
+    number.toExponential(digits)
+参数
+    digits
+        小数点之后出现的数字的数目。值可能在0-20之间，包括0和20。不同的实际环境可能会支持范围更大的值。如果省略此参数，则需要多少数字将显示多少数字。
+返回
+    以指数计数法表示的一个数字的字符串格式，小数点前有一个数字，小数点后面有digits个数字，数字的小数部分将根据四舍五入或补0，以便与自定的长度相符。
+异常
+    RangeError
+        digits参数太大或太小。0-20之间（包括0和20）不会产生RangeError。不过不同的实现环境可能会支持更大或更小的值
+    TypeError
+        这个方法在非Number对象上调用
+示例
+    var num = 12345.6789;
+    num.toExponential(1)//1.2E+4
+    num.toExponential(5)//1.23457E+4
+    num.toExponential(10)//1.2345678900E+4
+    num.toExponential()//1.23456789E+4
+相关方法
+    Number.toFixed(),Number.toLocaleString(),Number.toPrecision(),Number.toString()

@@ -1,0 +1,6 @@
+Date.getUTCFullYear()
+    返回一个Date对象的年份值（世界水岸）
+结构
+    date.getUTCFullYear()
+返回
+    以世界时间表示的date的年份值。返回值是一个完整的4位数字的年份。

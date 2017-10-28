@@ -1,0 +1,19 @@
+Object.hasOwnProperty()
+    检查一个属性是否是继承的
+结构
+    object.hasOwnProperty(propname)
+参数
+    propname
+        包含对象的属性名的字符串
+返回
+    返回一个布尔值，如果对象具有一个指定名字的非继承的属性则返回true，如果没有，或者此属性是从它的原型对象中继承的，则返回false。
+说明
+    javascript对象可以有自己的属性，也可以从他们的原型对象中继承属性。此方法提供了一个可以识别继承属性和非继承属性的本地属性的方法。
+示例
+    var o = new Object();
+    o.x = 10;
+    o.hasOwnProperty("x");//true
+    o.hasOwnProperty("y");//false
+    o.hasOwnProperty('toString');//false;此属性是继承而来的
+相关方法
+    Function.property(),Object.propertyIsEnumerable()

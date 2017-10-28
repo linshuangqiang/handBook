@@ -1,0 +1,101 @@
+Date
+    操作日期和时间
+构造函数
+    new Date()
+    new Date(milliseconds)
+    new Date(datestring)
+    new Date(year,month,day,hours,minutes,seconds,ms)
+    不带参数时，构造函数将根据当前日期和时间创建一个Date对象。当传入一个数字参数是，这个数字将作为日期的内部数字表示形式，单位为毫秒，值为对应的getTime()方法的返回值。当传入一个字符串参数时，它将作为当前日期的字符串表示形式，格式为Date.parse()方法接受的格式。在其他情况下，应该向构造函数传入2-7个数字参数，用于指定日期及时间的各个字段，除了前两个参数（年和月），其余的参数都是可选的，这些日期和时间值是使用本地时间指定的，而不是国际协调时间（UTC）（与格林尼治标准时间[GMT]类似）。替代方法：Date.UTC()。
+    Date()也可以不带new操作符，像调用一个函数一样，这样就回忽略掉所有传入的参数，并返回当前日期和时间的一个字符串表示。
+参数
+    milliseconds
+        需要的时间与1910年1月1日午夜（UTC）之间的毫秒数。例如：5000将创建一个表示1910-01-01午夜之后5秒钟的时间
+    datestring
+        一个以字符串形式定义日期（以及时间，可选）的参数。这个字符串应当为Date.parse()可接受的一种格式。
+    year
+        年份，4位数字。如果参数是0-99之间，则向它加上1900来兼容早期实现的JavaScript兼容
+    mouth
+        月份，介于0（表示1月）到11（表示12月）之间的呃一个整数
+    day
+        月份中的第几天，介于1-31之间的一个整数，注意这个参数使用1作为最小的值，而其他参数是使用0作为最小值。可选
+    hours
+        小时，0（午夜）-23（晚上11）之间的整数，可选
+    minutes
+        小时中的分钟，0-59之间的一个整数，可选
+    seconds
+        秒，0-59之间的一个整数，可选
+    ms
+        毫秒，0-999之间的整数，可选
+方法
+    get[UTC]Date()
+        返回Date对象的月份中的日期值，本地或世界时间
+    get[UTC]Day()
+        返回Date对象的一周中的日期值，本地或世界时间
+    get[UTC]FullYear()
+        返回日期的年份，为4外数字的格式，本地或世界时间
+    get[UTC]Hours()
+        返回Date对象中的小时，本地或世界时间
+    get[UTC]Milliseconds()
+        返回Date对象的毫秒，本地或世界时间
+    get[UTC]Minutes()
+        返回Date对象的分钟数，本地或世界时间
+    get[UTC]Month()
+        返回Date对象的月份值，本地或世界时间
+    get[UTC]Seconds()
+        返回Date对象的秒，本地或世界时间
+    getTime()
+        返回Date对象的内部毫秒表示形式。注：与时区无关，因此，没有一个单独的getUTCTime()方法
+    getTimezoneOffset()
+        返回当前日期的本地表示与UTC表示之间相差的分钟数。注：返回值依赖与指定日期的夏令时是否有效
+    getYear()
+        返回Date对象的年份值。建议使用getFullYear
+    set[UTC]Date()
+        设置日期的月份的日期值，使用本地或世界时间
+    set[UTC]FullYear()
+        设置日期的年份值，使用本地或世界时间
+    set[UTC]Hours()
+        设置日期的小时值（以及可选的分钟数、秒和毫秒），使用本地或世界时间
+    set[UTC]Milliseconds()
+        设置日期的毫秒值，使用本地或世界时间
+    set[UTC]Minutes()
+        设置日期的分钟值（可选秒及毫秒），使用本地或世界时间
+    set[UTC]Month()
+        设置日期的月份值（以及可选的月份中的天数），使用本地或世界时间
+    set[UTC]Seconds()
+        设置日期的秒（可选的毫秒），使用本地或世界时间
+    setTime()
+        使用毫秒的格式，设置一个Date对象的值
+    setYear()
+        设置一个Date对象的年份值，建议使用setFullYear()
+    toDateString()
+        返回一个表示当前日期的日期部分的字符串，使用本地时区
+    toGMTString()
+        使用GMT时区，将一个Date转换为一个字符串。已弃用，建议使用toUTCString()
+    toISOString()
+        将一个Date转为字符串，使用ISO-8601标准来组合日期/时间格式和UTC。
+    toJSON()
+        将一个Date对象JSON序列化，
+    toLocaleDateString()
+        返回一个表示当前日期的日期本分的字符串，使用本地时区，本地时间格式
+    toLocaleString()
+        将一个Date对象转化为字符串，使用本地时区及本地时间格式
+    toLocaleTimeString()
+        返回一个表示当前日期的时间部分的字符串。使用本地时区及本地时间格式
+    toString()
+        使用本地时区将一个Date转为字符串
+    toTimeString()
+        返回一个表示指定日期的时间部分的字符串，使用本地时区表示
+    toUTCString()
+        将一个Date转换为字符串，使用世界时间
+    valueOf()
+        将一个Date转为对应的内部毫秒格式
+静态方法
+注：通过Date()的构造函数本身调用，而不是通过各个Date对象
+    Date.now()
+        返回当前时间
+    Date.parse()
+        解析一个日期及时间的字符串表示，返回该日期的内部毫秒数表示
+    Date.UTC()
+        返回指定的UTC日期及时间的毫秒数
+Date对象是javascript语言中内置的数据类型。
+    

@@ -1,0 +1,11 @@
+Number.toLocaleString()
+    将一个数字转换为本地格式的字符串
+结构
+    number.toLocaleString()
+返回
+    根据本地格式化当前数字为一个字符串，与具体的实现无关，例如可能会影响小数点使用的标点符号或者千分位分隔符。
+异常
+    TypeError
+        这个方法在一个非Number对象上调用
+相关方法
+    Number.toExponential(),Number.toFixed(),Number.toPrecision(),Number.toString()

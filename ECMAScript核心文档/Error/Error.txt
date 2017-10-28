@@ -1,0 +1,44 @@
+Error
+    一个一般性的异常
+构造函数
+    new Error()
+    new Error(message)
+参数
+    message
+        一条可选的错误消息，用于提供关于该异常的细节
+返回
+    一个新构建的Error对象。如果指定message参数，则该Error对象将把它用做它的message属性的值，其他情况下，它将使用一个预定于的默认字符串作为该属性的值。当不使用new操作符，直接将Error()构造函数像一个函数一样调用时，它的性为和带new操作符调用是一样的。
+属性
+    message
+        提供关于该异常的一条错误消息。这个属性的值为传给构造函数的字符串或一个预定义的默认字符串。
+    name
+        一个指定该异常的类型的字符串。对Error类和它所有的子类而言，这个属性指定了用于创建该实例的构造函数的名字。
+方法
+    toString()
+        返回一个表示该Error对象的预定义字符串。
+说明
+    Error类的实例表示的错误或异常通常与throw和try/catch语句一起使用，name属性指明该异常的类型，message属性则提供了关于该异常的可读细节。
+    JavaScript解释器永远不会直接抛出Error对象，它只会抛出Error的某个子类的实例。如：SyntaxError或RangeError。
+    注：虽然ES标准为Error类定义一个toString方法（并且Error所有的子类都继承了这个方法），但并不要求这个方法返回的字符串包含message属性的内容。因此，不要期望toString方法将一个Error对象转为一个有意义的、可读的字符串。像用户显示错误信息时，应该显示的使用该Error对象的name及message属性。
+示例
+    抛出异常
+    function factorial(x){
+        if(x < 0){
+            throw new Error('factorial : x must be >= 0');
+        }
+        if(x <= 0){
+            return 1;
+        }else{
+            return x*factorial(x-1)
+        }
+    }
+    或捕获异常
+    try{
+    
+    }catch(e){
+        if(e instanceof Error){
+            console.log(e.name + ":" + e.message)
+        }
+    }
+相关方法
+    EvalError,RangeError,ReferenceError,SyntaxError,TypeError,URIError

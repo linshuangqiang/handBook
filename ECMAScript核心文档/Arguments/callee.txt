@@ -1,0 +1,16 @@
+Arguments.callee
+   当前正在执行的函数
+结构
+    arguments.callee
+说明
+    arguments.callee指代正在执行的函数，通过它可以引用匿名函数本身。该属性只定义在函数体中。
+示例
+    //实现一个递归
+    var factorial = function(x){
+        if(x < 2){
+            return 1;
+        }else{
+            return x * arguments.callee(x-1);
+        }
+    } 
+    var y = factorial(5);//120

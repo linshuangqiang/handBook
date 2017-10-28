@@ -1,0 +1,11 @@
+Date.now()
+    以毫秒的形式返回当前时间
+结构
+    Date.now()
+返回
+    从1970-1-1午夜（GMT）到现在时间的毫秒数
+说明
+    在es5之前的实现方式：
+        Date.now = function(){return (new Date()).getTime();}
+相关方法
+    Date,Date.getTime()

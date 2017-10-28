@@ -1,0 +1,32 @@
+RegExp.exec()
+    通用的模式匹配
+结构
+    regexp.exec(string)
+参数
+    string
+        要搜索的字符串
+返回
+    一个包含匹配结果的数组，如果没有找到匹配内容则为null。
+异常
+    TypeError
+        如果在非RegExp对象上调用此方法
+说明
+    exec()是所有的RegExp和String模式匹配中最强大的一个。它是一个通用的方法，有事使用起来比RegExp.test(),String.search(),String.replace()以及String.match()更为复杂。
+    exec在string中搜索匹配regexp的文本。如果它找到一个匹配项，则返回一个由匹配结构组成的数组；否则返回null。
+    返回数组的元素0是匹配的文本，元素1是匹配regexp中第一个带圆括号的子表达式的文本，如果存在这样的子表达式。元素2包含匹配第二个子表达式，一次类推。
+    数组的length属性指定该数组中包含的元素的个数，除了疏数组元素和length属性外，exec()返回的值还有另外两个属性。input和index。
+    index属性指定匹配的文本的第一个字符的位置
+    input属性则指代string，在一个非全局的RegExp对象上调用时，本函数返回的数组和String.match()方法返回的数组一样
+    在一个非全局的模式上调用exec()时，它将执行搜索并返回当前描述的结果。不过，如果regexp时一个全局正则表达式，exec()的行为将会复杂一点。它从regexp的lastIndex属性指定的位置开始搜索，当它找到一个匹配项时，将从lastIndex设置为该模式之后的第一个字符的位置。这意味着可以重复调用exec()，以便循环遍历一个字符串中所有的匹配项。如果exec()找不到匹配项，将返回null并将lastIndex设置为0。如果在成功的找个一个字符出的匹配项后，立刻开始搜索一个新的字符串，就必须小心地手动将lastIndex重置为0
+    注意：exec()总是包含它返回的数组中的每一个匹配项的全部细节，无论regexp是否为一个全局模式。这个exec()和String.match()不同的地方，后者在使用全局匹配时只返回很少的信息，要想获得一个全局模式的完整匹配信息，唯一的方法就是在一个循环中重复调用exec()方法。
+示例
+    可以在一个循环中使用exec()来在一个字符串中找到所有匹配项。
+    var pattern = /\bJava\w*\b/g;
+    var text = 'JavaScript is more fun than Java or JavaBeans!';
+    var result;
+    while((result = pattern.exec(text)) != null){
+        console.log(result)
+        console.log("Matched'" + result[0] + "'at position" + result.index + "next search begins at position"+pattern.lastIndex)
+    }
+相关方法
+    RegExp,lastIndex,RegExp.test(),String.match(),String.replace(),String.search()

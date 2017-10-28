@@ -1,0 +1,19 @@
+EvalError
+    当eval()使用错误时抛出
+构造函数
+    new EvalError()
+    new EvalError(message)
+参数
+    message
+        一条可选的错误消息，提供了关于该异常的细节。如果指定这个参数将用做这个EvalError对象的message属性的值。
+返回
+    一个新构造的EvalError对象，如果指定参数message参数，则Error对象将把它用做其他message属性的值。在其他情况下，它将使用预定义的默认字符串作为该属性的值。当不带new操作符，像一个函数一样调用EvalError构造函数时，它的行为和带new操作符调用是一样的。
+属性
+    message
+        一条提供该异常细节的错误消息。这个属性的值为传入构造函数的字符串或者自定义实现的默认字符串。
+    name
+        一个指定该异常类型的字符串。所有EvalError对象的这个属性继承自值“EvalError”
+说明
+    当全局函数eval()以任意其他名字调用时，可能会抛出EvalError类的一个实例。
+相关方法
+    Error,Error.message,Error.name

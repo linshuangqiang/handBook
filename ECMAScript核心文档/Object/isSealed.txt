@@ -1,0 +1,14 @@
+Object.isSealed()
+    判断一个对象的属性是否可添加或删除
+结构
+    Object.isSealed()
+参数
+    o
+        待检测的对象
+返回
+    如果o是封闭的则为true，否则为false
+说明
+    如果不可以向一个对象添加新（非继承）的属性，并且现有属性不可删除，则称它为封闭的。Object.isSealed()检测它的参数是否为封闭对象。对象一旦封闭，是没有办法解封的。封闭一个对象的常用方法是将它传递给Object.seal()或Object.freeze()。也可以这样封闭：将一个对象传入Object.preventExtensions(),在使用Object.defineProperty()来将它的所有属性设置为不可删除。
+    这个方法不能在对象上调用，是一个全局函数。
+相关方法
+    Object.defineProperty(),Object.freeze(),Object.isExtensible(),Object.isFrozen(),Object.preventExtensions(),Object.seal()

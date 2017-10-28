@@ -1,0 +1,10 @@
+Date.toUTCString()
+    将一个Date转化为字符串，世界时间
+结构
+    date.toUTCString()
+返回
+    date的一个可读的以全球时间表示的字符串
+说明
+    toUTCString返回date的以全球时间表示的与实现相关的字符串
+相关方法
+    Date.toISOString(),Date.toLocaleString(),Date.toString()

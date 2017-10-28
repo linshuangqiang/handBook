@@ -1,0 +1,10 @@
+JSON
+    JSON解析与字符串化
+说明
+    JSON是一个简单的对象，用ES5中全局函数JSON.parse()与JSON.stringify()的命名空间。JSON不是构造函数，在ES5之前，JSON解析与序列化函数的兼容版本可以参考：http://json.org/json2.js
+    JSON表示JavaScript Object Notation（JavaScript对象标记）。JSON是一种数据序列化格式，基于JavaScript的直接量，可以表示null值、布尔值、浮点数（使用数值直接量）、字符串（字符串直接量）、数组（数组直接量语法）以及字符串到值的映射（使用对象直接量语法）。JSON不能表示原始值undefined、数值NaN和Infinity。JavaScript函数、日期、正则表达式和异常错误在JSON中不支持
+示例
+    //深拷贝可被JSON序列化的对象或数组
+    function deepcopy(o){return JSON.parse(JSON.stringify(o));}
+相关方法
+    JSON.parse(),JSON.stringify()

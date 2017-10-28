@@ -1,0 +1,12 @@
+Date.setUTCSeconds()
+    设置一个Date表示的秒及毫秒数，世界时间
+结构
+    date.setUTCSeconds(seconds)
+    date.setUTCSeconds(seconds,millis)
+参数
+    seconds
+        0-59之间的一个整数，用做date表示的秒数    
+    millis
+        0-999之间的一个可选整数，用做date表示的毫秒数
+返回
+    调整后的日期的毫秒数 

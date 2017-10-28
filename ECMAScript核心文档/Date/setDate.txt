@@ -1,0 +1,9 @@
+Date.setDate()
+    设置一个Date对象的一个月份中的日期值
+结构
+    date.setDate(day_of_month)
+参数
+    day_of_month
+        1-31之间的一个整数，将用做date的对应月中的日期值（本地时间）
+返回
+    调整后的日期的毫秒数表示形式，在有ES标准之前，这个方法什么也不返回

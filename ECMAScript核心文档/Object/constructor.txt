@@ -1,0 +1,19 @@
+Object.constructor
+    对象的构造函数
+结构
+    object.constructor
+说明
+    所有对象的constructor属性都指向用做当前对象的构造函数的那个函数。例如：
+    var arr = new Array(1,2,3);
+    a.constructor == Array //true
+    可以看出a.constructor是一个Array
+    constructor属性经常用于检测未知对象的类型。给定一个未知的值，可以使用typeOf操作符来检查它是一个原始值还是一个对象。如果是一个对象，则可以使用constructor属性来检测对象的类型。
+    例如检测一个值是不是一个数组的方法
+    var x = [1,2,3,4]
+    function isArray(x){
+        return ((typeof x == "object") && (x.constructor == Array))//Array没有引号
+    }
+    isArray(x)
+    constructor只对核心的JavaScript内置对象有效。Object.toString()方法提供了另一种判断未知对象类型的方法。
+相关方法
+    Object.toString()

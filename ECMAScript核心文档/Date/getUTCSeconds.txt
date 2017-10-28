@@ -1,0 +1,6 @@
+Date.getUTCSeconds()
+    返回一个Date的秒数值，世界时间
+结构
+    date.getUTCSeconds()
+返回
+    以世界时间表示的date的秒数值，返回值介于0-59之间的一个整数

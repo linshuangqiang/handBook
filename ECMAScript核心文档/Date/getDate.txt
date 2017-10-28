@@ -1,0 +1,6 @@
+Date.getDate()
+    返回一个Date对象的月份中的日期值
+结构
+    date.getDate()
+返回
+    给定Date对象date的月份中的日期值，使用本地时间，返回1-31之间的一个值

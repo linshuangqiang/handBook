@@ -1,0 +1,23 @@
+String.slice()
+    提取一个子串
+结构
+    string.slice(satrt,end)
+参数
+    start
+        子串开始的子串索引，如果为负，则从尾部开始计算，-1表示最后一个字符，-2表示倒数第二个字符。
+    end
+        子串结束的字符串索引，如果不指定，则到结尾处，如果是负数，则从尾部开始计算。
+返回
+    一个新的字符串，内容为string中从start（包含）到end（不包含）的所有字符
+说明
+    slice方法返回一个字符串，内容为string字符串的一个切片或子串。不会修改string字符串的。
+    String对象中的slice、substring以及被弃用的substr都会返回一个字符串的指定部分。
+    slice比substring更灵活，因为slice允许为负值。slice与substr的不同之处是：前者通过两个字符位置来定义一个子串，而后者则使用一个位置和一个长度的。
+    注意String.slice与Array.slice比较类似。
+示例：
+    var s = 'abcdefg';
+    s.slice(0,4);//abcd
+    s.slice(2,4);//cd
+    s.slice(3,-1);//def
+相关方法
+    Array.slice(),String.substring()    

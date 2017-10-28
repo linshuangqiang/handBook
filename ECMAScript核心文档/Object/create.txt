@@ -1,0 +1,23 @@
+Object.create()
+    使用指定的原型和属性来创建一个对象
+结构
+    Object.create(proto)
+    Object.create(proto,descriptors)
+参数
+    proto
+        向创建对象的原型，可为null
+    descriptors
+        一个可选的对象，把属性名映射到属性描述符
+返回
+    一个新创建的对象，继承自proto，同时拥有descriptors所描述的属性。
+说明
+    Object.create()创建并返回一个新的对象，其原型为proto。新对象将会继承proto对象的属性。
+    如果指定了descriptors可选参数，则Object.create()将把指定的属性添加到新对象中，等同调用了Object.defineProperties()。
+    示例： 
+    //创建一个对象，具有x、y属性，同时继承属性z
+    var o = Object.create({z:0},{
+        x:{value:1,writable:false,enumerable:true,configurable:true},
+        y:{value:2,writable:false,enumerable:true,configurable:true},
+    })
+相关方法
+    Object.defineProperty(),Object.defineProperties(),Object.getOwnPropertyDescriptor()

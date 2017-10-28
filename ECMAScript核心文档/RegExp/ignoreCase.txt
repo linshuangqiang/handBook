@@ -1,0 +1,6 @@
+RegExp.ignoreCase
+    一个正则表达式是否忽略大小写
+结构
+    regexp.ignoreCase
+说明
+    ignoreCase是RegExp对象的一个只读的布尔值属性。它指定一个正则表达式是否执行忽略大小写的匹配。也就是说，创建它时是否带有i属性

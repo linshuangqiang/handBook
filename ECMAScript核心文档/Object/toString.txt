@@ -1,0 +1,21 @@
+Object.toString()
+    定义一个对象的字符串表示形式
+结构
+    object.toString()
+返回
+    一个表示该对象的字符串
+说明
+    在javascript中一般不会显示调用toString方法的。一般情况下，在对象中定义这个方法，系统会在需要的时候自动调用它来将对象转换为字符串的。
+    当对象在一个字符串上下文中使用是，javascript系统会调用相应的toString方法来将该对象转化为字符串。如：把一个对象传入期望参数为字符串的函数时，这个对象就回转为字符串。
+    当使用+操作符来将字符串与对象连接时，对象也会被转化为字符串的。
+    调用toString时没有参数，返回值是一个字符串。返回的字符串应该以某种形式与调用这个方法的对象的值相关
+    在javascript中定义自定义类是，为之定义一个toString方法是一个良好的习惯。否则会继承Object类的toString方法。默认的返回值：[objectclass];
+    其中calss值是该对象的类：Object，String，Number，Function，Window，Document等等，
+    不过，由于大多数对象都有自动以版本的toString，因此一般需要在对象上显示地调用Object.toString方法
+    Object.prototype.toString.call(o)
+    注意：这个判断未知对象的技术只适应于内置对象。自定义的对象类有一个“Object”类。在这种情况下，可以使用Object.constructor属性来获得更多有关此对象的信息。
+    还可以使用toString强制转化为字符串。
+    var x = 10；
+    x.toString()
+相关方法
+    Object.constructor,Object.toLocaleString(),Object.valueOf()

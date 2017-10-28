@@ -1,0 +1,36 @@
+RegExp
+    用于模式匹配的正则表达式
+直接量语法
+    /pattern/attributes
+构造函数
+    new RegExp(pattern,attribute)
+参数
+    pattern
+        一个指定正则表达式的模式的字符串或另一个正则表达式
+    attribute
+        一个可选字符串，包含任意g、i及m属性，分别表示全局、区分大小写及多行匹配。在ES标准之前m属性不可用。
+返回
+    一个新的RegExp对象，内容为指定的模式及标志。如果pattern参数是一个正则表达式而非一个字符串，则RegExp()构造函数将使用和指定的RegExp以一样的模式及标志来创建一个新的RegExp()对象。如果不待new操作符，像调用函数一样调用RegExp()，则它的行为和带new操作符是一样的，不过pattern是一个正则表达式时有所不同，在这种情况下，只是简单的返回pattern，而不会创建一个RegExp对象。
+异常
+    SyntaxError
+        如果pattern不是一个合法的正则表达式，或attributes参数包含除：g、i、m之外的字符
+    TypeError
+        如果pattern是一个RegExp对象，同时没有省略attributes参数
+属性
+    global
+        当前RegExp对象是否具有g属性
+    ignoreCase
+        当前RegExp对象是否具有i属性
+    lastIndex
+        最后匹配的字符的位置，用于在字符串中找到多个匹配的情况
+    multiline
+        当前RegExp对象是否具有m属性
+    source
+        对应正则表达式的源文本
+方法
+    exec()
+        执行强大的、通用的模式匹配
+    test()
+        测试一个字符串是否包含某个模式
+说明
+    RegExp对象代表一个正则表达式，这是一个用于在字符串上执行强大的模式匹配的工具。

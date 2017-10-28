@@ -1,0 +1,18 @@
+String.search()
+    根据一个正则表达式查找
+结构
+    string.search(regexp)
+参数
+    regexp
+        一个RegExp对象，指定在字符串中中的查找模式，如果这个参数不是一个RegExp对象，会先给给RegExp构造函数，转换为一个RegExp对象的。
+返回
+    string 字符串中第一个匹配regexp的子串的开始位置，如果没有找到匹配则返回-1
+说明
+    search在string中寻找匹配regexp的子串，并返回匹配字符串的第一个字符在string中的位置，如果没有找到则返回-1.
+    search不执行全局匹配，会直接忽略全局g标志的，也会忽略regexp的lastIndex属性，总是从string字符的开始位置进行搜索，也就是说总是会返回string中第一个匹配子串的位置。
+示例
+    var string = "JavaScript is Fun";
+    string.search(/script/i);//4
+    string.search(/a(.)a/)//1
+相关方法
+    RegExp,RegExp.exec(),RegExp.test(),String.match(),String.replace()    

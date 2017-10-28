@@ -1,0 +1,48 @@
+Function
+    JavaScript的函数
+结构
+    //函数定义语句
+    function functionName(arguments_name_list){
+        //函数体 body
+    }
+    //匿名函数直接量
+    function (arguments_name_list){
+        //函数体 body
+    }
+    //函数调用语句
+    functionName(arguments_name_list)
+构造函数
+    new Function(argument_names...,body)
+参数
+    argument_names
+        任意多个字符串参数，每个字符串命名要创建的Function对象的一个或多个参数
+    body
+        指定函数体的字符串，可以包含任意多条javascript语句，这些语句之间用分号隔开，并且可以引用任意参数名，这些参数由前面提到的传递给构造函数的参数指定
+返回
+    新创建的Function对象，调用该函数会指定由body指定的javascript代码的
+异常
+    SyntaxError
+        表示在body参数或某个argument_names参数中存在的javascript语法错误
+属性
+    arguments[]
+        传递给函数的参数数组，不推荐使用
+    caller
+        调用该函数的Function对象的引用，如果是全局调用，则该属性为null，不推荐使用
+    length
+        声明函数时指定的形参个数
+    prototype
+        一个给构造函数调用的对象。用构造函数创建的所有对象会共享prototype对象定义的属性和方法
+方法
+    apply()
+        将函数作为指定对象的方法来调用。传递给它的是指定的参数数组
+    bind()
+        返回一个新函数。通过可选的指定参数，作为指定对象的方法调用该方法
+    call()
+        将函数作为指定对象的方法来调用。传递给它的是自定的参数
+    toString()
+        返回函数的字符串表示
+说明
+    函数是javascript的一种基本数据类型。包括如何定义和使用函数，方法，构造函数及函数的prototype属性。
+    注意：虽然可以使用Function构造函数来创建函数对象，但效率比较低。推荐使用函数定义语句或函数直接量来定义函数。
+相关方法
+    arguments

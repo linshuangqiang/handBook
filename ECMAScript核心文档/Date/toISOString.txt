@@ -1,0 +1,8 @@
+Date.toISOString()
+    将一个Date转化为ISO-8601格式的字符串
+结构
+    date.toISIString()
+返回
+    date的一个字符串表示形式，以ISO-8601标准以及时区为z的UTC时间表示形式，包括日期和时间的完整精度。返回的字符串格式为：yyyy-mm-ddThh:ss:sssz
+相关方法
+    date.parse(),Date.toString()

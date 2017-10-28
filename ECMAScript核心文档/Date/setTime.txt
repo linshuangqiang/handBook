@@ -1,0 +1,9 @@
+Date.setTime()
+    使用毫秒值设置一个时间
+结构
+    date.setTime(milliseconds)
+参数
+    milliseconds
+        需要的日期值与1970-1-1午夜（GMT）之间的毫秒数。这种类型的毫秒数也可以传入Date的构造函数，也可以通过调用Date.UTC()和Date.parse()方法获得。将日期转化为这种毫秒格式，与时区无关。
+返回
+    返回milliseconds参数。在ES标准之前，没有返回值。

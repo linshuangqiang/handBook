@@ -1,0 +1,19 @@
+RangeError
+    当一个数字超出合法的范围时抛出
+结构
+    new RangeError()
+    new RangeError(message)
+参数
+    message
+        提供关于异常的细节信息的可选错误信息。如果指定，则这个参数将用做当前RangeError对象的message属性的值
+返回
+    一个新构造的RangeError对象。如果指定message参数，则Error对象将把它作为其他message属性的值；在其他情况下，它可以使用预设的默认值作为这个属性的值。不使用new操作符，像调用函数一样调用RangeError()构造函数时，它的行为和使用new操作符调用时是一样的
+属性
+    message
+        提供了关于当前异常的细节的错误信息。这个属性的值为传入构造函数的字符串或预定义的默认字符串。
+    name 
+        一个指定异常类型的字符串。所有RangeError对象的这个属性都继承自RangeError
+说明
+    当一个数值不在合法的范围内时，将抛出RangeError类的一个实例，例如：将数组的长度设置为负数将抛出一个RangeError。
+相关方法
+    Error，Error.message,Error.nane

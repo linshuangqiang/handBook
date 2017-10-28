@@ -1,0 +1,11 @@
+Object.toLocaleString()
+    返回对象的本地化字符串
+结果
+    object.toLocaleString()
+返回
+    一个表示该对象的字符串
+说明
+    这个方法用于返回一个表示当前对象的字符串，使用合适的本地化格式。Object类题佛难过的默认的toLocaleString方法只是简单的调用toString方法而已的，并返回后者返回的非本地化的字符串。
+    注意：其他的类（Array、Date、Number）都各自定义了自己的这个方法的版本，用于执行本地化字符串转换，定义自己的类是，也可能需要覆盖这个方法的。
+相关方法
+    Array.toLocaleString(),Date.toLocaleString(),Number.toLocaleString(),Object.toString()

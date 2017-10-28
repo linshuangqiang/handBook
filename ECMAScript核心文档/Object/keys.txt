@@ -1,0 +1,16 @@
+Object.keys()
+    返回自有的可枚举属性名
+结构
+    Object.keys(o)
+参数
+    o
+        一个对象
+返回
+    一个包含o的所有可枚举自有（非继承）属性名的数组
+说明
+    Object.keys()返回指定对象o的属性名著称的数组。这个数组只包含那些可枚举并且直接定义在o上的属性的名字。可过想获取不可枚举的属性名可参考Object.getOwnPropertyNames()。返回数组中的属性名的顺序即为通过for/in循环枚举的顺序。
+    这个方法不能在对象上调用，是一个全局函数。
+示例
+    Object.keys({x:1,y:2});//['x','y']
+相关方法
+    Object.getOwnPropertyNames()

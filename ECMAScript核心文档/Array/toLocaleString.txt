@@ -1,0 +1,12 @@
+Array.toLocaleString()
+    将数组转化为本地化字符串
+结构
+    array.toLocaleString()
+返回值
+    数组的本地化字符串。
+异常
+    如果调用该方法时，对象不是Array。则抛出异常（TypeError）。
+说明
+    数组的toLocaleString方法返回数组的本地化字符串表示。首先调用所有数组元素的toLocaleString方法，然后使用地区特定的分割字符将结果字符串连接起来。
+相关方法
+    Array.toString(),Object.toLocaleString()

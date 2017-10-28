@@ -1,0 +1,7 @@
+Date.getYear()
+    返回一个date对象的年份值
+    date.getYear()
+返回
+    给定Date对象的年份值减去1900
+说明
+    getYear方法返回给定date的年份减去1900.自ES3以后，以不在要求实现此方法，使用getFullYear方法来替代它

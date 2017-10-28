@@ -1,0 +1,6 @@
+Boolean.valueOf()
+    Boolean对象的布尔值
+结构
+    b.valueOf()
+返回
+    Boolean对象b存放的原始布尔值。

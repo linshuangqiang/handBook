@@ -1,0 +1,9 @@
+Array.reverse()
+    颠倒数组中的元素顺序
+结构
+    array.reverse()
+说明
+    Array对象的reverse方法可以颠倒数组元素的顺序。它会在原数组中进行操作，从整array中的值，而不会新创建一个数组。如果array右多个引用，该数组元素的新顺序在所有引用中可见
+示例
+    var arr = [1,2,3];
+    arr.reverse()//arr => [3,2,1]

@@ -1,0 +1,6 @@
+Date.getUTCDate()
+    返回一个Date对象的一个月中的日期值（世界时间）
+结构
+    date.getUTCDate()
+返回
+    以全球时间表示的date中一个月中的日期值，介于1-31之间

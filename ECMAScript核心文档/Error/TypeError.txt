@@ -1,0 +1,10 @@
+TypeError
+    当一个值类型错误时抛出
+构造函数
+    new TypeError()
+    new TypeError(message)
+参数
+    message
+        一条可选的错误消息，提供关于该异常的细节。如果指定，则这个参数将用做对应的TypeError对象的message属性的值
+返回
+    一个新建的TypeError对象，如果指定message参数，则对应的Error对象将把这个参数用做它的message属性的值；在其他情况下，它将使用预定义的默认字符串作为这个属性的值，当不带new操作符将TypeError()构造函数当作一个函数调用时，它的行为和带new操作符调用时时一样的。

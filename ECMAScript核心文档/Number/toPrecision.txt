@@ -1,0 +1,22 @@
+Number.toPrecision()
+    格式化一个数字的有效数字
+结构
+    number.toPrecision(precision)
+参数
+    precision
+        返回的字符串中包含的有效数字位数，值可能在1-21之间，包括1和21。不同的实现环境可能支持更大或更小的精度值。如果省略这个参数，则将调用toString方法来将当前数字转换为一个十进制的值。
+返回
+    一个包含precision位有效数字的数字字符串。如果precision足够大，包括当前数字的所有整数部分，则返回值将使用定点计数法表示。其他情况下，将使用指数计数法，小数点之前有一个数字，之后有个precision-1个数字。根据需要，这个数字将四舍五入或末尾补0
+异常
+    RangeError
+        参数太大或太小
+    TypeError
+        这个方法在一个非Number对象上调用
+示例
+    var num = 12345.6789;
+    num.toPrecision(1)//1e+4
+    num.toPrecision(3)//1.23e+4
+    num.toPrecision(5)//12346
+    num.toPrecision(10)//12345.67890
+相关方法
+    Number.toExponential(),Number.toFixed(),Number.toLocaleString(),Number.toString()

@@ -1,0 +1,15 @@
+isNaN()
+    检查是否非数值
+结构
+    isNaN(x)
+参数
+    x
+        要检测的值
+返回
+    如果x不是数值，或者是NaN这个特殊的数值时，返回true。如果x是其他任何数值，返回false。
+说明
+    NaN是“not-a-number”（不是数值）的缩写。全局变量NaN保持的是一个特殊数值，表示是无效数值。isNaN方法检测其参数是否不是数值。如果x是数值或可以转换为数值，但不是NaN，则返回false。如果x不是数值或者不可以转换为数值或者为NaN，则返回true。
+    NaN由一个独特的特性，它不等于任何值，包括它自己。因此项专门测试一个值是不是NaN。可以使用 x!==x，当x是NaN时，结果为true
+    使用isNaN的常见 是用啦检测parseInt和parseFloat方法的。
+相关方法
+    isFinite(),NaN,Number.NaN,parseInt(),parseFloat()

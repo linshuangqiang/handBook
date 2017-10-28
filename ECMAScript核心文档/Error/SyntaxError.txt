@@ -1,0 +1,19 @@
+SyntaxError
+    抛出以便通知一个语法错误
+构造函数
+    new SyntaxError()
+    new SyntaxError(message)
+参数
+    message
+        一条可选的错误消息，提供关于该异常的详细信息。如果指定，这个参数将用做对应的SyntaxError对象的message属性的值。
+返回
+    一个新构造函数的SyntaxError对象，如果指定message参数，则该Error对象将使用它作为自己的message属性的值，在其他情况下，它将使用一个预定义的默认字符串作为该属性的值。当不使用new操作符将SyntaxError()构造函数作为一个函数调用时，它的行为和使用new操作符是一样的。
+属性
+    message
+        一条提供关于该异常的细节的错误消息。这个属性的值为传入构造函数的字符串的值，或为预定义的默认字符串。
+    name
+        一个指定该异常的类型的字符串。所有的SyntaxError对象的这个属性的都继承自“SyntaxError”
+说明
+    在JavaScript中，SyntaxError类的实例用于在通知语法错误时抛出。eval()方法、Function()构造函数以及RegExp()构造函数都可能抛出这种类型的异常。
+相关方法
+    Error,Error.message,Error.name

@@ -1,0 +1,14 @@
+Date.parse()
+    解析一个日期/时间字符串
+结构
+    Date.parse(date)
+参数
+    date
+        一个包含待解析的日期和时间的字符串
+返回
+    从1970-1-1午夜（GMT）到给定日期之间的毫秒数。
+说明
+    Date.parse()是Date的一个静态方法。返回从纪元开始到给定字符串参数所指定的日期之间的毫秒数。返回值可以直接用于创建一个新的Date对象，或通过Date.setTime方法设置一个已存在的Date对象的日期。
+    ES5要求这个方法可以解析有Date.toISOString()方法返回的字符串，在ES5之前，还要求这个方法能解析有toUTCString和toString方法返回的依赖与具体实现环境的字符串
+相关方法
+    Date,Date.setTime(),Date.toISOString(),Date.toString()

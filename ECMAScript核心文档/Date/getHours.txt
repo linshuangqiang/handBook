@@ -1,0 +1,6 @@
+Date.getHours()
+    返回一个Date对象中的小时值
+结构
+    date.getHours()
+返回
+    指定的Dat对象date表示的本地小时值，返回值在0（午夜）-23（晚上11点）之间

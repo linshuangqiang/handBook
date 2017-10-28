@@ -1,0 +1,10 @@
+Date.toLocaleString()
+    将一个Date转化为一个本地格式的字符串
+结构
+    date.toLocaleString()
+返回
+    由date指定的日期与时间的一个字符串表示形式，日期与时间使用本地时区以及本地的习惯表示
+用法
+    toLocaleString使用本地时区，将一个日期转化为一个字符串。这个方法也使用本地习惯来格式化日期及时间，因此在不同的国家或平台上，格式可能会不一致，一般返回的是用户首选的日期及时间格式
+相关方法
+    Date.toISOString(),Date.toLocaleDateString(),Date.toLocaleTimeString(),Date.toString(),Date.ToUTCString()

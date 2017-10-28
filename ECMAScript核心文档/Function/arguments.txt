@@ -1,0 +1,10 @@
+Function.arguments[]
+    传递给函数的参数
+结构
+    function.arguments[i]
+    function.arguments.length
+说明
+    Function对象的arguments属性是一个参数数组，它的元素是传递给函数的参数。只在函数执行时才定义。arguments.length表示数组中元素的个数。
+    不推荐使用该属性，建议使用Arguments对象。
+相关方法
+    Arguments

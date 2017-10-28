@@ -1,0 +1,25 @@
+Array.every()
+    测试断言函数对每个元素是否为真
+结构
+    array.every(predicate)
+    array.every(predicate,o)
+参数
+    predicate
+        用来测试数组元素的断言函数
+    o
+        调用predicate时可选的this值。
+返回值
+    如果对array中的每一个元素调用predicate时都返回true，则返回true，如果任何一个元素返回假，则返回false。
+说明
+    every()方法用来测试数组中的所有元素是否满足某些条件。从第一个元素开始依次遍历array的元素，并对每个元素调用predicate函数。如果predicate函数返回false，则every会停止遍历并返回false。如果对每一个数组元素都返回true，则返回true。
+    调用predicate时带有三个参数：
+    predicate(array[i],i,array)。
+    predicate函数的返回值会被当作布尔值来解析，true和所有真值表示该数组元素通过了测试，或者每一个数组元素都满足该函数描述的条件。false或假值表示数组元素没有通过函数的测试条件，
+示例：
+    var arr = [1,2,3,4];
+    arr.every(function(x){return x < 5 ;});//true;
+    arr.every(function(x){return x < 4 ;});//false  元素4不满足条件
+    [].every(function(a){return false;});//true  []总是返回true
+    
+相关方法
+    Array.filter(),Array.forEach(),Array.some()    

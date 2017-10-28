@@ -1,0 +1,6 @@
+Error.name
+    错误的类型
+结构
+    error.name
+说明
+    Error对象的name属性定义发生的错误或异常的类型。所有Error对象都从他们的构造函数属性继承这个属性，这个属性的值和他们的构造函数的名字相同，也就是说：SyntaxError对象的name属性为：“SyntaxError”。

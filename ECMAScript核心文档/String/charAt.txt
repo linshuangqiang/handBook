@@ -1,0 +1,10 @@
+String.charAt()
+    取得一个字符串中第n个字符
+结构
+    string.charAt(n)
+参数
+    返回的字符在字符串中的索引（从0开始）
+说明
+    charAt()返回字符串中的第n个字符，注：第一个字符的索引（编号）是0；如果n不在0 - string.length之间，这个方法将会返回一个空字符串，在JavaScript中，字符其实就是长度为1的字符串。
+相关方法
+    String.charCodeAt(),String.indexOf(),String.lastIndexOf()

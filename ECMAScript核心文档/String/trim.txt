@@ -1,0 +1,8 @@
+String.trim()
+    去掉开始和结尾处的空白字符
+结构
+    string.trim()
+返回
+    string的一个副本，删除字符串开头和结尾的空白字符
+相关方法
+    String.replace()

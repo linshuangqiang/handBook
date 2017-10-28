@@ -1,0 +1,16 @@
+String.fromCharCode()
+    从字符编码创建一个字符串
+结构
+    string.fromCharCode(c1,c2,...)
+参数
+    c1,c2,...
+        指定创建字符串中的字符编码，为一个或多个整数
+返回
+    一个新的字符串，内容为指定编码对应的字符
+说明
+    这个静态方法提供一个通过指定每个字符的Unicode编码来创建字符串的方法。作为一个静态方法，fromCharCode是String构造函数的一个属性，而不是一个方法
+    string.charCodeAt()与这个方法对应，它会得到对应的字符编码
+示例
+    var s = String.fromCharCode(104,101,108,111);//helo
+相关方法
+    String.charCodeAt()

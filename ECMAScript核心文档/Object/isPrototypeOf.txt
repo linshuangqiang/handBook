@@ -1,0 +1,21 @@
+Object.isPrototypeOf()
+    判断当前对象是否为另一个对象的原型
+结构
+    object.isPrototypeOf(o)
+参数
+    o
+        任意一个对象
+返回
+    如果object是o对象的原型则返回true；如果o不是一个对象，或object不是o的原型则返回false。
+说明
+    JavaScript对象从他们的原型对象中继承属性。对象的原型通过prototype属性指向被创建并初始化该对象的构造函数。isPropertyOf()方法提供一种判断某个对象是否为另一个对象的原型方法。这个技术可用于判断对象的类。
+示例
+    var o = new Object();
+    Object.prototype.isPrototypeOf(o);//true
+    Function.prototype.isPrototypeOf(o.toString);//true toString是一个函数
+    Array.prototype.isPrototypeOf([1,2,3]);//true
+    (o.constructor == Object);//true
+    (o.toString.constructors == Function);//true
+    Object.prototype.isPrototypeOf(Function.prototype)
+相关方法
+    Function.prototype,Object.constructor

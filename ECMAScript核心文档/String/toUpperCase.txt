@@ -1,0 +1,6 @@
+String.toUpperCase()
+    将一个字符串转化为大写
+结构
+    string.toUpperCase()
+返回
+    一个string的副本，将其中的小写字母转换为大写字母。

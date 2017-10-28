@@ -1,0 +1,6 @@
+Date.getFullYear()
+    返回一个Date对象中的年份
+结构
+    date.getFullYear()
+返回
+    返回Date对象中date的年份。返回值是一个完整的4位数字的年份

@@ -1,0 +1,16 @@
+decodeURIComponent()
+    解码一个URI组件中的字符
+结构
+    decodeURIComponent(s)
+参数
+    s
+        一个包含已编码的URI组件或其他待解码的文本字符串
+返回
+    s的一个副本，其中所有的十六进制转义系列都已被替换为他们所代表的字符
+异常
+    URIError
+        表示s中的一个或多个转义序列格式有误，不能正确的解码
+说明
+    decodeURIComponent()是一个全局函数，返回它的参数的一个已解码的副本。它是encodeURIComponent()的逆操作。
+相关方法
+    decodeURI(),encodeURI(),encodeURIComponent(),escape(),unescape()

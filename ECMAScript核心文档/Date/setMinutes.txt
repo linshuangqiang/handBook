@@ -1,0 +1,15 @@
+Date.setMinutes()
+    设置一个Date的分钟、秒及毫秒
+结构
+    date.setMinutes(minutes)
+    date.setMinutes(minutes,seconds)
+    date.setMinutes(minutes,seconds,millis)
+参数
+    minutes
+        0-59之间的一个整数，将用做Date对象date的分钟值（本地时间）
+    seconds
+        0-59之间的一个可选整数，将用做Date对象date的秒数，本地时间，在ES标准之前，不支持此参数
+    millis
+        0-999之间的一个可选整数，将用做Date对象date的毫秒数，本地时间，在ES标准之前，不支持此参数
+返回
+    调整后的日期的毫秒数表示形式。在ES标准之前，没有返回值

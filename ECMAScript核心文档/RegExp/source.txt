@@ -1,0 +1,6 @@
+RegExp.source
+    正则表达式的文本
+结构
+    regexp.source
+说明
+    source是RggExp对象的一个只读属性，它的值为RegExp模式的文本内容，这个文本不包括正则表达式直接量中的分隔斜杠，也不会包含g、i和m属性的。

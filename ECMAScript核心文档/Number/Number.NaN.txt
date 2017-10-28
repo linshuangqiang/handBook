@@ -1,0 +1,9 @@
+Number.NaN
+    特殊的非数字值
+结构
+    Number.NaN
+说明
+    Number.NaN是一个特殊值，表示某些舒徐操作的结果不是一个数字，parseInt和parseFloat在不能解析指定的字符串时也会返回这个值，类似的，可以在那些正常情况下返回有效数字的函数中返回Number.NaN来报告一个错误。
+    JavaScript将Number.NaN值输出为NaN。注：可以使用NaN来代替Number.NaN。
+相关方法
+    isNaN(),NaN

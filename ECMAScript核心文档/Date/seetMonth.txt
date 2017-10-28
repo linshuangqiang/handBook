@@ -1,0 +1,12 @@
+Date.setMonth()
+    设置一个Date的月份及日期值
+结构
+    date.setMonth(month)
+    date.setMonth(month,day)
+参数
+    month
+        0（1月）-11（12月）之间的一个整数，将用做该Date对象date的新月份址，本地时间
+    day
+        1-31之间的一个可选整数，将用做date的对应月份中的日期值，本地时间，在ES标准之前，不支持此参数
+返回
+    调整后的日期的毫秒数。在ES标准之前，没有返回值。

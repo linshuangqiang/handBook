@@ -1,0 +1,21 @@
+Array,reduceRight()
+    从右至左缩减数组
+结构
+    array.reduceRight(f)
+    array.reduceRight(f,inital)
+参数
+    f
+        一个函数，可以合并两个值，并返回一个缩减的新值
+    inital
+        用来缩减数组的可选初始值。如果省略，此方法会吧该参数插入数组的尾部一样。
+返回值
+    数组的缩减值，该值是最后一次调用f函数时的返回值。
+说明
+    reduceRight和reduce方法一样，调用f函数n-1次，来将array的n个元素缩减为单个值。唯一不同的是reduceRight方法是从右向左遍历的。
+示例
+    var arr = [2,10,60];
+    arr.reduceRight(function(x,y){return x/y;})//3:(60/10)/2;
+相关方法
+    Array.reduce()
+    
+    

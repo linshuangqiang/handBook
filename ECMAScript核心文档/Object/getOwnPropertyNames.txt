@@ -1,0 +1,14 @@
+Object.getOwnPropertyNames()
+    返回非继承属性的名字
+结构
+    Object.getOwnPropertyNames(o)
+参数
+    o
+        一个对象
+返回
+    一个包含o的所有非继承属性的名字的属性，包括那些不可枚举的属性
+说明
+    Object.getOwnPropertyNames()返回一个包含o的所有非继承属性的名字数组。当需要返回不包含可枚举的属性可以使用Object.keys()方法。
+    这个方法不能在对象上调用，是一个全局函数
+相关方法
+    Object.keys()

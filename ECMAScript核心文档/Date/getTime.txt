@@ -1,0 +1,13 @@
+Date.getTime()
+    将一个Date对象以毫秒形式返回
+结构
+    date.getTime()
+返回
+    date的毫秒表示形式，即1970-1-1到指定日期之间的毫秒数
+说明
+    getTime()将日期和时间转化为一个单独的整数。在比较两个Date对象或判断两个日期之间的时间差时，较有用。
+    注意：一个日期的毫秒表示形式与时区无关，所以不存在getUTCTime方法。
+    不要将getTime方法与getDay和getDate方法混淆，后两者分别返回星期几和日期值（月份中的第几天）
+    Date.parse()和Date.UTC()方法可以在不创建Date对象的情况下将一个日期或者时间转化为毫秒表示形式。
+相关方法
+    Date,Date.parse(),Date.setTime(),Date.UTC()

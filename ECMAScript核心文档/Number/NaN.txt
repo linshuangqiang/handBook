@@ -1,0 +1,11 @@
+NaN
+    非数字属性
+结构
+    NaN
+说明
+    NaN时一个全局属性，指向一个特殊的非数字值。NaN 属性可以用for/in循环枚举，也不能用delete操作符删除。
+    注：NaN不是常量，不可将它设置为任何其他值，有些操作应该谨慎避免
+    要检查一个值是否为数字，可以使用isNaN()，因为NaN总是和其他值不相等，包括它本身。
+    NaN的typeof结构为number
+相关方法
+    Infinity，isNaN(),Number.NaN

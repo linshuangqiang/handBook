@@ -1,0 +1,9 @@
+Date.getTimezoneOffset()
+    取得与GMT时间之间的差
+结构
+    date.getTimezoneOffset()
+返回
+    GMT时间与本地时间的差，用分钟表示
+说明
+    getTimezoneOffset方法以分钟为单位返回GMT或UTC时间与本地时间的差。实际上，这个函数告诉你当前的JavaScript是运行在那个时区的，以及给定的日期是否是处于夏令时状态
+    返回值的单位是分钟数。

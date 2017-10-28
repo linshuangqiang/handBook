@@ -1,0 +1,9 @@
+Number.valueOf()
+    返回原始的数字值
+结构
+    number.valueOf()
+返回
+    当前Number对象的原始数字值，很少需要显示调用此方法
+异常
+    TypeError
+        这个方法在一个非Number对象上调用

@@ -1,0 +1,23 @@
+Array.map()
+    从数组中计算新值
+结构
+    array.map(f)
+    array.map(f,o)
+参数
+    f
+        为数组中的每一个元素调用的函数，它的返回值会成为返回数组中的元素
+    o
+        f调用时的可选this值
+返回值
+    一个新数组，由函数f计算出的新元素组成。
+说明
+    map()会创建一个新数组，数组的长度与array的长度一致。数组的元素将通过array的元素传递给函数f后计算出的新值。map()按照从小到大的序号遍历array数组，并为每一个元素调用一次f函数。f函数将接收3个参数
+    f(array[i],i,array)。
+    将数组遍历完成后，会返回新数组（array数组中每一个调用函数f返回值组成的数组）
+示例：
+    var arr = [1,2,3,4];
+    arr.map(function(){return x*2;});//2,4,6,8
+相关方法
+    Array.every(),Array.filter(),Array.forEach(),Array.indexOf(),Array.reduce()
+    
+    

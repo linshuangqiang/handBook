@@ -1,0 +1,8 @@
+String.toLocaleLowerCase()
+    将一个字符串转换为小写
+结构
+    string.toLocaleLowerCase();
+返回
+    string的一个副本，子字符全部转换为小写。一般和toLowerCase()返回的内容相同。
+相关方法
+    String.toLocaleUpperCase(),String.toLowerCase(),String.toUpperCase()

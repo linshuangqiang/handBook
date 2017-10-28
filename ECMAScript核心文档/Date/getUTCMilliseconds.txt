@@ -1,0 +1,6 @@
+Date.getUTCMilliseconds()
+    返回一个Date对象的毫秒值，世界时间
+结构
+    date.getUTCMilliseconds()
+返回
+    以时间时间表示的毫秒

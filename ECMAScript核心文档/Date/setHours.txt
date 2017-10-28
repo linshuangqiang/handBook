@@ -1,0 +1,18 @@
+Date.setHours()
+    设置一个Date的小时，分钟,秒及毫秒数
+结构
+    date.setHours(hours)
+    date.setHours(hours,minutes)
+    date.setHours(hours,minutes,seconds)
+    date.setHours(hours,minutes,seconds,millis)
+参数
+    hours
+        0-23之间的一个整数，用做date的新小时值
+    minutes
+        0-59之间的一个可选整数，新的分钟数，ES标准之前不支持此参数
+    seconds
+        0-59之间的一个可选整数，新的秒数，ES标准之前不支持此参数
+    millis
+        0-999之间的一个可选参数，新的毫秒数，ES标准之前，不支持此参数
+返回
+    调整后的时间的毫秒表示形式，ES标准之前，什么也不会返回

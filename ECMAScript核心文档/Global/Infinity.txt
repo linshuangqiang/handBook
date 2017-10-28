@@ -1,0 +1,9 @@
+Infinity
+    表示无穷大的数值属性
+结构
+    Infinity
+说明
+    Infinity是一个全局属性，用来存放表示无穷大的特殊数值。用for/in循环不可枚举Infinity属性，用delete操作符也无法删除它。
+    注：Infinity不是常量，它可以设置为任意值，然而Number.POSITIVE_INFINITY是常量
+相关方法
+    isFine(),NaN,Number.POSITIVE_INFINITY,Number.POSITIVE_INFINITY

@@ -1,0 +1,12 @@
+Date.setSeconds()
+    设置一个Date的秒及毫秒
+结构
+    date.setSeconds(seconds)
+    date.setSeconds(seconds,millis)
+参数
+    seconds
+        0-59之间的一个整数，将用做Date对象date的分钟数
+    millis    
+        0-999之间的一个可选整数，将用做date的新毫秒数，本地时间，在ES标准之前，不支持此参数
+返回
+    调整后的日期的毫秒数。在ES标准之前，没有返回值。

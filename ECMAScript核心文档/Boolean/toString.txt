@@ -1,0 +1,6 @@
+Boolean.toString()
+    将布尔值转化为字符串
+结构
+    b.toString()
+返回值
+    根据原始布尔值或Boolean对象b的值返回"true"或"false"

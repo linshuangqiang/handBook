@@ -1,0 +1,13 @@
+String.concat()
+    连接字符串
+结构
+    string.concat(value,...)
+参数
+    一个或多个待连接为字符串的值
+返回值
+    有每个参数连接为string而组成的新的字符串。
+说明
+    concat将它的每个参数转换为字符串，并按照顺序追加到string的末尾，返回最后连接的结构。注意：不会修改string本身。
+    String.concat()和Array.concat()类似。注意：使用“+”操作符来直接字符串连接会更简单、方便的。
+相关方法
+    Array.concat()

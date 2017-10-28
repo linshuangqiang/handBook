@@ -1,0 +1,10 @@
+Date.toString()
+    将一个Date转化为一个字符串
+结构
+    date.toString()
+返回
+    date的一个可读的字符串表示形式，使用本地时区
+说明
+    toString方法返回date的一个可读的，与实现相关的字符串表示形式。和toUTCString方法不同，toString使用本地时区。与toLocaleString方法不同，toString可能不使用本地特定的格式来表示日期及时间
+相关方法
+    Date.parse(),Date.toDateString(),Date.toISOString(),Date.toLocaleString(),Date.toTimeString(),Date.toUTCString()

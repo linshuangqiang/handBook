@@ -1,0 +1,20 @@
+Array.unshift()
+    在数组的头部添加元素
+结构
+    array.unshift(value,...)
+参数
+    value,...
+        要插入array头部的一个或多个值
+返回值
+    数组的新长度
+说明
+    unshift方法会把参数插入到array的头部，并将原数组中已存在的元素顺序向后移动，该方法的第一个参数会成为数组的第一个元素（所以为0），后面的一次类推。注：unshift方法不会创建新数组，而是直接修改数组本身。
+示例
+    unshift经常与shift一起使用，
+        var arr = [];
+        arr.unshift(1,2);//返回2
+        arr.shift();//返回1（数组的第一个元素）
+        arr.unshift(33,[4,5]);//返回3，数组arr：[33,[4,5],2]
+相关方法
+    Array.shift()
+        

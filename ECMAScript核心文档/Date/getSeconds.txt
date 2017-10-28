@@ -1,0 +1,6 @@
+Date.getSeconds()
+    返回一个Date对象的秒数
+结构
+    date.getSeconds()
+返回
+    表示本地时间的秒数。返回值在0-59之间

@@ -1,0 +1,9 @@
+Number.NEGATIVE_INFINITY
+    负无穷大
+结构
+    Number.NEGATIVE_INFINITY
+说明
+    Number.NEGATIVE_INFINITY是一个特殊的值，当一个算术操作符或数学函数产生了一个绝对值比JavaScript中能表示的最大的数还大的负数（比-Number.MAX_VALUE还小）时返回该值。
+    JavaScript将Number.NEGATIVE_INFINITY值显示为-Infinity。这个值在数学上表现的就像无穷大一样。可以使用-Infinity代替Number.NEGATIVE_INFINITY。
+相关方法
+    Infinity,isFinite()

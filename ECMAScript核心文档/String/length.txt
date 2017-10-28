@@ -1,0 +1,6 @@
+String.length
+    字符串的长度
+结构
+    string.length
+说明
+    length属性是一个只读的整数，指定了字符串的字符个数。对于任意已字符串，其最后一个的索引都将是string.length-1。lenght属性不会在for／in循环中被枚举，也不能通过delete操作符进行删除的。

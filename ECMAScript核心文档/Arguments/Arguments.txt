@@ -1,0 +1,14 @@
+arguments[]
+    函数参数数组
+介绍
+    arguments[]数组只定义在函数体中。在函数体中，arguments指代该函数的Arguments对象，该对象用于与Array一样的数值属性。是一个局部变量，在函数中会自动声明并初始化该变量，尽在函数内指代Arguments对象，在全局作用域中为undefined。
+Arguments
+    函数的参数和其他属性。
+    arguments
+    arguments[n]
+      Arguments对象只定义在函数体内，并不是数组，但是拥有数值属性和length属性，所有作为参数传入的值都会成为Arguments对象的数组元素，即使在函数声明中没有指定参数名。
+属性：
+    callee
+        指代当前正在执行的函数
+    length
+        传递给函数的参数的个数，以及Arguments对象中数组元素的个数。

@@ -1,0 +1,6 @@
+Date.getMilliseconds()
+    返回一个对象的毫秒值
+结构
+    date.getMilliseconds()
+返回
+    指定的date以本地时间表示的毫秒值

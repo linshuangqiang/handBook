@@ -1,0 +1,9 @@
+Date.setUTCMilliseconds()
+    设置一个Date的毫秒值，世界时间
+结构
+    date.setUTCMilliseconds(millis)
+参数
+    millis
+        0-999之间的一个整数，将用做date的以全球时间表示的毫秒数
+返回
+    调整后的日期的毫秒数 

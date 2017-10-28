@@ -1,0 +1,18 @@
+Array.join()
+    将数组元素衔接为字符串
+结构
+    array.join()
+    array.join(separator)
+参数
+    separator
+        在返回的字符串中，用来分割数组的某个元素与下一个元素的可选字符或字符串，如果省略，则生用逗号（,）分割
+返回值
+    一个字符串，将array转化为字符串，然后使用separator进行分割。然后衔接为新字符串并返回。
+说明
+    join将数组的每一个元素转换为字符串，并通过指定的separator将其衔接在一起。并返回。
+    可以进行相反的操作：将字符串分割为数组元素，使用String对象中的split()方法。即：String.split()
+示例
+    var arr = new Array(1,2,3,'string');
+    arr.join('-');//结果是字符串：1-2-3-string
+相关方法
+    String.split()

@@ -1,0 +1,20 @@
+Array.concat()
+    链接数组
+结构
+    array.concat(value,...)
+参数
+    任意个要链接到数组中的值
+返回值
+    一个新数组，包含array的元素，以及链接的新元素
+说明 
+    concat()会将参数链接到array中得到一个新数组并返回。并不会修改原数组（array），如果传给concat的某个参数本身是一个数组，则会将该数组中的元素链接到array中，而不是数组本身。
+示例：
+    var arr = [1,2,3];
+    console.log(arr.concat(4,5,6));//[1,2,3,4,5,6]
+    console.log(arr.concat([4,5,6])) ;//[1,2,3,4,5,6]
+相关方法
+    Array.join(),Array.push(),Array.splice()       
+    
+    
+    
+    

@@ -1,0 +1,15 @@
+Date.setUTCFullYear()
+    设置一个Date的年、月及日期值，世界时间
+结构
+    date.setUTCFullYear(year)
+    date.setUTCFullYear(year,month)
+    date.setUTCFullYear(year,month,day)
+参数
+    year
+        一个4位的整数，将用做date表示世界时间的年份值
+    month
+        0-11之间的一个可选整数，将用做date的月份值，世界时间。
+    day
+        1-31之间的一个可选整数，将用走date的日期值，世界世界
+返回
+    调整后的时间的毫秒数

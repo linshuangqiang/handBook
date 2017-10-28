@@ -1,0 +1,28 @@
+String.match()
+    找到一个或多个正则表达式匹配结果
+结构
+    string.match(regexp)
+参数
+    一个指定要匹配的模式的RegExp对象，如果这个参数不是一个RegExp对象，则它将先被传入RegExp构造函数内，转换为RegExp对象。
+返回
+    一个包含匹配结果的数组，数组的内容取决于regexp是否设置了g属性。如果没有匹配到则返回null。
+说明
+    match方法在string字符串中查找一个或多个regexp的匹配结果，至于是一个还是多个完全取决于regexp是否设置了g属性
+    如果没有g属性，则值进行一次匹配。没有匹配到结果则返回null。在其他情况下，会返回一个包含匹配到的结果的一个数组，该数组的元素索引0为匹配文本，剩余的元素为匹配正则表达式是圆括号子表达式的文本。除了这些数组元素，还将返回index和input属性，index表示匹配文本在string字符串中的开始位置，input则表示对string本身的一个引用
+    如果有g属性，则match会执行一次全局搜索，在string中寻找所有匹配的子串，如果没有找到则返回null，如果找到一个或多个匹配的结果，则返回一个数组。然而全局匹配返回的数组内容与非全局匹配返回的数组内容不一样。在全局匹配中，数组元素包含string中的每一个匹配子串，同时返回的数组没有index和input属性。注意：match不会提供关于圆括号子表达式的信息，也不会记录每个匹配子串在string中的位置。如需要，可以使用RegExp.exec()
+示例
+    var str = '1 plus 2 equals 3';
+    str.match(/\d+/g);//返回结果：['1','2','3']
+    
+    var url = /(\w+):\/\/([\w.]+)\/(\S*)/;
+    var text = 'Visit my home page at http://www.beyourside.com/~david';
+    var result = text.match(url);
+    if(result != null){
+        var fullurl = result[0];
+        var protocol = result[1];
+        var host = result[2];
+        var path = result[3];
+    }
+    //result => ["http://www.beyourside.com/~david", "http", "www.beyourside.com", "~david", index: 22, input: "Visit my home page at http://www.beyourside.com/~david"]
+相关方法
+    RegExp,RegExp.exec(),RegExp.test(),String.replace(),String.search()

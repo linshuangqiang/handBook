@@ -1,0 +1,22 @@
+Array.some()
+    测试是否有元素满足断言函数
+结构
+    array.some(predicate)
+    array.some(predicate,o)
+参数
+    predicate
+        用来测试数组元素的断言函数
+    o
+        调用predicate函数时可用的this值
+返回值
+    如果array中只有有一个元素调用predicate函数藩镇真值，则结果为true。如果所有的数组元素调用此函数返回假值，则结果为false。
+说明：
+    some方法用来测试数组中是否有元素满足某些条件。它会按照从小到大的顺序遍历array中的元素，并依次对每个数组中的元素调用指定的predicate函数。返回predicate函数返回true；则some方法会停止遍历，并返回true。否则继续遍历直至结尾，如果都返回false。则此方法的返回值为false。当数组为空的时候，some方法返回false。
+    该方法类似与every()。
+示例
+    var arr = [1,2,3];
+    arr.some(function(x){return x > 10})//false
+    [].some(function(x){return false})//false,[]总是会返回false的。
+相关方法
+    Array.every(),Array.filter(),Array.forEach()
+    

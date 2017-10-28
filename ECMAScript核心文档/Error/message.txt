@@ -1,0 +1,6 @@
+Error.message
+    可读的错误消息
+结构
+    error.message
+说明
+    Error对象的message属性用于包含一个可读的字符串，提供了关于发生的错误或异常的细节。如果像Error()构造函数传入message参数，则该参数将会是这个message属性的值。如果没有传入message参数，则Error对象的这个属性将继承预定义的默认值（可能是空字符串）

@@ -1,0 +1,6 @@
+Date.getMinutes()
+    返回一个Date对象的分钟值
+结构
+    date.getMinutes()
+返回
+    指定Date对象的date以本地表示的分钟值，返回值在0-59之间

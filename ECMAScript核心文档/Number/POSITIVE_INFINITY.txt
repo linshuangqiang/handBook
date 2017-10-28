@@ -1,0 +1,10 @@
+Number.POSITIVE_INIFINITY
+    无穷大
+结构
+    Number.POSITIVE_INIFINITY
+说明
+    Number.POSITIVE_INIFINITY是一个特殊的值，当一个算术操作符或数学函数产生了一个比JavaScript中所能表示的最大值还要大的值是返回该值。
+    注意：数字下溢，或者说比Number.MIN_VALUE还要小时，将会被转为0。
+    JavaScript将Number.POSITIVE_INIFINITY显示为Infinity。这个值在数学上表现的就像无穷大一样。一般使用Ininity代替Number.POSITIVE_INIFINITY。
+相关方法
+    Infinity,isFinite()。

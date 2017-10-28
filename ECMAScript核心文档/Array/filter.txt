@@ -1,0 +1,23 @@
+Array.filter()
+    返回通过断言函数的数组元素
+结构
+    array.filter(predicate)
+    array.filter(predicate,o)
+参数
+    predicate
+        用来判断array中的元素是否需要包含在返回数组中的调用函数内
+    o
+        调用predicate时的可选this值
+返回值
+    一个新数组，只包含那些满足predicate（返回真值）条件的数组元素
+说明
+    filter()函数会创建一个新数组，包含那些满足predicate函数中条件的array的元素。filter函数不会修改array本身，
+    filter函数按照序号从小到大遍历array，并对每一个元素调用predicate函数。
+    predicate(array[i],i,array)
+    如果predicate函数返回真，则将其元素追加到新创建的数组中，直至测试完每一个array数组内的元素，然后返回新创建的数组
+示例
+    [1,2,3,4,5].filter(function(x){return x > 2;})//[3,4,5]
+相关方法
+    Array.every(),Array.forEach(),Array.indexOf(),Array.map(),Array.reduce()  
+      
+    

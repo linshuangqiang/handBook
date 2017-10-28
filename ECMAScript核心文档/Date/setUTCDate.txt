@@ -1,0 +1,9 @@
+Date.setUTCDate()
+    设置一个Date的对应月中的日期值，世界时间
+结构
+    date.setUTCDate(day_of_month)
+参数
+    day_of_month
+        将用做date的对应月中的日期值，以全球时间表示。这个参数的值是1-31之间的一个整数
+返回
+    调整后的日期的内部毫秒数

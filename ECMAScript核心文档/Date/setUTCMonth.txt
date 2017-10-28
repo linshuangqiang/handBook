@@ -1,0 +1,12 @@
+Date.setUTCMonth()
+    设置一个Date的月份及日期值，世界时间
+结构
+    date.setUTCMonth(month)
+    date.setUTCMonth(month,day)
+参数
+    month
+        0-11之间的一个整数，表示date的全球时间表示的月份。
+    day
+        1-31之间的可选整数，表示date对象的日期值
+返回
+    调整后的日期的毫秒数

@@ -1,0 +1,8 @@
+String.valueOf()
+    返回对应的字符串
+结构
+    string.valueOf()
+返回
+    string的原始字符串值
+相关方法
+    string.toString()

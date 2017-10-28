@@ -1,0 +1,8 @@
+undefined
+    未定义值
+结构
+    undefined
+说明
+    undefined是一个全局属性，值为JavaScript中未定义的值。当试图读一个不存在的对象属性时，返回此值。undefined属性不可在for/in循环中枚举，也不可以使用delete操作符删除。
+    注：undefined不是一个常量，它可以设置称其他址，但需要避免这样的操作
+    测试一个值是否为undefined时要使用 === 全等操作符，因为相等操作符会把undefined值等同于null的。

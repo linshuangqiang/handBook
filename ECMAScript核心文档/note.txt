@@ -1,0 +1,20 @@
+JavaScript定义的类、方法和属性。预览
+    Number
+    String
+    Boolean
+    Array
+    Arguments
+    Function
+    Object
+    Global
+    Date
+    Math
+    RegExp
+    JSON
+    Error
+    RangeError
+    TypeError
+    EvalError
+    ReferenceError
+    SyntaxError
+    URIError

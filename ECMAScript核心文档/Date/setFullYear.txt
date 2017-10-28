@@ -1,0 +1,15 @@
+Date.setFullYear()
+    设置一个Date的年份值，以及可选的月份值和日期值
+结构
+    date.setFullYear(year)
+    date.setFullYear(year,month)
+    date.setFullYear(year,month,day)
+参数
+    year
+        date中待设置的年份值，本地时间形式，这个参数应该是一个包含世纪的整数，（4为整数）
+    month
+        0-11之间的一个可选整数，将用做date中的月份值（本地时间）
+    day
+        1-31之间的一个可选整数，将用做date的对象月中的日期值，（本地时间）
+返回
+    调整后日期的内部毫秒数表示形式

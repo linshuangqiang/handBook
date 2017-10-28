@@ -1,0 +1,13 @@
+Array.pop()
+    移除并返回数组的最后一个元素
+结构
+    array.pop()
+返回值
+    array数组中的最后一个元素
+说明
+    pop()会移除array的最后一个元素，并相应的缩短数组的长度，并返回被移除的数组元素。如果数组为空，pop方法不会修改数组，返回值是undefined。
+示例：
+    var arr = [1,2,3,4,5];
+    arr.pop()//返回值：5，arr：[1,2,3,4]
+相关方法
+    array.push(),array.shift(),array.unshift()

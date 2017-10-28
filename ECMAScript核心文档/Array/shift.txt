@@ -1,0 +1,14 @@
+Array.shift()
+    移除数组中的第一个元素
+结构
+    array.shift()
+返回值
+    原数组中第一个元素
+说明
+    shift方法会移除并返回array中的第一个元素，并将数组中后面的元素顺序前移。如果数组为空，shift方法什么也不做，直接返回undefined
+    shift方法与pop类似，只不过shift操作的是数组头部，pop操作的是数组的尾部。
+示例
+    var arr = [1,2,3,4];
+    arr.shift();//1,arr:[2,3,4]
+相关方法
+    Array.pop(),Array.unshift()

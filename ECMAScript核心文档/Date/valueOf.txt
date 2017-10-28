@@ -1,0 +1,6 @@
+Date.valueOf()
+    将一个Date转为毫秒表示的形式
+结构
+    date.valueOf()
+返回
+    date的毫秒表示形式，返回值与Date.getTime()的返回值相同

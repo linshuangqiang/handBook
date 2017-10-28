@@ -1,0 +1,20 @@
+String.substr()
+    提取一个子串
+结构
+    string.substr(start,length)
+参数
+    start
+        子串的开始位置，如果为负数，则从尾部开始计算
+    length
+        该字符串中的字符数，如果省略，则表示后面的全部字符。
+说明
+    substr从string中提取并返回一个子串，它并不修改string本身
+    注意：此方法已被弃用
+示例
+    var s = 'abcdefg';
+    s.substr(2,2);//cd
+    s.substr(4);//efg
+    s.substr(-3,2);//ef
+相关方法
+    String.slice(),String.subString()
+    

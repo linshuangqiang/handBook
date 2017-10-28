@@ -1,0 +1,6 @@
+Date.getUTCHours()
+    返回一个对象的小时值，世界时间
+结构
+    date.getUTCHours()
+返回
+    以全球时间表示的date的小时值，返回值介于0-23之间的一整数
