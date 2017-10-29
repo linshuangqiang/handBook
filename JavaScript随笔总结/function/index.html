@@ -1,55 +1,250 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-	<meta charset="utf-8">
-	<title></title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Cache-Control" content="no-transform " />
+<title>JavaScript函数详解</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="JavaScript,函数">
+<meta name="description" content="定义和使用函数,传递参数,预定义函数,作用域,函数也是数据（特殊数据类型），函数名即为变量名,匿名函数,回调函数,自掉函数,内嵌函数（函数内部定义的函数）,返回值为函数的函数,能重定义自身的函数,闭包">
+<link type="text/css"  rel="stylesheet" href="http://www.beyourside.com/statics/css/beyourside/css/style.css" />
+<link href="http://www.beyourside.com/statics/css/beyourside/css/contents.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-<h1><a href="../index.html">JavaScript</a></h1>
-<h2>函数</h2>
-<ul>
-	<li>定义和使用函数</li>
-	<li>传递参数</li>
-	<li>预定义函数</li>
-	<li>作用域</li>
-	<li>函数也是数据（特殊数据类型），函数名即为变量名</li>
-	<li>匿名函数</li>
-	<li>回调函数</li>
-	<li>自掉函数</li>
-	<li>内嵌函数（函数内部定义的函数）</li>
-	<li>返回值为函数的函数</li>
-	<li>能重定义自身的函数</li>
-	<li>闭包</li>
-</ul>
-<dl>
-	<dt>什么函数（函数的组成部分）</dt>
-	<dd>关键字：function</dd>
-	<dd>函数名：function之后的名字</dd>
-	<dd>参数</dd>
-	<dd>函数块</dd>
-	<dd>return子句</dd>
-	<dt>调用函数</dt>
-	<dt>预定义函数</dt>
-	<dd>parseInt()</dd>
-	<dd>parseFloat()</dd>
-	<dd>isNaN()</dd>
-	<dd>isFinite()</dd>
-	<dd>URI的编码与反编码：encodeURI(url);encodeURIComponent(url)</dd>
-	<dd>eval()</dd>
-	<dt>变量作用域</dt>
-	<dd>变量提升</dd>
-	<dt>函数也是数据</dt>
-	<dd>匿名函数</dd>
-	<dd>回调函数（+示例）</dd>
-	<dd>即时函数</dd>
-	<dd>内部函数（私有）</dd>
-	<dd>返回函数的函数</dd>
-	<dd>重写自己的函数</dd>
-	<dt>闭包</dt>
-	<dd>作用域链</dd>
-	<dd>利用闭包突破作用域链</dd>
-	<dt>闭包的应用示例：getter和setter</dt>
-	<dt>迭代器</dt>
-</dl>
+	<div class="header">
+	<div class="top w960">
+			<a href="/"><img src="/statics/bys/images/logo.png" class="logo" title="web前端开发网站" alt="web前端开发网站" /></a>
+	</div>
+	<div class="nav">
+		<ul class="w960">
+			<li><a href="http://www.beyourside.com/">首页</a></li><li class="active"><a href="http://www.beyourside.com/webfront/">前端技术</a></li><li><a href="http://www.beyourside.com/book/">读书频道</a></li><li><a href="http://www.beyourside.com/program/">程序设计</a></li><li><a href="http://www.beyourside.com/phpweb/">PHP建站</a></li><li><a href="http://www.beyourside.com/anli/">网页制作</a></li><li><a href="http://www.beyourside.com/linux/">Linux笔记</a></li><li><a href="http://www.beyourside.com/database/">数据库</a></li><li><a href="http://www.beyourside.com/jingdian/">经典文章</a></li><li><a href="http://www.beyourside.com/download/">前端下载</a></li><li><a href="http://www.beyourside.com/diannao/">操作系统</a></li>			<div class="clear"></div>
+		</ul>
+	</div>
+</div>
+		<div class="wrap">
+		<div class="pleft">
+			<div class="place">当前位置：<a href="/">首页</a> &gt; <a href="http://www.beyourside.com/webfront/">前端技术</a> > <a href="http://www.beyourside.com/webfront/javascript/">JavaScript</a> >  JavaScript函数详解</div>
+			<div class="content">
+				<h1>JavaScript函数详解</h1>
+				<div class="aside">
+					<span>作者:梦寒</span>
+					<span>时间: 2017-10-29 13:49:56</span>
+				</div>
+				
+				<h2>匿名函数</h2>
+<blockquote>
+	<ol class="dp-c">
+	<li class="alt"><span><span class="keyword">var</span><span>&nbsp;f&nbsp;=&nbsp;</span><span class="keyword">function</span><span>(){&nbsp;</span></span></li>
+	<li><span>&nbsp;&nbsp;&nbsp;&nbsp;console.log(<span class="string">&#39;这是一个匿名函数&#39;</span><span>)&nbsp;</span></span></li>
+	<li class="alt"><span>}&nbsp;</span></li>
+	<li><span><span class="keyword">var</span><span>&nbsp;f1&nbsp;=&nbsp;</span><span class="keyword">function</span><span>(book){&nbsp;</span></span></li>
+	<li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;console.log(<span class="string">&quot;参数bool：&quot;</span><span>+book)&nbsp;</span></span></li>
+	<li><span>}&nbsp;</span></li>
+	</ol>
+</blockquote>
+<h2>回掉函数</h2>
+<blockquote>
+	<ol class="dp-c">
+	<li class="alt"><span><span class="keyword">function</span><span>&nbsp;add(a,b){&nbsp;</span></span></li>
+	<li><span>&nbsp;&nbsnbsp;&nbsp;&nbsp;console.log(a()+b());&nbsp;</span></li>
+	<li class="alt"><span>}&nbsp;</span></li>
+	<li><span><span class="keyword">function</span><span>&nbsp;a(){&nbsp;</span></span></li>
+	<li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span><span>&nbsp;5;&nbsp;</span></span></li>
+	<li><span>}&nbsp;</span></li>
+	<li class="alt"><span><span class="keyword">function</span><span>&nbsp;b(){&nbsp;</span></span></li>
+	<li><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span><span>&nbsp;15;&nbsp;</span></span></li>
+	<li class="alt"><span>}&nbsp;</span></li>
+	<li><span><span class="keyword">var</span><span>&nbsp;a1&nbsp;=&nbsp;</span><span class="keyword">function</span><span>(){&nbsp;</span></span></li>
+	<li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span><span>&nbsp;55;&nbsp;</span></span></li>
+	<li><span>}&nbsp;</span></li>
+	<li class="alt"><span>add(a,b);<span class="comment">//20</span><span>&nbsp;</span></span></li>
+	<li><span>add(a1,b);<span class="comment">//70&nbsp;&nbsp;</span><span>&nbsp;</span></span></li>
+	</ol>
+</blockquote>
+<p>&nbsp;</p>
+<blockquote>
+	<ol class="dp-c">
+	<li class="alt"><span><span class="keyword">function</span><span>&nbsp;totalPrice(price1,price2,price3,callback){&nbsp;</span></span></li>
+	<li><span>&nbsp;&nbsp;&nbsp;&nbsp;arr&nbsp;=&nbsp;[];&nbsp;</span></li>
+	<li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">for</span><span>(</span><span class="keyword">var</span><span>&nbsp;i&nbsp;=&nbsp;0;&nbsp;i&nbsp;&lt;&nbsp;3;&nbsp;i++){&nbsp;</span></span></li>
+	<li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;arr[i]&nbsp;=&nbsp;callback(arguments[i]);&nbsp;</span></li>
+	<li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;</span></li>
+	<li><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span><span>&nbsp;arr&nbsp;</span></span></li>
+	<li class="alt"><span>}&nbsp;</span></li>
+	<li><span><span class="keyword">function</span><span>&nbsp;add1(num){&nbsp;</span></span></li>
+	<li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span><span>&nbsp;num*2;&nbsp;</span></span></li>
+	<li><span>}&nbsp;</span></li>
+	<li class="alt"><span>console.log(totalPrice(100,200,300,add1));&nbsp;</span></li>
+	</ol>
+</blockquote>
+<h2>自执行函数</h2>
+<blockquote>
+	<ol class="dp-c">
+	<li class="alt"><span><span>(</span><span class="keyword">function</span><span>(){console.log(1)}())&nbsp;</span></span></li>
+	</ol>
+</blockquote>
+<blockquote>
+	<ol class="dp-c">
+	<li class="alt"><span><span>(</span><span class="keyword">function</span><span>(){console.log(1)})()&nbsp;</span></span></li>
+	</ol>
+</blockquote>
+<h2>内部函数</h2>
+<blockquote>
+	<ol class="dp-c">
+	<li class="alt"><span><span class="keyword">function</span><span>&nbsp;outer(param){&nbsp;</span></span></li>
+	<li><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">function</span><span>&nbsp;inner(num){&nbsp;</span></span></li>
+	<li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span><span>&nbsp;num&nbsp;*&nbsp;2;&nbsp;</span></span></li>
+	<li><span>&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;</span></li>
+	<li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span><span>&nbsp;</span><span class="string">&#39;结果:&#39;</span><span>+inner(param);&nbsp;</span></span></li>
+	<li><span>}&nbsp;</span></li>
+	<li class="alt"><span>console.log(outer(10))&nbsp;</span></li>
+	<li><span><span class="comment">//inner将只能在outer函数内部被访问</span><span>&nbsp;</span></span></li>
+	</ol>
+</blockquote>
+<h2>返回函数的函数</h2>
+<blockquote>
+	<ol class="dp-c">
+	<li class="alt"><span><span class="keyword">function</span><span>&nbsp;a(){&nbsp;</span></span></li>
+	<li><span>&nbsp;&nbsp;&nbsp;&nbsp;console.log(<span class="string">&#39;a&#39;</span><span>);&nbsp;</span></span></li>
+	<li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span><span>&nbsp;</span><span class="keyword">function</span><span>(){&nbsp;</span></span></li>
+	<li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log(<span class="string">&#39;b&#39;</span><span>)&nbsp;</span></span></li>
+	<li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;</span></li>
+	<li><span>}&nbsp;</span></li>
+	<li class="alt"><span>b&nbsp;=&nbsp;a();&nbsp;</span></li>
+	<li><span>b()&nbsp;</span></li>
+	<li>&nbsp;</li>
+	</ol>
+</blockquote>
+<h2>重写自己的函数</h2>
+<blockquote>
+	<ol class="dp-c">
+	<li class="alt"><span><span class="keyword">function</span><span>&nbsp;a(){&nbsp;</span></span></li>
+	<li><span>&nbsp;&nbsp;&nbsp;&nbsp;console.log(<span class="string">&#39;a1&#39;</span><span>);&nbsp;</span></span></li>
+	<li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;a&nbsp;=&nbsp;<span class="keyword">function</span><span>(){&nbsp;</span></span></li>
+	<li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log(<span class="string">&#39;b1&#39;</span><span>)&nbsp;</span></span></li>
+	<li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;</span></li>
+	<li><span>}&nbsp;</span></li>
+	<li class="alt"><span>a();&nbsp;</span></li>
+	<li><span>a()&nbsp;</span></li>
+	<li class="alt"><span>a()&nbsp;</span></li>
+	</ol>
+</blockquote>
+<p>&nbsp;</p>
+<blockquote>
+	<ol class="dp-c">
+	<li class="alt"><span><span class="keyword">var</span><span>&nbsp;a&nbsp;=&nbsp;(</span><span class="keyword">function</span><span>(){&nbsp;</span></span></li>
+	<li><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">var</span><span>&nbsp;setp&nbsp;=&nbsp;0;&nbsp;</span></span></li>
+	<li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">function</span><span>&nbsp;aa(){&nbsp;</span></span></li>
+	<li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">var</span><span>&nbsp;setop&nbsp;=&nbsp;</span><span class="string">&#39;done&#39;</span><span>;&nbsp;</span></span></li>
+	<li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;</span></li>
+	<li><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">function</span><span>&nbsp;bb(){&nbsp;</span></span></li>
+	<li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log(<span class="string">&#39;word&#39;</span><span>)&nbsp;</span></span></li>
+	<li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log(<span class="string">&#39;bb:&#39;</span><span>+(setp++))&nbsp;</span></span></li>
+	<li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;</span></li>
+	<li><span>&nbsp;&nbsp;&nbsp;&nbsp;aa();&nbsp;</span></li>
+	<li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span><span>&nbsp;bb&nbsp;</span></span></li>
+	<li><span>}())&nbsp;</span></li>
+	<li class="alt"><span>console.log(a)&nbsp;</span></li>
+	<li><span>a();&nbsp;</span></li>
+	<li class="alt"><span>a();&nbsp;</span></li>
+	<li><span>a()&nbsp;</span></li>
+	</ol>
+</blockquote>
+<h2>闭包</h2>
+<p>&nbsp;</p>
+<h2>getter与setter</h2>
+<blockquote>
+	<ol class="dp-c">
+	<li class="alt"><span><span class="keyword">var</span><span>&nbsp;getValue,setValue;&nbsp;</span></span></li>
+	<li><span>(<span class="keyword">function</span><span>(){&nbsp;</span></span></li>
+	<li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">var</span><span>&nbsp;secret&nbsp;=&nbsp;0;&nbsp;</span></span></li>
+	<li><span>&nbsp;&nbsp;&nbsp;&nbsp;getValue&nbsp;=&nbsp;<span class="keyword">function</span><span>(){</span><span class="keyword">return</span><span>&nbsp;secret}&nbsp;</span></span></li>
+	<li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;setValue&nbsp;=&nbsp;<span class="keyword">function</span><span>(v){</span><span class="keyword">if</span><span>(</span><span class="keyword">typeof</span><span>&nbsp;v&nbsp;===&nbsp;</span><span class="string">&#39;number&#39;</span><span>){secret&nbsp;=&nbsp;v}}&nbsp;</span></span></li>
+	<li><span>}())&nbsp;</span></li>
+	<li class="alt"><span>console.log(getValue());&nbsp;</span></li>
+	<li><span>setValue(10)&nbsp;</span></li>
+	<li class="alt"><span>console.log(getValue());&nbsp;</span></li>
+	<li><span>setValue(<span class="string">&#39;20&#39;</span><span>)&nbsp;</span></span></li>
+	<li class="alt"><span>console.log(getValue());&nbsp;</span></li>
+	</ol>
+</blockquote>
+<h2>迭代器</h2>
+<blockquote>
+	<ol class="dp-c">
+	<li class="alt"><span><span class="keyword">function</span><span>&nbsp;setup(x){&nbsp;</span></span></li>
+	<li><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">var</span><span>&nbsp;i&nbsp;=&nbsp;0;&nbsp;</span></span></li>
+	<li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">var</span><span>&nbsp;len&nbsp;=x.length&nbsp;</span></span></li>
+	<li><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span><span>&nbsp;</span><span class="keyword">function</span><span>(){&nbsp;</span></span></li>
+	<li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">//&nbsp;console.log(&#39;i:&#39;+i)</span><span>&nbsp;</span></span></li>
+	<li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">//&nbsp;console.log(&#39;len:&#39;+len)</span><span>&nbsp;</span></span></li>
+	<li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">if</span><span>(i&nbsp;&lt;&nbsp;len){&nbsp;</span></span></li>
+	<li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span><span>&nbsp;x[i++];&nbsp;</span></span></li>
+	<li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<span class="keyword">else</span><span>{&nbsp;</span></span></li>
+	<li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span><span>&nbsp;</span><span class="string">&#39;eof&#39;;</span><span>&nbsp;</span></span></li>
+	<li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;</span></li>
+	<li><span>&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;</span></li>
+	<li class="alt"><span>}&nbsp;</span></li>
+	<li><span><span class="keyword">var</span><span>&nbsp;next&nbsp;=&nbsp;setup([</span><span class="string">&#39;a&#39;</span><span>,</span><span class="string">&#39;b&#39;</span><span>,</span><span class="string">&#39;c&#39;</span><span>,</span><span class="string">&#39;d&#39;</span><span>]);&nbsp;</span></span></li>
+	<li class="alt"><span>console.log(next())&nbsp;</span></li>
+	<li><span>console.log(next())&nbsp;</span></li>
+	<li class="alt"><span>console.log(next())&nbsp;</span></li>
+	<li><span>console.log(next())&nbsp;</span></li>
+	<li class="alt"><span>console.log(next())&nbsp;</span></li>
+	</ol>
+</blockquote>
+<h2>高阶函数</h2>
+<p>&nbsp;</p>
+<h2>函数表达式</h2>
+				<p><strong>网页原文：</strong><a href="">JavaScript函数详解</a><!--&nbsp;&nbsp;<a href="http://www.beyourside.com/">WEB前端开发</a>--></p>
+				
+				<div class="keywords">
+					<strong>关键字：</strong>
+											<a href="http://www.beyourside.com/index.php?m=content&c=tag&a=lists&tag=JavaScript" class="blue">JavaScript</a> 	
+											<a href="http://www.beyourside.com/index.php?m=content&c=tag&a=lists&tag=%E5%87%BD%E6%95%B0" class="blue">函数</a> 	
+									</div>
+				
+				<ul class="page">
+					<li>上一篇：<a href="http://www.beyourside.com/webfront/javascript/311.html">JavaScript获取url中参数名及参数值</a></li>
+					<li>下一篇：<a href="javascript:">最后一页</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="pright">
+			<div class="box">
+	<h2><a href="javascript:void(0)">相关推荐</a></h2>
+			<ul>
+							<li><a href="http://www.beyourside.com/webfront/javascript/324.html" target="_blank" title="JavaScript函数详解">JavaScript函数详解</a></li>
+							<li><a href="http://www.beyourside.com/webfront/javascript/311.html" target="_blank" title="JavaScript获取url中参数名及参数值">JavaScript获取url中参数名及参数值</a></li>
+							<li><a href="http://www.beyourside.com/webfront/javascript/254.html" target="_blank" title="JavaScript 代码风格指南">JavaScript 代码风格指南</a></li>
+							<li><a href="http://www.beyourside.com/webfront/javascript/182.html" target="_blank" title="JavaScript类型">JavaScript类型</a></li>
+							<li><a href="http://www.beyourside.com/webfront/javascript/179.html" target="_blank" title="JavaScript面试题">JavaScript面试题</a></li>
+							<li><a href="http://www.beyourside.com/webfront/javascript/158.html" target="_blank" title="JavaScript中break、continue和return语句的区别">JavaScript中break、continue和return语句的区别</a></li>
+							<li><a href="http://www.beyourside.com/webfront/javascript/154.html" target="_blank" title="JavaScript常见题">JavaScript常见题</a></li>
+							<li><a href="http://www.beyourside.com/webfront/javascript/153.html" target="_blank" title="JavaScript从作用域链谈闭包">JavaScript从作用域链谈闭包</a></li>
+							<li><a href="http://www.beyourside.com/webfront/javascript/152.html" target="_blank" title="JavaScript实现全国三级城市联动select选择">JavaScript实现全国三级城市联动select选择</a></li>
+							<li><a href="http://www.beyourside.com/webfront/javascript/151.html" target="_blank" title="JavaScript知识总结">JavaScript知识总结</a></li>
+							<li><a href="http://www.beyourside.com/webfront/javascript/150.html" target="_blank" title="JavaScript鼠标事件之获取点击的是哪个键">JavaScript鼠标事件之获取点击的是哪个键</a></li>
+							<li><a href="http://www.beyourside.com/webfront/javascript/149.html" target="_blank" title="JavaScript事件类型">JavaScript事件类型</a></li>
+							<li><a href="http://www.beyourside.com/webfront/javascript/137.html" target="_blank" title="JavaScript和jQuery获取各种屏幕的宽度和高度">JavaScript和jQuery获取各种屏幕的宽度和高度</a></li>
+							<li><a href="http://www.beyourside.com/webfront/javascript/113.html" target="_blank" title="JavaScript实现选项卡效果">JavaScript实现选项卡效果</a></li>
+							<li><a href="http://www.beyourside.com/webfront/javascript/6.html" target="_blank" title="JavaScript简介">JavaScript简介</a></li>
+						<div class="clear"></div>
+		</ul>
+	</div>		</div>
+		<div class="clear"></div>
+	</div>
+	<div class="footer">
+	<div class="w960">
+		&copy;2015  晋ICP备13005922号-2&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.beyourside.com/">web前端开发博客</a>&nbsp;&nbsp;&nbsp;&nbsp;网站中某些内容或文章参考于书籍，如有侵权，请联系qq:2547248578
+		<span>
+<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1255329381'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/stat.php%3Fid%3D1255329381%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>
+            		
+		</span>
+	</div>
+</div>	<div class="none">
+		<span>浏览:</span>
+		<script type="text/javascript" src="http://www.beyourside.com/statics/js/jquery.min.js"></script>
+		<span id="hits"><script language="JavaScript" src="http://www.beyourside.com/api.php?op=count&id=324&modelid=1"></script></span>
+	</div>
 </body>
 </html>
