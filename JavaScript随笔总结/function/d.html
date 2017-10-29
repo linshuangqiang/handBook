@@ -1,0 +1,80 @@
+<script type="text/javascript">
+var a = 'global';
+var fn = function(){
+	var b = 'local';
+	var innerFn = function(){
+		var c = 'inner';
+		console.log(c);
+		return b;
+	}
+	return innerFn;
+}
+//console.log(b);//访问不到
+var inner = fn();
+console.log(inner);
+// 将返回值赋值给一个全局变量。从而可以访问fn()私有控件的新全局函数；返回的是innerFn
+console.log(inner());
+</script>
+
+<script type="text/javascript">
+var inner;
+var fn = function(){
+	var b = 'local';
+	var innerFn = function(){
+		return b;
+	}
+	inner = innerFn;
+}
+console.log(fn())//代用fn函数后  fn内部的innerFn指向了inner。
+console.log(inner())
+</script>
+
+<script type="text/javascript">
+function fn(param){
+	var innerFn = function(){
+		return param;
+	}
+	param++;
+	return innerFn;
+}
+var inner = fn(144);
+//fn执行了一次，所以param只自加1次
+console.log(inner())//145
+console.log(inner())//145
+</script>
+
+<script type="text/javascript">
+function fn(){
+	var arr = [];
+	for(var i = 0; i < 5; i++){
+		arr[i] = function(){
+			return i;
+		}
+	}
+	return arr;
+}
+var arr = fn();
+for(var i = 0; i < arr.length; i++){
+	console.log(arr[i]);
+	console.log(arr[i]())//输出5个5,即每次调用函数后都返回5
+}
+// 解决方法:下一个script
+</script>
+<script type="text/javascript">
+function fn(){
+	var arr = [];
+	for(var i = 0; i < 5; i++){
+		arr[i] = (function(i){//1  此处的i是每次自执行是for语句的i值
+			return function(){
+				return i;//2  此处的i是1处的i
+			}
+		}(i))
+	}
+	return arr
+}
+var arr = fn();
+for(var i = 0; i < arr.length; i++){
+	console.log(arr[i]);
+	console.log(arr[i]())
+}
+</script>
