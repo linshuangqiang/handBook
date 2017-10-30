@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+<div id="box">click box</div>
+<script type="text/javascript">
+var getId = function(id){
+	return document.getElementById(id)
+}
+console.log(getId('box'))//div节点
+
+var getId = document.getElementById;
+getId('box');//TypeError
+
+document.getElementById  = (function(func){
+	return function(){
+		return func.apply(document,arguments);
+	}
+})(document.getElementById)
+var getId = document.getElementById;
+var div = getId('box')
+console.log(div.id)
+</script>
+</body>
+</html>

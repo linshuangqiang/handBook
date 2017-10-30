@@ -1,0 +1,100 @@
+<script type="text/javascript">
+var o = {
+	num:1,
+	getNum: function(){
+		console.log(this);
+		console.log(this === o)
+		console.log(this.num)
+	}
+}
+o.getNum()
+</script>
+
+<script type="text/javascript">
+window.name = 'zs';
+var age = 25;
+var getUserInfo = function(){
+	console.log(this)
+	console.log(this === window)
+	return this.name+":"+age;
+}
+console.log(getUserInfo())
+</script>
+
+<script type="text/javascript">
+window.name = 'local-zs';
+var age = 25;
+var o = {
+	name: 'inner-ls',
+	getUserInfo: function(){
+		return this.name+":"+age;
+	}
+}
+var getUserInfo = o.getUserInfo
+console.log(getUserInfo())
+</script>
+
+<script type="text/javascript">
+function fn(){
+	'use strict'
+	console.log(this)
+}
+fn()
+</script>
+
+<script type="text/javascript">
+var Person = function(name){
+	this.name = name;
+}
+var person = new Person("zs");
+console.log(person.name)
+</script>
+
+<script type="text/javascript">
+var name = 'local-name'
+var Person = function(name){
+	this.name = name;
+	return {//显示的返回一个对象
+		age:'33',
+		name:this.age//this为Person对象
+	}
+}
+var person = new Person('张三');
+console.log(person.name)
+</script>
+
+<script type="text/javascript">
+var name = 'local-name'
+var Person = function(name){
+	this.name = name;
+	return '123'
+}
+var person = new Person('张三');
+console.log(person.name)
+</script>
+
+<script type="text/javascript">
+var o1 = {
+	name: 'o1-name',
+	getName: function(){
+		return this.name;
+	}
+}
+var o2 = {
+	name: 'o2-name'
+}
+console.log(o1.getName())
+console.log(o1.getName.call(o2))
+</script>
+
+<script type="text/javascript">
+var o1 = {
+	name : 'zs',
+	getName: function(){
+		return this.name
+	}
+}
+console.log(o1.getName())
+var getName1 = o1.getName;
+console.log(getName1())
+</script>

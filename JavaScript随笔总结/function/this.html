@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="../css/global.css">
+</head>
+<body>
+<h1>this</h1>
+<p>JavaScript的this总是指向一个对象,而具体指向哪个对象是由在运行时基于函数的执行环境动态绑定的，而非函数被声明的环境</p>
+<h2>this的指向</h2>
+<dl>
+	<dt>除去不常用的with和eval的情况。具体到实际应用中，this的指向如下</dt>
+	<dd>作为对象的方法调用</dd>
+	<dd>作为普通函数调用</dd>
+	<dd>构造器调用</dd>
+	<dd>Function.prototype.call或Function.prototype.apply调用</dd>
+</dl>
+<h3>作为对象的方法调用</h3>
+<p>this将会指向对象</p>
+<code>
+<pre>
+var o = {
+	num:1,
+	getNum: function(){
+		console.log(this);
+		console.log(this === o)
+		console.log(this.num)
+	}
+}
+o.getNum()
+</pre>
+</code>
+<h3>作为普通函数调用</h3>
+<p>this总是指向全局对象。在浏览器中就是window对象</p>
+<code>
+<pre>
+window.name = 'zs';
+var age = 25;
+var getUserInfo = function(){
+	console.log(this)
+	console.log(this === window)
+	return this.name+":"+age;
+}
+console.log(getUserInfo())
+</pre>
+</code>
+<div>或者</div>
+<code>
+<pre>
+window.name = 'local-zs';
+var age = 25;
+var o = {
+	name: 'inner-ls',
+	getUserInfo: function(){
+		return this.name+":"+age;
+	}
+}
+var getUserInfo = o.getUserInfo
+console.log(getUserInfo())
+</pre>
+</code>
+<div>一个使用的实例</div>
+<code>
+<pre>
+var id ='window';
+document.getElementById('box').onclick = function(){
+	console.log(this.id);//指向id为box的节点
+	var callback = function(){
+		console.log(this.id);//指向全局
+	}
+	callback()
+}
+</pre>
+</code>
+<div>解决方法</div>
+<code>
+<pre>
+var id ='window';
+document.getElementById('box').onclick = function(){
+	console.log(this.id);//指向id为box的节点
+	var self = this;
+	var callback = function(){
+		console.log(self.id);//指向id为box的节点
+	}
+	callback()
+}
+</pre>
+</code>
+<div>注意：</div>
+<code>
+<pre>
+function fn(){
+	'use strict'
+	console.log(this)
+}
+fn();
+//说明：在严格模式下，方法内的this已经被规定为不会指向全局对象，而是undefined
+</pre>
+</code>
+<h3>构造函数调用</h3>
+<p>当使用new操作符调用函数时，函数总返回一个对象。构造器里面的this就指向这个返回的对象</p>
+<code>
+<pre>
+var Person = function(name){
+	this.name = name;
+}
+var person = new Person("zs");
+console.log(person.name)
+</pre>
+</code>
+<div>注意：</div>
+<code>
+<pre>
+var name = 'local-name'
+var Person = function(name){
+	this.name;
+	return {//显示的返回一个对象
+		age:'33',
+		name:this//this为Person对象
+	}
+}
+var person = new Person('张三');
+console.log(person.name)
+</pre>
+</code>
+<div>返回的不是一个对象</div>
+<code>
+<pre>
+var name = 'local-name'
+var Person = function(name){
+	this.name = name;
+	return '123'
+}
+var person = new Person('张三');
+console.log(person.name)
+</pre>
+</code>
+<h3>Function.prototype.call()或Function.prototype.apply()调用</h3>
+<p>他们可以动态改变传入函数的this</p>
+<code>
+<pre>
+var o1 = {
+	name: 'o1-name',
+	getName: function(){
+		return this.name;
+	}
+}
+var o2 = {
+	name: 'o2-name'
+}
+console.log(o1.getName())
+console.log(o1.getName.call(o2))
+</pre>
+</code>
+<div>call和apply方法体现了函数式语言的特性。每一次的编写函数式语言的代码，都离不开call和apply</div>
+<h2>丢失的this</h2>
+<code>
+<pre>
+var o1 = {
+	name : 'zs',
+	getName: function(){
+		return this.name
+	}
+}
+console.log(o1.getName())
+var getName1 = o1.getName;
+console.log(getName1())
+</pre>
+</code>
+<div>解决方法：</div>
+<code>
+<pre>
+var o1 = {
+	name : 'zs',
+	getName: function(){
+		var self = o1
+		return self.name
+	}
+}
+console.log(o1.getName())
+var getName1 = o1.getName;
+console.log(getName1())
+</pre>
+</code>
+<div>综合实例</div>
+<div>-1</div>
+<code>
+<pre>
+var getId = function(id){
+	return document.getElementById(id)
+}
+console.log(getId('box'))//div节点
+</pre>
+</code>
+<div>-2</div>
+<code>
+<pre>
+var getId = document.getElementById;
+getId('box');//TypeError;this指向可window
+</pre>
+</code>
+<div>-2的解决方案</div>
+<code>
+<pre>
+document.getElementById  = (function(func){
+	return function(){
+		return func.apply(document,arguments);
+	}
+})(document.getElementById)
+var getId = document.getElementById;
+var div = getId('box')
+console.log(div.id)
+//利用apply把document当作this传入getId函数,帮助修正this
+</pre>
+</code>
+</body>
+</html>

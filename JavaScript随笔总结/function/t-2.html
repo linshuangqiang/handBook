@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+<div id='box'>click div</div>
+<script type="text/javascript">
+
+'use strict'
+console.log(this)
+var id ='window';
+document.getElementById('box').onclick = function(){
+	console.log(this.id);//指向id为box的节点
+	var callback = function(){
+		console.log(this)
+		console.log(this.id);//指向全局
+	}
+	callback()
+}
+// var id ='window';
+// document.getElementById('box').onclick = function(){
+// 	console.log(this.id);//指向id为box的节点
+// 	var self = this;
+// 	var callback = function(){
+// 		console.log(self.id);//指向id为box的节点
+// 	}
+// 	callback()
+// }
+</script>
+</body>
+</html>
