@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="../css/global.css">
+</head>
+<h1>函数@2（函数高级）</h1>
+<h2>书写方式#1</h2>
+<h3>-1</h3>
+<code>
+<pre>
+//验证用户名
+function checkName(){
+	
+}
+//验证邮箱
+function checkEmail(){
+	
+}
+//验证密码
+function checkPasswd(){
+	
+}
+</pre>
+</code>
+<h3>-2</h3>
+<code>
+<pre>
+//验证用户名
+var checkName = function(){
+	
+}
+//验证邮箱
+var checkEmail = function(){
+	
+}
+//验证密码
+var checkPasswd function(){
+	
+}
+</pre>
+</code>
+<h2>书写方式#2（使用对象收编变量）</h2>
+<h3>-1</h3>
+<code>
+<pre>
+var Check = {
+	checkName : function(){
+
+	},
+	checkEmail : function(){
+
+	},
+	checkPasswd : function(){
+
+	}
+}
+</pre>
+</code>
+<h3>-2</h3>
+<code>
+<pre>
+var Check = function(){};
+Check.checkName = function(){
+	
+}
+Check.checkEmail = function(){
+	
+}
+Check.checkPasswd = function(){
+	
+}
+</pre>
+</code>
+<h2>书写方法#3（真假对象）</h2>
+<code>
+<pre>
+var Check = function(){
+	return {
+		checkName : function(){
+
+		},
+		checkEmail : function(){
+
+		},
+		checkPasswd : function(){
+
+		}
+	}
+}
+</pre>
+</code>
+<h2>书写方法#4（类的使用）</h2>
+<h3>-1</h3>
+<code>
+<pre>
+var Check = function(){
+	this.checkName = function(){
+		
+	}
+	this.checkEmail = function(){
+		
+	}
+	this.checkPasswd = function(){
+		
+	}	
+}
+</pre>
+</code>
+<h3>-2</h3>
+<code>
+<pre>
+var Check = function(){};
+Check.prototype.checkName = function(){
+	
+}
+Check.prototype.checkEmail = function(){
+	
+}
+Check.prototype.checkPasswd = function(){
+	
+}
+</pre>
+</code>
+<h3>-3</h3>
+<code>
+<pre>
+var Check = function(){};
+Check.prototype = {
+	checkName : function(){},
+	checkEmail: function(){},
+	checkPasswd: function(){}
+}
+//注意：构造器属性已经被改变了
+</pre>
+</code>
+<h2>书写方法#5（链式调用）</h2>
+<h3>-1</h3>
+<code>
+<pre>
+var Check = {
+	checkName : function(){
+
+		return this;
+	},
+	checkEmail : function(){
+
+		return this;
+	},
+	checkPasswd : function(){
+
+		return this;
+	}
+}
+</pre>
+</code>
+<h3>-2</h3>
+<code>
+<pre>
+var Check = function(){};
+Check.prototype = {
+	checkName : function(){
+
+		return this;
+	},
+	checkEmail: function(){
+
+		return this;
+	},
+	checkPasswd: function(){
+
+		return this;
+	}
+}
+</pre>
+</code>
+<h2>书写方法#6（函数的祖先）</h2>
+<h3>-1</h3>
+<code>
+<pre>
+Function.prototype.checkEmail = function(){
+	//验证邮箱
+}
+var fn = function(){};
+fn.checkEmail();
+//or
+var fn = new Function();
+fn.checkEmail();
+</pre>
+</code>
+<h3>-2(抽象出可以统一添加方法的功能方法)</h3>
+<code>
+<pre>
+Function.prototype.addMethod = function(name,fn){
+	this[name] = fn;
+}
+var methods = function(){}//or new function();
+methods.addMethod('checkName',function(){
+	//check user name
+});
+methods.addMethod('checkEmail',function(){
+	//check user email
+});
+methods.checkName();
+methods.checkEmail();
+</pre>
+<h3>-3(针对上一个方法，支持链式)</h3>
+<code>
+<pre>
+Function.prototype.addMethod = function(name,fn){
+	this[name] = fn;
+	return this;
+}
+var methods = function(){}//or new function();
+methods.addMethod('checkName',function(){
+	//check user name
+	return this；
+}).addMethod('checkEmail',function(){
+	//check user email
+	return this；
+})
+methods.checkName().checkEmail();
+</pre>
+</code>
+<h2>书写方法#7（#6-2作对比）(类式调用方式)</h2>
+<code>
+<pre>
+Function.prototype.addMethod = function(name,fn){
+	this.prototype[name] = fn;
+	return this;
+}
+var Methods = function(){};
+methods.addMethod('checkName',function(){
+	//check user name
+}).addMethod('checkEmail',function(){
+	//check user email
+})
+var m = new Methods();//new 不能省略
+m.checkEmail();
+</pre>
+</code>
+<body>
+</body>
+</html>

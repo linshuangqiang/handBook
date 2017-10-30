@@ -1,0 +1,202 @@
+<script type="text/javascript">
+function checkName(){
+	console.log('checkname');	
+}
+checkName()
+
+
+var checkName = function(){
+	console.log('name-1')
+}
+checkName()
+</script>
+
+<script type="text/javascript">
+var Check = {
+	checkName : function(){
+		console.log('name-2')
+	},
+	checkEmail : function(){
+
+	},
+	checkPasswd : function(){
+
+	}
+}
+Check.checkName();
+
+
+var Check = function(){};
+Check.checkName = function(){
+	console.log('name-3')
+}
+Check.checkEmail = function(){
+	
+}
+Check.checkPasswd = function(){
+	
+}
+Check.checkName();
+</script>
+
+<script type="text/javascript">
+var Check = function(){
+	return {
+		checkName : function(){
+			console.log('name-4')
+		},
+		checkEmail : function(){
+			console.log('email')
+		},
+		checkPasswd : function(){
+
+		}
+	}
+}
+var check = new Check();
+check.checkName();
+check.checkEmail();
+</script>
+<script type="text/javascript">
+var Check = function(){
+	this.checkName = function(){
+		console.log('name-5')
+	}
+	this.checkEmail = function(){
+		console.log('email-1')
+	}
+	this.checkPasswd = function(){
+		
+	}	
+}
+var check = new Check();
+check.checkName();
+check.checkEmail();
+
+
+var Check = function(){};
+Check.prototype.checkName = function(){
+	console.log('name-6')
+}
+Check.prototype.checkEmail = function(){
+	console.log('email-2')
+}
+Check.prototype.checkPasswd = function(){
+	
+}
+console.log(Check.prototype.constructor);
+var check = new Check();
+console.log(Check.prototype.constructor);
+check.checkName();
+check.checkEmail();
+
+var Check = function(){};
+Check.prototype = {
+	checkName : function(){console.log('name-7')},
+	checkEmail: function(){console.log('email-3')},
+	checkPasswd: function(){}
+}
+var check = new Check();
+check.checkName();
+check.checkEmail();
+console.log(Check.prototype.constructor);
+</script>
+
+<script type="text/javascript">
+var Check = {
+	checkName : function(){
+		console.log('name-8')
+		return this;
+	},
+	checkEmail : function(){
+		console.log('email-4')
+		return this;
+	},
+	checkPasswd : function(){
+		console.log('password')
+		return this;
+	}
+}
+Check.checkName().checkEmail().checkPasswd();
+
+
+var Check = function(){};
+Check.prototype = {
+	checkName : function(){
+		console.log('name-9')
+		return this;
+	},
+	checkEmail: function(){
+		console.log('email-5')
+		return this;
+	},
+	checkPasswd: function(){
+		console.log('password-1')
+		return this;
+	}
+}
+var check = new Check();
+check.checkName().checkEmail().checkPasswd();
+</script>
+<script type="text/javascript">
+Function.prototype.checkEmail = function(){
+	console.log('email-6')
+	//验证邮箱
+}
+var fn = function(){};
+fn.checkEmail();
+//or
+var fn = new Function();
+fn.checkEmail();
+
+
+Function.prototype.addMethod = function(name,fn){
+	this[name] = fn;
+}
+var methods = function(){}//or new function();
+methods.addMethod('checkName',function(){
+	console.log('name-10')
+	//check user name
+});
+methods.addMethod('checkEmail',function(){
+	console.log('email-7')
+	//check user email
+});
+methods.checkName();
+methods.checkEmail();
+
+
+Function.prototype.addMethod = function(name,fn){
+	this[name] = fn;
+	return this;
+}
+var methods = function(){}//or new function();
+methods.addMethod('checkName',function(){
+	console.log('name-22')
+	//check user name
+	return this;
+}).addMethod('checkEmail',function(){
+	//check user email
+	console.log('email-22')
+	return this;
+});
+methods.checkName().checkEmail();
+
+
+Function.prototype.addMethod = function(name,fn){
+	this.prototype[name] = fn;
+	return this;
+}
+var Methods = function(){};
+Methods.addMethod('checkName',function(){
+	console.log('name-23')
+	return this;
+	//check user name
+}).addMethod('checkEmail',function(){
+	console.log('email-23')
+	return this
+	//check user email
+})
+var m = new Methods();//new 不能省略
+m.checkEmail().checkName();
+</script>

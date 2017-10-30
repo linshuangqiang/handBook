@@ -1,3 +1,12 @@
 .con-show-link{
 	margin-left:2em;
 }
+pre{
+	background-color: #F5F5F5; 
+	padding:10px 20px;
+}
+h3{
+	margin-left:2em;
+	padding-left: 10px;
+	border-left:3px solid red;
+}
