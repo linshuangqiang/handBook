@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-cn" ng-app="notesApp">
+<head>
+    <meta charset="UTF-8">
+    <title>根据id判断重复性</title>
+</head>
+<body ng-controller="MainCtrl as ctrl">
+<input type="button" value="改变内容" ng-click="ctrl.chageNotes()">
+<div ng-repeat="note in ctrl.notes1">
+    {{note.$$hashKey}}
+    <span>{{note.book}}</span>
+    <span>{{note.done}}</span>
+</div>
+<div ng-repeat="note in ctrl.notes2 track by note.id">
+    {{note.$$hashKey}}
+    <span>{{note.book}}</span>
+    <span>{{note.done}}</span>
+</div>
+<script src="../js/angular.js"></script>
+<script>
+    angular.module('notesApp',[]).controller('MainCtrl',[function(){
+        var self = this;
+        var notes = [
+            {id:1,book:'javascript',done:false},
+            {id:2,book:'html',done:false},
+            {id:3,book:'css',done:false},
+            {id:4,book:'angularJS',done:true}
+        ]
+        self.notes1 = angular.copy(notes);
+        self.notes2 = angular.copy(notes);
+        self.chageNotes = function(){
+            var notes = [
+                {id:1,book:'change javascript',done:false},
+                {id:2,book:'html',done:false},
+                {id:3,book:'css',done:false},
+                {id:4,book:'angularJS',done:true}
+            ];
+
+            self.notes1 = angular.copy(notes);
+            self.notes2 = angular.copy(notes);
+        }
+    }])
+</script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+pre{
+	background-color: #F5F5F5; 
+	padding:10px 20px;
+}
+h3{
+	margin-left:2em;
+	padding-left: 10px;
+	border-left:3px solid red;
+}
+textarea{
+	display: block;
+	width: 100%;
+	height: auto;
+	border:0;
+	resize: none;
+	outline: 0;
+	background: none;
+	line-height: 1.5;
+	font-size: 14px;
+}

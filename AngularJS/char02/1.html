@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="zh-cn" ng-app="notesApp">
+<head>
+    <meta charset="UTF-8">
+    <title>模块定义</title>
+</head>
+<body>
+{{1+2}}
+<p>如果没有定义自己的notesApp。那么将不会显示出3而是原样显示</p>
+<script src="../js/angular.js"></script>
+<script>
+//   定义模块 名为notesApp。不依赖任何模块
+    angular.module('notesApp',[])
+</script>
+</body>
+</html>

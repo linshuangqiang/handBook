@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh-cn" ng-app="notesApp">
+<head>
+    <meta charset="UTF-8">
+    <title>控制器的使用扩展</title>
+</head>
+<body ng-controller="MainCtrl as ctrl">
+<p><span ng-bind="ctrl.name"></span></p>
+<input type="button" ng-click="ctrl.message()" value="修改上面的值">
+<script src="../js/angular.js"></script>
+<script>
+    angular.module('notesApp',[]).controller('MainCtrl',[function(){
+        var self = this;
+        var i = 0;
+        self.name = 'lisi';
+        self.message = function(){
+            if((i++)%2 === 0){
+                self.name = 'change';
+            }else{
+                self.name = 'lisi';
+            }
+        }
+    }])
+</script>
+</body>
+</html>

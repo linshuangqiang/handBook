@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>AngularJS V1.2.32</title>
+    <link rel="stylesheet" href="./css/global.css">
+
+</head>
+<body>
+<h2>初始AngularJS</h2>
+<code>
+<pre>
+<textarea readonly>
+<html lang="zh-cn" ng-app>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript" src="../js/angular.js"></script>
+</head>
+<body>
+{{1+2}}
+<h2>数据的绑定</h2>
+<input type="text" ng-model='name' name="">
+<p>{{name}}</p>
+<p><span ng-bind="name"></span></p>
+</body>
+</html>
+</textarea>
+</pre>
+</code>
+<h2>模块定义</h2>
+<code>
+<pre>
+<textarea readonly>
+<!DOCTYPE html>
+<html lang="zh-cn" ng-app="notesApp">
+<head>
+    <meta charset="UTF-8">
+    <title>模块定义</title>
+</head>
+<body>
+{{1+2}}
+<p>如果没有定义自己的notesApp。那么将不会显示出3而是原样显示</p>
+<script src="../js/angular.js"></script>
+<script>
+    //   定义模块 名为notesApp。不依赖任何模块
+    angular.module('notesApp',[])
+</script>
+</body>
+</html>
+</textarea>
+</pre>
+</code>
+<h2>控制器的使用 => 创建一个控制器</h2>
+<code>
+<pre>
+<textarea readonly>
+<!DOCTYPE html>
+<html lang="zh-cn" ng-app="notesApp">
+<head>
+    <meta charset="UTF-8">
+    <title>控制器的使用 => 创建一个控制器</title>
+</head>
+<body>
+<div ng-controller="MainCtrl">
+    {{1+2}}
+</div>
+<script src="../js/angular.js"></script>
+<script>
+    angular.module('notesApp',[]).controller('MainCtrl',[function(){
+        console.log('控制器被创建');
+    }])
+</script>
+</body>
+</html>
+</textarea>
+</pre>
+</code>
+<h2>控制器的使用</h2>
+<code>
+<pre>
+<textarea readonly>
+<!DOCTYPE html>
+<html lang="zh-cn" ng-app="notesApp">
+<head>
+    <meta charset="UTF-8">
+    <title>控制器的使用</title>
+</head>
+<body ng-controller="MainCtrl as ctrl">
+{{ctrl.name}} <=> {{ctrl.age}};
+<p><span ng-bind="ctrl.name"></span><span ng-bind="ctrl.age"></span></p>
+<script src="../js/angular.js"></script>
+<script>
+    angular.module('notesApp',[]).controller('MainCtrl',[function(){
+        this.name = 'zhang';
+//        不是this将不会被显示出来。因此这个里面的this不能被省略
+//        age = 12;
+        this.age = 22
+    }])
+</script>
+</body>
+</html>
+</textarea>
+</pre>
+</code>
+<h2>控制器的使用扩展</h2>
+<code>
+<pre>
+<textarea readonly>
+<!DOCTYPE html>
+<html lang="zh-cn" ng-app="notesApp">
+<head>
+    <meta charset="UTF-8">
+    <title>控制器的使用扩展</title>
+</head>
+<body ng-controller="MainCtrl as ctrl">
+<p><span ng-bind="ctrl.name"></span></p>
+<input type="button" ng-click="ctrl.message()" value="修改上面的值">
+<script src="../js/angular.js"></script>
+<script>
+    angular.module('notesApp',[]).controller('MainCtrl',[function(){
+        var self = this;
+        var i = 0;
+        self.name = 'lisi';
+        self.message = function(){
+            if((i++)%2 === 0){
+                self.name = 'change';
+            }else{
+                self.name = 'lisi';
+            }
+        }
+    }])
+</script>
+</body>
+</html>
+</textarea>
+</pre>
+</code>
+<h2>数组的操作和显示</h2>
+<code>
+<pre>
+<textarea readonly>
+<!DOCTYPE html>
+<html lang="zh-cn" ng-app="notesApp">
+<head>
+    <meta charset="UTF-8">
+    <title>数组的操作和显示</title>
+</head>
+<body ng-controller="MainCtrl as ctrl">
+<h2>数组的遍历</h2>
+<div ng-repeat="note in ctrl.notes">
+    <span>{{note.book}}</span>&nbsp;&nbsp;<=>&nbsp;&nbsp;
+    <span ng-bind="note.done"></span>
+</div>
+<script src="../js/angular.js"></script>
+<script>
+    angular.module('notesApp',[]).controller('MainCtrl',[function(){
+        var self = this;
+        self.notes = [
+            {id:1,book:'javascript',done:false},
+            {id:2,book:'html',done:false},
+            {id:3,book:'css',done:false},
+            {id:4,book:'angularJS',done:true},
+        ]
+    }])
+</script>
+</body>
+</html>
+</textarea>
+</pre>
+</code>
+<h2>其它指令</h2>
+<code>
+<pre>
+<textarea readonly>
+<!DOCTYPE html>
+<html lang="zh-cn" ng-app="notesApp">
+<head>
+    <meta charset="UTF-8">
+    <title>其它指令</title>
+    <style>
+        .done{background-color: #ccc}
+        .pending{
+            background-color: red;
+        }
+    </style>
+</head>
+<body ng-controller="MainCtrl as ctrl">
+<div ng-repeat="note in ctrl.notes" ng-class="ctrl.getClass(note.done)">
+    {{note.book}}
+    <p>
+        <span ng-show="note.isbn" ng-bind="note.isbn"></span>
+    </p>
+</div>
+<script src="../js/angular.js"></script>
+<script>
+    angular.module('notesApp',[]).controller('MainCtrl',[function(){
+        var self = this;
+        self.notes = [
+            {id:1,book:'javascript',done:false},
+            {id:2,book:'html',done:false,isbn:'11233'},
+            {id:3,book:'css',done:false},
+            {id:4,book:'angularJS',done:true,isbn:'1234'},
+        ];
+        self.getClass = function(status){
+            //方法1
+            var obj = {
+                true:'done',
+                false:'pending'
+            }
+            return obj[status]
+            //-2
+            if(status){
+                return 'pending';
+            }else{
+                return 'done'
+            }
+            //-3
+            return{
+                done:status,
+                pending:!status
+            }
+        };
+    }])
+</script>
+</body>
+</html>
+</textarea>
+</pre>
+</code>
+<h2>作用于对象上的ng-repeat</h2>
+<code>
+<pre>
+<textarea readonly>
+<!DOCTYPE html>
+<html lang="zh-cn" ng-app="notesApp">
+<head>
+    <meta charset="UTF-8">
+    <title>作用于对象上的ng-repeat</title>
+</head>
+<body ng-controller="MainCtrl as ctrl">
+<!--(key,value) in ObjectExpression-->
+<div ng-repeat="(author,note) in ctrl.notes">
+    {{note.name}}
+    =><span ng-bind="author"></span>
+</div>
+<script src="../js/angular.js"></script>
+<script>
+    angular.module('notesApp',[]).controller('MainCtrl',[function(){
+        var self = this;
+        self.notes = {
+            javaScript:{
+                id:1,
+                name:'JavaScript高级程序设计',
+                done:false
+            },
+            anularJS:{
+                id:3,
+                name:'即学即用AngularJS',
+                done:true
+            },
+            html:{
+                id:2,
+                name:'HTML高级程序设计',
+                done:false
+            }
+        }
+    }])
+</script>
+</body>
+</html>
+</textarea>
+</pre>
+</code>
+<h2>ng-repeat的辅助变量</h2>
+<code>
+<pre>
+<textarea readonly>
+<!DOCTYPE html>
+<html lang="zh-cn" ng-app="notesApp">
+<head>
+    <meta charset="UTF-8">
+    <title>ng-repeat的辅助变量</title>
+</head>
+<body ng-controller="MainCtrl as ctrl">
+<h2>ng-repeat的辅助变量</h2>
+<div ng-repeat="note in ctrl.notes" style="border-bottom: 1px solid red">
+    <p>first：{{$first}} <span ng-bind="$first"></span></p>
+    <p>middel:{{$middle}}</p>
+    <p>last:{{$last}}</p>
+    <p>index:{{$index}}</p>
+    <p>odd:{{$odd}}</p>
+    <p>even:{{$even}}</p>
+    <span>{{note.book}}</span>&nbsp;&nbsp;<=>&nbsp;&nbsp;
+    <span ng-bind="note.done"></span>
+</div>
+<script src="../js/angular.js"></script>
+<script>
+    angular.module('notesApp',[]).controller('MainCtrl',[function(){
+        var self = this;
+        self.notes = [
+            {id:1,book:'javascript',done:false},
+            {id:2,book:'html',done:false},
+            {id:3,book:'css',done:false},
+            {id:4,book:'angularJS',done:true},
+        ]
+    }])
+</script>
+</body>
+</html>
+</textarea>
+</pre>
+</code>
+<h2>根据id判断重复性</h2>
+<code>
+<pre>
+<textarea readonly>
+<!DOCTYPE html>
+<html lang="zh-cn" ng-app="notesApp">
+<head>
+    <meta charset="UTF-8">
+    <title>根据id判断重复性</title>
+</head>
+<body ng-controller="MainCtrl as ctrl">
+<input type="button" value="改变内容" ng-click="ctrl.chageNotes()">
+<div ng-repeat="note in ctrl.notes1">
+    {{note.$$hashKey}}
+    <span>{{note.book}}</span>
+    <span>{{note.done}}</span>
+</div>
+<div ng-repeat="note in ctrl.notes2 track by note.id">
+    {{note.$$hashKey}}
+    <span>{{note.book}}</span>
+    <span>{{note.done}}</span>
+</div>
+<script src="../js/angular.js"></script>
+<script>
+    angular.module('notesApp',[]).controller('MainCtrl',[function(){
+        var self = this;
+        var notes = [
+            {id:1,book:'javascript',done:false},
+            {id:2,book:'html',done:false},
+            {id:3,book:'css',done:false},
+            {id:4,book:'angularJS',done:true}
+        ]
+        self.notes1 = angular.copy(notes);
+        self.notes2 = angular.copy(notes);
+        self.chageNotes = function(){
+            var notes = [
+                {id:1,book:'change javascript',done:false},
+                {id:2,book:'html',done:false},
+                {id:3,book:'css',done:false},
+                {id:4,book:'angularJS',done:true}
+            ];
+
+            self.notes1 = angular.copy(notes);
+            self.notes2 = angular.copy(notes);
+        }
+    }])
+</script>
+</body>
+</html>
+</textarea>
+</pre>
+</code>
+<h2>跨HTML元素的ng-repeat</h2>
+<code>
+<pre>
+<textarea readonly>
+<!DOCTYPE html>
+<html lang="zh-cn" ng-app="notesApp">
+<head>
+    <meta charset="UTF-8">
+    <title>跨HTML元素的ng-repeat</title>
+</head>
+<body ng-controller="MainCtrl as ctrl">
+<table>
+    <tr ng-repeat-start="note in ctrl.notes">
+        <td>{{note.book}}</td>
+    </tr>
+    <tr ng-repeat-end>
+        <td>{{note.done}}</td>
+    </tr>
+</table>
+<script src="../js/angular.js"></script>
+<script>
+    angular.module('notesApp',[]).controller('MainCtrl',[function(){
+        var self = this;
+        self.notes = [
+            {id:1,book:'javascript',done:false},
+            {id:2,book:'html',done:false},
+            {id:3,book:'css',done:false},
+            {id:4,book:'angularJS',done:true}
+        ]
+
+    }])
+</script>
+</body>
+</html>
+</textarea>
+</pre>
+</code>
+
+<script>
+var textareaElem = document.getElementsByTagName('textarea');
+console.log(textareaElem.length)
+for(var i = 0; i < textareaElem.length;i++){
+    console.log(textareaElem[i].scrollHeight)
+    textareaElem[i].style.height = textareaElem[i].scrollHeight+'px'
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,4 @@
+示例版本为AngularJS v1.2.32的版本。
+说明：
+index.html
+    char01,char02为demo文件。angular基础，基本的angularJS指令及控制器

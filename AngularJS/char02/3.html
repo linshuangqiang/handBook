@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="zh-cn" ng-app="notesApp">
+<head>
+    <meta charset="UTF-8">
+    <title>控制器的使用</title>
+</head>
+<body ng-controller="MainCtrl as ctrl">
+{{ctrl.name}} <=> {{ctrl.age}};
+<p><span ng-bind="ctrl.name"></span><span ng-bind="ctrl.age"></span></p>
+<script src="../js/angular.js"></script>
+<script>
+    angular.module('notesApp',[]).controller('MainCtrl',[function(){
+        this.name = 'zhang';
+//        不是this将不会被显示出来。因此这个里面的this不能被省略
+//        age = 12;
+        this.age = 22
+    }])
+</script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-cn" ng-app="notesApp">
+<head>
+    <meta charset="UTF-8">
+    <title>其它指令</title>
+    <style>
+        .done{background-color: #ccc}
+        .pending{
+            background-color: red;
+        }
+    </style>
+</head>
+<body ng-controller="MainCtrl as ctrl">
+<div ng-repeat="note in ctrl.notes" ng-class="ctrl.getClass(note.done)">
+    {{note.book}}
+    <p>
+        <span ng-show="note.isbn" ng-bind="note.isbn"></span>
+    </p>
+</div>
+<script src="../js/angular.js"></script>
+<script>
+    angular.module('notesApp',[]).controller('MainCtrl',[function(){
+        var self = this;
+        self.notes = [
+            {id:1,book:'javascript',done:false},
+            {id:2,book:'html',done:false,isbn:'11233'},
+            {id:3,book:'css',done:false},
+            {id:4,book:'angularJS',done:true,isbn:'1234'},
+        ];
+        self.getClass = function(status){
+            //方法1
+            var obj = {
+                true:'done',
+                false:'pending'
+            }
+            return obj[status]
+            //-2
+            if(status){
+                return 'pending';
+            }else{
+                return 'done'
+            }
+            //-3
+            return{
+                done:status,
+                pending:!status
+            }
+        };
+    }])
+</script>
+</body>
+</html>

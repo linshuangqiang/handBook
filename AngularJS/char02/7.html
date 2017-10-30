@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-cn" ng-app="notesApp">
+<head>
+    <meta charset="UTF-8">
+    <title>作用于对象上的ng-repeat</title>
+</head>
+<body ng-controller="MainCtrl as ctrl">
+<!--(key,value) in ObjectExpression-->
+<div ng-repeat="(author,note) in ctrl.notes">
+    {{note.name}}
+    =><span ng-bind="author"></span>
+</div>
+<script src="../js/angular.js"></script>
+<script>
+    angular.module('notesApp',[]).controller('MainCtrl',[function(){
+        var self = this;
+        self.notes = {
+            javaScript:{
+                id:1,
+                name:'JavaScript高级程序设计',
+                done:false
+            },
+            anularJS:{
+                id:3,
+                name:'即学即用AngularJS',
+                done:true
+            },
+            html:{
+                id:2,
+                name:'HTML高级程序设计',
+                done:false
+            }
+        }
+    }])
+</script>
+</body>
+</html>

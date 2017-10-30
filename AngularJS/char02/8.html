@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-cn" ng-app="notesApp">
+<head>
+    <meta charset="UTF-8">
+    <title>ng-repeat的辅助变量</title>
+</head>
+<body ng-controller="MainCtrl as ctrl">
+<h2>ng-repeat的辅助变量</h2>
+<div ng-repeat="note in ctrl.notes" style="border-bottom: 1px solid red">
+    <p>first：{{$first}} <span ng-bind="$first"></span></p>
+    <p>middel:{{$middle}}</p>
+    <p>last:{{$last}}</p>
+    <p>index:{{$index}}</p>
+    <p>odd:{{$odd}}</p>
+    <p>even:{{$even}}</p>
+    <span>{{note.book}}</span>&nbsp;&nbsp;<=>&nbsp;&nbsp;
+    <span ng-bind="note.done"></span>
+</div>
+<script src="../js/angular.js"></script>
+<script>
+    angular.module('notesApp',[]).controller('MainCtrl',[function(){
+        var self = this;
+        self.notes = [
+            {id:1,book:'javascript',done:false},
+            {id:2,book:'html',done:false},
+            {id:3,book:'css',done:false},
+            {id:4,book:'angularJS',done:true},
+        ]
+    }])
+</script>
+</body>
+</html>

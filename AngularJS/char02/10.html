@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh-cn" ng-app="notesApp">
+<head>
+    <meta charset="UTF-8">
+    <title>跨HTML元素的ng-repeat</title>
+</head>
+<body ng-controller="MainCtrl as ctrl">
+<table>
+    <tr ng-repeat-start="note in ctrl.notes">
+        <td>{{note.book}}</td>
+    </tr>
+    <tr ng-repeat-end>
+        <td>{{note.done}}</td>
+    </tr>
+</table>
+<script src="../js/angular.js"></script>
+<script>
+    angular.module('notesApp',[]).controller('MainCtrl',[function(){
+        var self = this;
+        self.notes = [
+            {id:1,book:'javascript',done:false},
+            {id:2,book:'html',done:false},
+            {id:3,book:'css',done:false},
+            {id:4,book:'angularJS',done:true}
+        ]
+
+    }])
+</script>
+</body>
+</html>

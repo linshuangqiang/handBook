@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh-cn" ng-app="notesApp">
+<head>
+    <meta charset="UTF-8">
+    <title>数组的操作和显示</title>
+</head>
+<body ng-controller="MainCtrl as ctrl">
+<h2>数组的遍历</h2>
+<div ng-repeat="note in ctrl.notes">
+    <span>{{note.book}}</span>&nbsp;&nbsp;<=>&nbsp;&nbsp;
+    <span ng-bind="note.done"></span>
+</div>
+<script src="../js/angular.js"></script>
+<script>
+    angular.module('notesApp',[]).controller('MainCtrl',[function(){
+        var self = this;
+        self.notes = [
+            {id:1,book:'javascript',done:false},
+            {id:2,book:'html',done:false},
+            {id:3,book:'css',done:false},
+            {id:4,book:'angularJS',done:true},
+        ]
+    }])
+</script>
+</body>
+</html>
