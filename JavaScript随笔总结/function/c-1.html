@@ -1,0 +1,64 @@
+<script type="text/javascript">
+var func  = function(a,b,c){
+    console.log(this)
+    console.log([a,b,c])
+}
+func(1,1,1)
+func.apply(null,[1,2,3])
+func.call(null,1,3,4)
+console.log(Math.max(1,2,3.5,5))
+console.log(Math.max.apply(null,[5,8,9,44,1,2,4]))
+</script>
+
+
+<script type="text/javascript">
+var name = 'g-name';
+var o1 ={
+    name: 'o1-name'
+}
+var o2 = {
+    name: 'o2-name'
+}
+function getName(){
+    console.log(this.name);
+}
+getName();
+getName.call(null);
+getName.call(o1);
+getName.call(o2);
+
+</script>
+<div id="box">
+click me
+</div>
+<script type="text/javascript">
+document.getElementById('box').onclick = function(){
+    console.log(this)
+    var func = function(){
+        console.log(this)
+        console.log(this.id)
+    }
+    // func()
+    func.call(this)
+}
+</script>
+
+<script type="text/javascript">
+    Function.prototype.bind = function (context) {
+        var self = this;
+        console.log(1);
+        console.log(this);
+        return function(){
+            return self.apply(context,arguments);
+            // context对象为func函数体内的this
+        }
+    }
+    var obj= {
+        name:'name'
+    }
+    var func = function(){
+        console.log(this);
+        console.log(this.name);
+    }.bind(obj);
+    func()
+</script>
