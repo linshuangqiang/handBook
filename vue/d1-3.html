@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>if</title>
+</head>
+<body>
+<div id="app">
+    <span v-if="even">even</span>
+</div>
+<script src="./js/vue.js"></script>
+<script>
+    var vm = new Vue({
+        el: '#app',
+        data: {
+            even: true
+        }
+    })
+</script>
+</body>
+</html>

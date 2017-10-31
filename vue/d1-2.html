@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <span v-bind:title="message">鼠标悬浮</span>
+</div>
+<script src="./js/vue.js"></script>
+<script>
+    var vm = new Vue({
+        el:'#app',
+        data:{
+            message: '页面加载与'+new Date().toLocaleString()
+        }
+    })
+</script>
+</body>
+</html>

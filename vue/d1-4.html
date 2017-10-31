@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>for</title>
+</head>
+<body>
+<div id="app">
+    <ul>
+        {{todos.length}}
+        <li v-for="todo in todos">
+            <span>{{todo.id}}:{{todo.book}}</span>
+        </li>
+    </ul>
+</div>
+<script src="./js/vue.js"></script>
+<script>
+    var vm = new Vue({
+        el: '#app',
+        data:{
+            todos:[
+                {book:'js',id:1},
+                {book:'html',id:2},
+                {book:'css',id:3},
+                {book:'jQuery',id:4}
+            ]
+        }
+    })
+</script>
+</body>
+</html>
