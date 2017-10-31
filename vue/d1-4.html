@@ -8,8 +8,8 @@
 <div id="app">
     <ul>
         {{todos.length}}
-        <li v-for="todo in todos">
-            <span>{{todo.id}}:{{todo.book}}</span>
+        <li v-for="(todo,index) in todos">
+            <span>{{todo.id}}:{{todo.book}}-{{index}}</span>
         </li>
     </ul>
 </div>
