@@ -62,3 +62,23 @@ document.getElementById('box').onclick = function(){
     }.bind(obj);
     func()
 </script>
+<script type="text/javascript">
+    var A = function(name){
+        this.name = name;
+    }
+    var B = function(){
+        A.apply(this,arguments)
+    }
+    B.prototype.getName = function(){
+        return this.name
+    }
+    var b = new B('b');
+    console.log(b.getName())
+</script>
+<script type="text/javascript">
+(function(){
+    // [].push.call(arguments,3)
+    Array.prototype.push.call(arguments,3)
+    console.log(arguments)
+})(1,2)
+</script>

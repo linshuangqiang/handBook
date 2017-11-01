@@ -80,5 +80,29 @@ func()
 </pre>
 </code>
 <h3>借用其它对象的方法</h3>
+<code>
+<pre>
+var A = function(name){
+    this.name = name;
+}
+var B = function(){
+    A.apply(this,arguments)
+}
+B.prototype.getName = function(){
+    return this.name
+}
+var b = new B('b');
+console.log(b.getName())
+</pre>
+</code>
+<code>
+<pre>
+(function(){
+    // [].push.call(arguments,3)
+    Array.prototype.push.call(arguments,3)
+    console.log(arguments)
+})(1,2)
+</pre>
+</code>
 </body>
 </html>
