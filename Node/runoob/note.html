@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>文档说明列表</title>
+</head>
+<body>
+<h2>回掉函数</h2>
+<h3>同步执行文件</h3>
+<pre>
+var fs = require('fs');
+var data = fs.readFileSync('note.txt');
+console.log(data.toString());
+console.log('end')
+/*
+*1.回掉函数
+ end
+* */
+</pre>
+<h3>异步读取文件</h3>
+<pre>
+var fs = require('fs');
+var data = fs.readFile('note.txt',function(err,data){
+    if(err){
+        return console.log(err);
+    }
+    console.log(data);
+    console.log(data.toString())
+})
+console.log('end')
+</pre>
+</body>
+</html>
