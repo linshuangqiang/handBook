@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>安全模式类-问题</title>
+	</head>
+	<body>
+<script>
+	var Demo = function(){};
+	Demo.prototype.show = function(){
+		console.log('ok')
+	}
+	var d = new Demo();
+	d.show();
+//加入省略new
+	var d = Demo();
+	d.show()
+</script>
+	</body>
+</html>

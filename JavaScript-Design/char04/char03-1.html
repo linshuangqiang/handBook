@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>使用简单工厂模式创建一批广告位 - 简单工厂模式</title>
+	</head>
+	<body>
+		<div id="container"></div>
+<script>
+	var Java = function(content){
+		this.content = content;
+		(function(content){
+			var div = document.createElement('div');
+			div.innerHTML = content;
+			div.style.color = 'red';
+			document.getElementById('container').appendChild(div);
+		})(content)
+	}
+	var Php = function(content){
+		this.content = content;
+		(function(content){
+			var div = document.createElement('div');
+			div.innerHTML = content;
+			div.style.color = 'pink';
+			document.getElementById('container').appendChild(div);
+		})(content)
+	}
+	var JavaScript = function(content){
+		this.content = content;
+		(function(content){
+			var div = document.createElement('div');
+			div.innerHTML = content;
+			div.style.color = 'yellow';
+			document.getElementById('container').appendChild(div);
+		})(content)
+	}
+	//如果有其他的学科，就继续定义学科类。并在学科工厂中进行增加case选项
+	//不足之处是每次都需要修改2次
+	//学科类工厂
+	function JobFactory(type,content){
+		switch(type){
+			case 'java' :
+				return new Java(content);
+			case 'php' :
+				return new Php(content);
+			case 'javascript' :
+				return new JavaScript(content);
+		}
+	}
+	JobFactory('java','java推广')
+	JobFactory('php','php推广')
+	JobFactory('php','php-兄弟俩')
+	JobFactory('javascript','javascript推广')
+</script>
+	</body>
+</html>

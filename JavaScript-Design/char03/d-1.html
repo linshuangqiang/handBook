@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>简单工厂模式-创建动物</title>
+	</head>
+	<body>
+<script>
+	var People = function(name){
+		this.intro = name;
+	}
+	People.prototype = {
+		getSpeech: function(){
+			console.log('人用嘴进行说话的');
+		},
+		getWalk: function(){
+			console.log('人是用两条腿走路的')
+		}
+	}
+	//继续定义其他动物类： 如：猫科，爬行等等 以及相应的属性与方法。
+	//创建动物的工厂
+	var Animal = function(name,animalName){
+		if(name === 'people'){
+			console.log(1)
+			return new People(animalName);
+		}
+	};
+	//创建一个人，他的名字叫张三
+	var people = Animal('people','张三');
+	console.log(people);
+	console.log(people.intro);
+	people.getSpeech();
+	people.getWalk();
+</script>
+	</body>
+</html>

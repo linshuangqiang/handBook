@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	//判断用户名
+	var CheckUserMsg = function(text){
+		this.content = text;
+	}
+	CheckUserMsg.prototype.show = function(){
+		//对用户名的判断
+		console.log(this.content);
+	}
+	var UserName = new CheckUserMsg('user name');
+	UserName.show();
+	//添加其他的判断信息
+</script>
+</body>
+</html>

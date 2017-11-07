@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>工厂模式-创建书</title>
+	</head>
+	<body>
+<script>
+	function CreateBook(name,time,type){
+		var o = {};
+		o.name = name;
+		o.time = time;
+		o.type = type;
+		o.getMsg = function(){
+			console.log('你老创建的是'+this.name+'出版时间'+this.time+'属于：'+this.type)
+		}
+		return o;
+	}
+	var book1 = new CreateBook('JavaScript','2017','js');
+	var book2 = new CreateBook('Java','2016','java');
+	book1.getMsg();
+	book2.getMsg()
+</script>
+	</body>
+</html>
