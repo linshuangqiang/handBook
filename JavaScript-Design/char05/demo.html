@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>抽象工厂方法</title>
+	</head>
+	<body>
+<script>
+	//抽象工厂方法
+	/* *
+	 * 实现子类继承父类的方法。
+	 * */
+	var VehicleFactory = function(subType,supperType){
+		if(typeof VehicleFactory[supperType] === 'function'){
+			function F(){};
+			F.prototype = new VehicleFactory[supperType]();
+			subType.constructor = subType;
+			subType.prototype = new F();
+			console.log(subType.prototype)
+			console.log(subType.constructor)
+		}else{
+			throw new Error('未创建该抽象类');
+		}
+	}
+	//小汽车抽象类
+	VehicleFactory.Car = function(){
+		this.type = 'car';
+	}
+	VehicleFactory.Car.prototype = {
+		getPrice: function(){
+			return new Error('car price 抽象方法不能被调用');
+		},
+		getSpeed: function(){
+			return new Error('car speed抽象方法不能被调用');
+		}
+	}
+	//...其他的类似
+		
+		//宝马汽车子类
+		var BMW = function(price,speed){
+			this.price = price;
+			this.speed = speed;
+		}
+		//实现对Car抽象类的继承
+		VehicleFactory(BMW,'Car');
+		BMW.prototype.getPrice = function(){
+			return this.price;
+		}
+		BMW.prototype.getSpeed = function(){
+			return this.speed;
+		}
+		//。。。其他的类似
+		
+		//实例化宝马汽车
+		var bmCar = new BMW(1234,200);
+		console.log(bmCar.type);
+		console.log(bmCar.getPrice())
+		console.log(bmCar.getSpeed())
+</script>
+	</body>
+</html>

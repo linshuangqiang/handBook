@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>建造者模式</title>
+	</head>
+	<body>
+<script>
+	//创建一个人类
+	var Human = function(param){
+		//技能 
+		this.skill = param && param.skill ||'保密';
+		//兴趣爱好
+		this.hobby = param && param.hobby ||'保密';
+	}
+	Human.prototype = {
+		getSkill: function(){
+			return this.skill;
+		},
+		getHobby: function(){
+			return this.hobby;
+		}
+	}
+	//实例化姓名类
+	var Named = function(name){
+		var self = this;
+		(function(name,self){
+			self.wholeName = name;
+			if(name.indexOf(' ') > -1){
+				self.FirstName = name.slice(0,name.indexOf(' '));
+				self.secondName = name.slice(name.indexOf(' ')+1);
+			}
+		})(name,self)
+	}
+	
+	//实例化职位类
+	var Work = function(work){
+		var self = this;
+		(function(work,self){
+			switch(work){
+				case 'code':
+					self.work = '程序员';
+					self.workDescript = '编程是一种艺术';
+					break;
+				case 'UI':
+				case 'UE':
+					self.work = '设计师';
+					self.workDescript = '简约设计 ';
+					break;
+				case 'teach':
+					self.work = '教师';
+					self.workDescript = '';
+					break;
+				default:
+					self.work = 'word';
+					self.workDescript = 'sorry';
+			}
+		})(work,self)
+	}
+	//更换期望的职位
+	Work.prototype.changWork = function(work){
+		this.Work = work;
+	}
+	//添加对职位的描述
+	Work.prototype.changeDescript = function(setence){
+		this.workDescript = setence;
+	}
+	
+	//创建应聘者
+	var Person = function(name,work){
+		var _person = new Human();
+		_person.name = new Named(name);
+		_person.work = new Work(work);
+		return _person;
+	}
+	
+	var person = new Person('xiao ming','code');
+	console.log(person.skill);
+	console.log(person.name.FirstName);
+	console.log(person.name.secondName);
+	console.log(person.work.work);
+	console.log(person.work.workDescript);
+	person.work.changeDescript('change')
+	console.log(person.work.workDescript);
+</script>
+	</body>
+</html>
