@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>原型模式</title>
+	</head>
+	<body>
+<script>
+	//图片轮播类
+	var LoopImages = function(imgArr,container){
+		this.imagesArr = imgArr;
+		this.container = container;
+	}
+	LoopImages.prototype = {
+		//创建轮播图片
+		createImage: function(){
+			console.log('创建轮播图片:createImage');
+		},
+		//切换下一张图片
+		changeImage: function(){
+			console.log('切换下一张图片:changeImage');
+		}
+	}
+	//上下滑动切换类
+	var SlideLoopImg = function(imgArr,container){
+		LoopImages.call(this,imgArr,container);
+	}
+	SlideLoopImg.prototype = new LoopImages();
+	SlideLoopImg.prototype.changeImage = function(){
+			console.log('切换下一张图片:changeImage-SlideLoopImg');
+	}
+	//渐隐切换类
+	var FadeLoopImg = function(imgArr,container,arrow){
+		LoopImages.call(this,imgArr,container);
+		//切换箭头私有变量
+		this.arrow = arrow;
+	}
+	FadeLoopImg.prototype = new LoopImages();
+	FadeLoopImg.prototype.changeImage = function(){
+		console.log('切换下一张图片:changeImage-FadeLoopImg')
+	}
+	
+	var fadeImg = new FadeLoopImg(['1.jpg','2.jpg','3.jpg'],'fade',['left.jpg','right.jpg']);
+	console.log(fadeImg.container);
+	fadeImg.changeImage()
+</script>
+	</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>惰性单例</title>
+	</head>
+	<body>
+<script>
+	//惰性载入单例
+	var LazySingle = (function(){
+		//单例实例引用
+		var _instance = null;
+		function Single(){
+			return {
+				publicMenthod: function(){},
+				publicProperty: 10
+			}
+		}
+		//获取单例对象接口
+		return function(){
+			if(!_instance){
+				_instance = Single();
+			}
+			return _instance
+		}
+	})();
+	
+	console.log(LazySingle().publicProperty)
+</script>
+	</body>
+</html>

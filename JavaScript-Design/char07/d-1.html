@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>原型继承</title>
+	</head>
+	<body>
+<script>
+	function prototypeExtend(){
+		//arguments 参数列表表示模版对象
+		//对模版引用类型的属性实质上是浅复制（引用类型属性共享）
+		var F = function(){},
+				args = arguments;
+				len = args.length;
+		for(var i = 0; i < len; i++){
+			for(var j in args[i]){
+				F.prototype[j] = args[i][j];
+			}
+		}
+		return new F();
+	}
+	var penguin = prototypeExtend(
+		{
+			speed:20,
+			swim: function(){
+				console.log('游泳速度'+this.speed);
+			}
+		},
+		{
+			run: function(speed){
+				console.log('奔跑速度'+speed);
+			}
+		},
+		{
+			jump: function(){
+				console.log('跳跃')
+			}
+		}
+	)
+	penguin.swim();
+	penguin.run(10);
+	penguin.jump();
+</script>
+	</body>
+</html>

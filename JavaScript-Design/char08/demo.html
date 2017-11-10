@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>单例模式-创建一个小型代码库</title>
+	</head>
+	<body>
+<script>
+	var Bys = {
+		dom:{
+			addClass: function(className){
+				console.log('添加class类' + className);
+			},
+			removeClass: function(className){
+				console.log('移除class类' + className);
+			}
+			//.... 其他方法或属性
+		},
+		Ajax: {
+			get: function(){
+				console.log('get方法请求数据');
+			},
+			post: function(){
+				console.log('post方法请求数据');
+			}
+			//...
+		}
+		//....定义其他模块
+	}
+	Bys.dom.addClass('hover');
+	Bys.dom.removeClass('active')
+</script>
+	</body>
+</html>
