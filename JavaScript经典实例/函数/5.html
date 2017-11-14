@@ -1,0 +1,12 @@
+<script type="text/javascript">
+function greetingmaker(greeting){
+	function addName(name){
+		return greeting+ " " + name;
+	}
+	return addName;
+}
+var daytimeGreeting = greetingmaker('good day to you');
+var nightGreeting = greetingmaker('good Evening');
+console.log(daytimeGreeting('za'));
+console.log(nightGreeting('li'))
+</script>

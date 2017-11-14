@@ -1,0 +1,21 @@
+<script type="text/javascript">
+console.log(a);//undefined
+var a;
+</script>
+<script type="text/javascript">
+console.log(a);//undefined
+var a = 1;
+
+console.log(fn());//fn函数
+function fn(){
+	return 'fn函数';
+}
+
+// var fn1 = function(){
+// 	return 'fn1函数';
+// }
+console.log(fn1());//TypeError: fn1 is not a function
+var fn1 = function(){
+	return 'fn1函数';
+}
+</script>

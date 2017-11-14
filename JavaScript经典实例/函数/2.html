@@ -1,0 +1,25 @@
+<script type="text/javascript">
+
+function fn(x,y,z){
+	x(y,z)
+}
+
+// var fn1 = function(arg1,arg2){
+// 	console.log(arg1,arg2);//hello world
+// }
+// fn(fn1,'hello','world')
+fn(function(arg1,arg2){console.log(arg1,arg2);},'hello','world')
+
+
+var arr = [1,2,3,4,5,6,7,8,9];
+var total = 0;
+for(var i = 0; i < arr.length; i++){
+	total += arr[i];
+}
+console.log(total);//45
+
+var total =  arr.reduce(function(n1,n2) {
+	return n1+n2;
+});
+console.log(total)
+</script>

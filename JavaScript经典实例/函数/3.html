@@ -1,0 +1,31 @@
+<script type="text/javascript">
+
+var reverseArr = function(x,index,str){
+	return index == 0 ? str : reverseArr(x,--index,(str+=' '+x[index]));
+}
+var arr = [1,2,3,4,5,6,7,8,9];
+var str = reverseArr(arr,arr.length,'');
+console.log(str);// 9 8 7 6 5 4 3 2 1
+
+
+var fibonacci = function(n){
+	return n<2 ? n : fibonacci(n-1)+fibonacci(n-2);
+}
+console.log(fibonacci(3));//2
+
+function factorial(n){
+	return n === 1 ? 1 : n*factorial(n-1);
+}
+console.log(factorial(3));//6
+
+
+function factorial(num){
+	if(num === 0){
+		return 1;
+	}else{
+		return num*factorial(num-1);
+	}
+}
+console.log(factorial(3))
+
+</script>

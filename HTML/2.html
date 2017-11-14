@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>DOCTYPE - 文档声明</title>
+	<link rel="stylesheet" type="text/css" href="http://www.beyourside.net/statics/css/beyourside/css/style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<div class="content">
+<h2>浏览器呈现模式和DOCTYPE</h2>
+<p>DOCTYPE元素是唯一的,每一个HTML文档都必须以DOCTYPE元素开头，浏览器会由此而得知将要处理的是HTML内容。即使省略DOCYPE元素，大多数浏览器仍然可以正常显示文档内容的。只不过不建议省略（不是一个好的习惯）。</p>
+<p>&lt;!DOCTYPE&gt; 声明不是 HTML 标签；它是指示 web 浏览器关于页面使用哪个 HTML 版本进行编写的指令。</p>
+<p>在 HTML 4.01 中，&lt;!DOCTYPE&gt; 声明引用 DTD，因为 HTML 4.01 基于 SGML。DTD 规定了标记语言的规则，这样浏览器才能正确地呈现内容。</p>
+<p>HTML5 不基于 SGML，所以不需要引用 DTD。</p>
+<h3>小贴士</h3>
+<p>注释：&lt;!DOCTYPE&gt; 声明没有结束标签。</p>
+<p>提示：&lt;!DOCTYPE&gt; 声明对大小写不敏感。</p>
+<p>提示：请使用 W3C 的验证器来检查您是否编写了有效的 HTML / XHTML 文档！</p>
+<p>有的网页是遵循标准而创作的，但也有很多不是。即使你不能创建遵循标准的网页，也希望浏览器根据标准来正确显示那些页。目前，大量网页充斥着大量非标准代码，它们仍能正常地工作。事实上，为旧版浏览器设计的大多数代码都能在新版浏览器中正确显示（虽然呈现方式可能有所区别）。这是什么原因呢？事实上，假如严格遵循最新标准，会完全破坏那些页的生存基础。对于任何希望有所作为的浏览器来说，这当然是令人无法接受的。</p>
+<h2>书写方式</h2>
+<h3>HTML 4.01 Strict</h3>
+<p>该 DTD 包含所有 HTML 元素和属性，但不包括展示性的和弃用的元素（比如 font）。不允许框架集（Framesets）。</p>
+<pre>
+<code>
+	&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"> 
+</code>
+</pre>
+<h3>HTML 4.01 Transitional</h3>
+<p>该 DTD 包含所有 HTML 元素和属性，包括展示性的和弃用的元素（比如 font）。不允许框架集（Framesets）。</p>
+<pre>
+<code>
+	&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"> 
+</code>
+</pre>
+<h3>HTML 4.01 Frameset</h3>
+<p>该 DTD 等同于 HTML 4.01 Transitional，但允许框架集内容。</p>
+<pre>
+<code>
+	&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" "http://www.w3.org/TR/html4/frameset.dtd"> 
+</code>
+</pre>
+<h3>XHTML 1.0 Strict</h3>
+<p>该 DTD 包含所有 HTML 元素和属性，但不包括展示性的和弃用的元素（比如 font）。不允许框架集（Framesets）。必须以格式正确的 XML 来编写标记。</p>
+<pre>
+<code>
+	&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"> 
+</code>
+</pre>
+<h3>XHTML 1.0 Transitional</h3>
+<p>该 DTD 包含所有 HTML 元素和属性，包括展示性的和弃用的元素（比如 font）。不允许框架集（Framesets）。必须以格式正确的 XML 来编写标记。</p>
+<pre>
+<code>
+	&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+</code>
+</pre>
+<h3>XHTML 1.0 Frameset</h3>
+<p>该 DTD 等同于 XHTML 1.0 Transitional，但允许框架集内容。</p>
+<pre>
+<code>
+	&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd"> 
+</code>
+</pre>
+<h3>XHTML 1.1</h3>
+<p>该 DTD 等同于 XHTML 1.0 Strict，但允许添加模型（例如提供对东亚语系的 ruby 支持）。</p>
+<pre>
+<code>
+	&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"> 
+</code>
+</pre>
+<h3>HTML5</h3>
+<p>在HTML5中DOCTYPE元素只有一种使用方法，每个文档都会被添加进去的，最终形成一个简单但完整的HTML5文档。</p>
+<pre>
+<code>
+	&lt;!DOCTYPE HTML> 
+</code>
+</pre>
+<p>DOCTYPE声明通常是文档的第一行，要在&lt;html&gt;标记以及其他文档内容之前。注意，在XHTML文档中，DOCTYPE的前面偶尔会出现一条XML处理指令（也称为XML prolog）：&lt;?xml version="1.0" encoding="utf-8"?&gt;</p>
+<p>为了确保网页正确显示和顺利通过验证，使用正确的DOCTYPE是关键。与内容相反的、不正确的或者形式错误的DOCTYPE是大量问题的罪魁祸首。</p>
+<h2>浏览器呈现模式</h2>
+<p>现代浏览器包括不同的呈现模式，目的是既支持遵循标准的网页，也支持为老式浏览器而设计的网页。其中， Standards （标准）模式（也就是严格呈现模式）用于呈现遵循最新标准的网页，而 Quirks （包容）模式（也就是松散呈现模式或者兼容模式）用于呈现为传统浏览器而设计的网页。另外，注意Mozilla/Netscape 6新增了一种 Almost Standards （近似标准）模式，用于支持为标准的某个老版本而设计的网页。</p>
+<h3>2. DOCTYPE的切换</h3>
+<p>DOCTYPE声明是让浏览器进入正确呈现模式的关键。浏览器自动切换到恰当的呈现模式，以便正确显示由DOCTYPE声明所指定的文档种类。假如DOCTYPE指出当前网页是一个遵循标准（也就是HTML 4+或XHTML 1+）的文档，浏览器就会切换到Standards模式。假如没有指定DOCTYPE，或者指定HTML 3.2以及更老的版本，浏览器就切换到Quirks模式。这样一来，浏览器既能正确显示遵循标准的文档，又不至于完全舍弃老式的、与标准不符的网页。</p>
+<p>但是，DOCTYPE切换是一个不完善的方案。即使你在Web文档中使用了一个DOCTYPE声明，浏览器也可能不会采取你希望的呈现模式来显示网页。原因是多方面的，包括形式错误的DOCTYPE，以及不同&lt;?xml version="1.0" encoding="UTF-8"?&gt;) 开头，其中包括XHTML网页。然而，IE，Opera和旧版Safari都希望文档的第一行是DOCTYPE声明。所以，如果在它之前还有其他任何东西（包括XML prolog），就无法识别DOCTYPE。因此，XML prolog的存在会使IE，Opera和Safari进入Quirks模式。XML prolog并非必需的，所以你可在XHTML网页中安全地省略它。注意：一定要在http-equiv meta标记中包括一个charset属性，以弥补XML prolog中缺失的encoding属性。</p>
+<p>在完整的DOCTYPE声明中，要包括相应的文档类型定义（DTD）文件的URL。如果URL丢失，或者指定的是一个相对路径（而不是完全限定的Internet地址），大多数浏览器都会进入Quirks模式，不管DOCTYPE声明规定的是什么模式。</p>
+<p>浏览器对DOCTYPE声明的形式和格式非常敏感，如果不能识别一个形式错误的DOCTYPE，就会强制进入Quirks模式（正是因为这个原因，所以我们建议将一个已知正确的DOCTYPE拷贝和粘贴到文档中，而不是亲自输入它）。之所以出现形式错误的DOCTYPE，一个常见的原因是在DOCTYPE 的第一部分与URL之间缺少一个空格。将一个分两行的DOCTYPE折叠成单独一行，常常会丢失那个空格。</p>
+<p>浏览器处理过渡期的DOCTYPE时，最容易出现不一致的问题。IE和Opera使用Standards模式；Netscape 6和旧版本的Safari使用Quirks模式；Netscape 7、Mozilla 1和新版本的Safari使用Netscape的Almost Standards模式，它是Standards模式的一个具有更好容错性的版本。</p>
+<p>浏览器在处理不能识别的DOCTYPE时，也存在不一致的现象。IE和Opera会进入Standards模式；换言之，它假定不能识别的DOCTYPE 是尚未在浏览器中集成的一个新标准。Netscape 6则相反，会在遇到不能识别的DOCTYPE时切换到Quirks模式。</p>
+<p>DOCTYPE切换也许是让浏览器进入正确呈现模式并正确显示网页的一种有效手段，前提是你注意到了各种浏览器的不一致，并能积极主动地避免各种问题。</p>
+<h2>使用正确的DOCTYPE声明</h2>
+<p>平时在做页面的时候可能会忽视这一点（包括鄙人，通常都是懒于不写而使用浏览器默认），随着目前网页编码规范化热潮的到来，大家都有必要了解一下这个细节，会有用处的。俗话说没有规矩不成方圆呢。</p>
+<p>虽然大多数Web文档的顶部都有DOCTYPE声明，但很多人都没有注意它。它是在你新建一个文档时，由Web创作软件草率处理的众多细节之一。虽然 DOCTYPE被许多人忽视，但在遵循标准的任何Web文档中，它都是一项必需的元素。DOCTYPE会影响代码验证，并决定了浏览器最终如何显示你的 Web文档。</p>
+<h3>1.DOCTYPE的作用</h3>
+<p>DOCTYPE声明指出阅读程序应该用什么规则集来解释文档中的标记。在Web文档的情况下，“阅读程序”通常是浏览器或者校验器这样的一个程序，“规则”则是W3C所发布的一个文档类型定义（DTD）中包含的规则。</p>
+<p>每个DTD都包括一系列标记、attributes和properties，它们用于标记Web文档的内容；此外还包括一些规则，它们规定了哪些标记能出现在其他哪些标记中。每个Web建议标准（比如HTML 4 Frameset和XHTML 1.0 Transitional）都有自己的DTD。假如文档中的标记不遵循DOCTYPE声明所指定的DTD，这个文档除了不能通过代码校验之外，还有可能无法在浏览器中正确显示。对于标记不一致的问题，浏览器相较于校验器来说更宽容。但是，不正确的DOCTYPE声明经常导致网页不正确显示，或者导致它们根本不能显示。</p>
+<h3>2.选择正确的DOCTYPE</h3>
+<p>为了获得正确的DOCTYPE声明，关键就是让DTD与文档所遵循的标准对应。例如，假定文档遵循的是XHTML 1.0 Strict标准，文档的DOCTYPE声明就应该引用相应的DTD。另一方面，如果DOCTYPE声明指定的是XHTML DTD，但文档包含的是旧式风格的HTML标记，就是不恰当的；类似地，如果DOCTYPE声明指定的是HTML DTD，但文档包含的是XHTML 1.0 Strict标记，同样是不恰当的。</p>
+<p>有的时候，也可以根本不使用一个DOCTYPE声明。如果没有指定有效的DOCTYPE声明，大多数浏览器都会使用一个内建的默认DTD。在这种情况下，浏览器会用内建的DTD来试着显示你所指定的标记。对于一些临时性的、匆忙拼凑的文档（这种文档有许多），你确实可以考虑省略DOCTYPE声明，并接受浏览器的默认显示。</p>
+<p>完全可以从头编写一个DOCTYPE声明，并让它指向自己选择的一个DTD。然而，由于大多数Web文档都需要遵循由W3C发布的某个国际公认的Web标准，所以那些文档通常都要包含以下标准DOCTYPE声明之一：</p>
+</div>
+</body>
+</html>

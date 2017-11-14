@@ -1,0 +1,34 @@
+<script type="text/javascript">
+
+function factorial(n){
+	console.log(n);
+	return n === 1 ? 1 : n*factorial(n-1);
+}
+function noBlock(n,callback){
+	setTimeout(function(){
+		var val = factorial(n);
+		if(callback && typeof callback == 'function'){
+			callback(val);
+		}
+	},0)
+}
+console.log('Top');
+
+noBlock(3,function(n){
+	console.log('first:'+n);
+	noBlock(n,function(m){
+		console.log('final:'+m);
+	})
+})
+
+var tst = 0;
+for(var i = 0; i < 10; i++){
+	tst += i;
+}
+console.log('value:'+tst);
+noBlock(4,function(n){
+	console.log('end:'+n);
+})
+console.log('not')
+
+</script>
