@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>测试集合</title>
+</head>
+<body>
+<script src="set.js"></script>
+<script>
+    var set = new Set();
+    console.log('集合的长度：',set.size());
+    set.add(3);
+    set.add('zhangsan');
+    set.add(4);
+    set.add(45);
+    set.add('lisi');
+    console.log(set.values());
+    console.log('集合的长度：',set.size());
+    console.log('集合的长度：',set.sizeLegacy());
+    console.log('delete 5:',set.remove(5));
+    console.log('cunzai 5:',set.has(5));
+    console.log('cunzai 3:',set.has(3));
+    set.clear();
+    console.log(set.values());
+</script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>集合操作 - 差集</title>
+</head>
+<body>
+<script src="set.js"></script>
+<script>
+    var set = new Set();
+    set.add(1);
+    set.add(2);
+    set.add(3);
+    set.add(4);
+    set.add(5);
+    set.add('a');
+    console.log('set:')
+    console.log(set.values());
+    var set1 = new Set();
+    set1.add('a')
+    set1.add('b')
+    set1.add('c')
+    set1.add('d');
+    set1.add(1);
+    set1.add(2);
+    set1.add(3);
+    set1.add(4);
+    set1.add(5);
+    console.log('set1:')
+    console.log(set1.values());
+    console.log(set.subset(set1));
+    console.log(set1.subset(set));
+</script>
+</body>
+</html>
