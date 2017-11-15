@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a1fef0f6-8e4f-480a-8db8-bd22dece1e23" name="默认的" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/JavaScript - DataStructuers/Set集合操作/1.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/JavaScript - DataStructuers/Set集合操作/2.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/JavaScript - DataStructuers/Set集合操作/3.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/JavaScript - DataStructuers/Set集合操作/4.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/JavaScript - DataStructuers/Set集合操作/5.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/JavaScript - DataStructuers/Set集合操作/set.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaScript - DataStructuers/Set集合操作/set.js" afterPath="$PROJECT_DIR$/JavaScript - DataStructuers/Set集合操作/set.js" />
     </list>
     <ignored path="handBook.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,11 +23,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="set.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="set.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/JavaScript - DataStructuers/Set集合操作/set.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="2.2016807">
-              <caret line="80" column="29" selection-start-line="80" selection-start-column="12" selection-end-line="80" selection-end-column="29" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="60" column="33" selection-start-line="60" selection-start-column="33" selection-end-line="60" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -72,17 +66,17 @@
       <file leaf-file-name="2.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/JavaScript - DataStructuers/Set集合操作/2.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-15.714286">
-              <caret line="20" column="15" selection-start-line="20" selection-start-column="15" selection-end-line="20" selection-end-column="15" />
+            <state vertical-scroll-proportion="-1.5714285">
+              <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="1.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="1.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/JavaScript - DataStructuers/Set集合操作/1.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.0">
+            <state vertical-scroll-proportion="0.39793283">
               <caret line="14" column="14" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
               <folding />
             </state>
@@ -141,9 +135,8 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="23" />
     <option name="width" value="1440" />
-    <option name="height" value="834" />
+    <option name="height" value="900" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -226,6 +219,7 @@
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
+    <property name="FullScreen" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -305,7 +299,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="834" extended-state="0" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24947146" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -603,26 +597,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/JavaScript - DataStructuers/Set集合操作/1.html">
+    <entry file="file://$PROJECT_DIR$/JavaScript - DataStructuers/Set集合操作/4.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.0">
-          <caret line="14" column="14" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JavaScript - DataStructuers/Set集合操作/2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.714286">
-          <caret line="20" column="15" selection-start-line="20" selection-start-column="15" selection-end-line="20" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JavaScript - DataStructuers/Set集合操作/3.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.285714">
-          <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="26" selection-end-column="49" />
+        <state vertical-scroll-proportion="-11.785714">
+          <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
           <folding />
         </state>
       </provider>
@@ -635,18 +613,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/JavaScript - DataStructuers/Set集合操作/4.html">
+    <entry file="file://$PROJECT_DIR$/JavaScript - DataStructuers/Set集合操作/set.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.785714">
-          <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="60" column="33" selection-start-line="60" selection-start-column="33" selection-end-line="60" selection-end-column="33" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/JavaScript - DataStructuers/Set集合操作/set.js">
+    <entry file="file://$PROJECT_DIR$/JavaScript - DataStructuers/Set集合操作/3.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.2016807">
-          <caret line="80" column="29" selection-start-line="80" selection-start-column="12" selection-end-line="80" selection-end-column="29" />
+        <state vertical-scroll-proportion="-6.285714">
+          <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="26" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JavaScript - DataStructuers/Set集合操作/2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.5714285">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JavaScript - DataStructuers/Set集合操作/1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.39793283">
+          <caret line="14" column="14" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
           <folding />
         </state>
       </provider>
