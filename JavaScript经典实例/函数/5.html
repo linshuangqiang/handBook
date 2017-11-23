@@ -9,4 +9,15 @@ var daytimeGreeting = greetingmaker('good day to you');
 var nightGreeting = greetingmaker('good Evening');
 console.log(daytimeGreeting('za'));
 console.log(nightGreeting('li'))
+
+
+function outer(x){
+	return function(y){
+		return x*y;
+	}
+}
+var muliThree = outer(5);
+console.log(muliThree(3));//15
+
+
 </script>

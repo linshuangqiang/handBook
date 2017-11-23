@@ -1,0 +1,17 @@
+<script type="text/javascript">
+function fn(){
+	var args = Array.prototype.slice.call(arguments);
+	console.log(Object.prototype.toString.call(args));//[object Array]
+	console.log(Object.prototype.toString.call(args) == '[object Array]');//[object Array]
+	console.log(args);
+}
+fn(1,2,3,4,5,6,7);
+function fn1(){
+	var args = [].slice.call(arguments);
+	console.log(Object.prototype.toString.call(args));//[object Array]
+	console.log(Object.prototype.toString.call(args) == '[object Array]');//[object Array]
+	console.log(args);
+}
+fn1(1,2,3,4,5,6,7);
+
+</script>
